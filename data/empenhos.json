@@ -1,12 +1,13 @@
 {
-  "schema_version": 1,
-  "atualizado_em": "2026-10-22T17:27:44+00:00",
+  "schema_version": 2,
+  "atualizado_em": "2026-10-22T18:14:51+00:00",
   "processo_financeiro": "23064.037514/2022-95",
   "contrato_id": "arcolon",
   "empenhos": [
     {
       "numero": "2026NE000051",
       "ug": "150148",
+      "exercicio": 2026,
       "valor_total_centavos": 8500012,
       "versao": 9,
       "data_versao": "25/09/2026",
@@ -30,13 +31,114 @@
         }
       ],
       "saldo_a_liquidar_centavos": null,
-      "situacao_saldo": "Não apurado: falta confronto com liquidações/estornos"
+      "situacao_saldo": "A apurar: faltam liquidações e estornos validados",
+      "pagamentos_documentados": 0
+    },
+    {
+      "numero": "2025NE000019",
+      "ug": "150148",
+      "exercicio": 2025,
+      "valor_total_centavos": null,
+      "versao": 14,
+      "data_versao": "02/12/2025",
+      "sei": "5397252",
+      "url": "https://sei.utfpr.edu.br/sei/modulos/pesquisa/md_pesq_documento_consulta_externa.php?9LibXMqGnN7gSpLFOOgUQFziRouBJ5VnVL5b7-UrE5TO2O7PD8RR7jzitU4SONs1Pap1mPN5UpxojFukZ7iTVVEMnAfud5mVyxiNzdSSxv0d4AN3yKLXXlzY4gfwqhn4",
+      "movimentacoes": [
+        {
+          "data": "06/02/2025",
+          "operacao": "Inclusão",
+          "valor_centavos": 6000000
+        },
+        {
+          "data": "21/05/2025",
+          "operacao": "Reforço",
+          "valor_centavos": 6000000
+        },
+        {
+          "data": "25/09/2025",
+          "operacao": "Reforço",
+          "valor_centavos": 230185
+        },
+        {
+          "data": "09/10/2025",
+          "operacao": "Reforço",
+          "valor_centavos": 4500000
+        },
+        {
+          "data": "01/12/2025",
+          "operacao": "Reforço",
+          "valor_centavos": 3000000
+        }
+      ],
+      "saldo_a_liquidar_centavos": null,
+      "situacao_saldo": "A apurar: faltam liquidações e estornos validados",
+      "pagamentos_documentados": 0
+    },
+    {
+      "numero": "2024NE000063",
+      "ug": "150148",
+      "exercicio": 2024,
+      "valor_total_centavos": null,
+      "versao": 8,
+      "data_versao": "07/12/2024",
+      "sei": "4624854",
+      "url": "https://sei.utfpr.edu.br/sei/modulos/pesquisa/md_pesq_documento_consulta_externa.php?9LibXMqGnN7gSpLFOOgUQFziRouBJ5VnVL5b7-UrE5Qhhjs3-sg8OzNYUkFu3ZfGSBNcVTdzVFbC1qOZkOM6d7GJKwEWfP4Z9mkRePCerW_Nmmwrj3ZJclqaXP-0k50b",
+      "movimentacoes": [
+        {
+          "data": "28/03/2024",
+          "operacao": "Inclusão",
+          "valor_centavos": 5000000
+        },
+        {
+          "data": "21/06/2024",
+          "operacao": "Reforço",
+          "valor_centavos": 15000000
+        },
+        {
+          "data": "06/12/2024",
+          "operacao": "Anulação",
+          "valor_centavos": -4000000
+        }
+      ],
+      "saldo_a_liquidar_centavos": null,
+      "situacao_saldo": "A apurar: faltam liquidações e estornos validados",
+      "pagamentos_documentados": 0
+    },
+    {
+      "numero": "2023NE000030",
+      "ug": "150148",
+      "exercicio": 2023,
+      "valor_total_centavos": null,
+      "versao": 8,
+      "data_versao": "22/12/2023",
+      "sei": "3943805",
+      "url": "https://sei.utfpr.edu.br/sei/modulos/pesquisa/md_pesq_documento_consulta_externa.php?9LibXMqGnN7gSpLFOOgUQFziRouBJ5VnVL5b7-UrE5TIy3kz4TBXTNWX3AIZcHgpa6Ovf8piPZBOc88dBRZG-WHsYt4OnYEeBW8c-193o7MTfqOVCbewgztpEoXa72g-",
+      "movimentacoes": [
+        {
+          "data": "23/03/2023",
+          "operacao": "Inclusão",
+          "valor_centavos": 4000000
+        },
+        {
+          "data": "25/05/2023",
+          "operacao": "Reforço",
+          "valor_centavos": 10000000
+        },
+        {
+          "data": "21/12/2023",
+          "operacao": "Reforço",
+          "valor_centavos": 3000000
+        }
+      ],
+      "saldo_a_liquidar_centavos": null,
+      "situacao_saldo": "A apurar: faltam liquidações e estornos validados",
+      "pagamentos_documentados": 0
     }
   ],
   "documentos_pagamento": [],
   "diagnostico": {
     "documentos_listados": 67,
-    "notas_empenho_reconhecidas": 3,
+    "notas_empenho_reconhecidas": 14,
     "documentos_pagamento_reconhecidos": 0,
     "erros_leitura": [
       {
@@ -158,7 +260,48 @@
       {
         "sei": "4622529",
         "erro": "Documento não é PDF"
+      },
+      {
+        "sei": "4638921",
+        "erro": "Documento não é PDF"
+      },
+      {
+        "sei": "4678569",
+        "erro": "Documento não é PDF"
+      },
+      {
+        "sei": "4709083",
+        "erro": "Documento não é PDF"
+      },
+      {
+        "sei": "4768702",
+        "erro": "Documento não é PDF"
+      },
+      {
+        "sei": "4852913",
+        "erro": "Documento não é PDF"
+      },
+      {
+        "sei": "4918432",
+        "erro": "Documento não é PDF"
+      },
+      {
+        "sei": "4972930",
+        "erro": "Documento não é PDF"
+      },
+      {
+        "sei": "4986731",
+        "erro": "Documento não é PDF"
+      },
+      {
+        "sei": "5031149",
+        "erro": "Documento não é PDF"
+      },
+      {
+        "sei": "5097116",
+        "erro": "Documento não é PDF"
       }
-    ]
+    ],
+    "aviso": "Saldo contábil não é dedutível apenas de documentos de pagamentos."
   }
 }

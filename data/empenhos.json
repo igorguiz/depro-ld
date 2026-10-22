@@ -1,1 +1,164 @@
-{"schema_version":1,"empenhos":[],"documentos_pagamento":[],"diagnostico":{"observacao":"Aguardando execução do workflow Consultar empenhos SEI - ARCOLON"}}
+{
+  "schema_version": 1,
+  "atualizado_em": "2026-10-22T17:27:44+00:00",
+  "processo_financeiro": "23064.037514/2022-95",
+  "contrato_id": "arcolon",
+  "empenhos": [
+    {
+      "numero": "2026NE000051",
+      "ug": "150148",
+      "valor_total_centavos": 8500012,
+      "versao": 9,
+      "data_versao": "25/09/2026",
+      "sei": "6000166",
+      "url": "https://sei.utfpr.edu.br/sei/modulos/pesquisa/md_pesq_documento_consulta_externa.php?9LibXMqGnN7gSpLFOOgUQFziRouBJ5VnVL5b7-UrE5QWc-9ovId9iGlwxv5rfn2nJgaiS-5XndyUFOPK_77X9ZSJZJFcoEi-AUaC8dPb2XEKrvL_EIeoqU9T-Qo-A9WG",
+      "movimentacoes": [
+        {
+          "data": "09/03/2026",
+          "operacao": "Inclusão",
+          "valor_centavos": 3400000
+        },
+        {
+          "data": "06/05/2026",
+          "operacao": "Reforço",
+          "valor_centavos": 5100000
+        },
+        {
+          "data": "23/09/2026",
+          "operacao": "Reforço",
+          "valor_centavos": 12
+        }
+      ],
+      "saldo_a_liquidar_centavos": null,
+      "situacao_saldo": "Não apurado: falta confronto com liquidações/estornos"
+    }
+  ],
+  "documentos_pagamento": [],
+  "diagnostico": {
+    "documentos_listados": 67,
+    "notas_empenho_reconhecidas": 3,
+    "documentos_pagamento_reconhecidos": 0,
+    "erros_leitura": [
+      {
+        "sei": "2937029",
+        "erro": "Documento não é PDF"
+      },
+      {
+        "sei": "2958238",
+        "erro": "Documento não é PDF"
+      },
+      {
+        "sei": "3009003",
+        "erro": "Documento não é PDF"
+      },
+      {
+        "sei": "3083175",
+        "erro": "Documento não é PDF"
+      },
+      {
+        "sei": "3135640",
+        "erro": "Documento não é PDF"
+      },
+      {
+        "sei": "3195902",
+        "erro": "Documento não é PDF"
+      },
+      {
+        "sei": "3227760",
+        "erro": "Documento não é PDF"
+      },
+      {
+        "sei": "3265832",
+        "erro": "Documento não é PDF"
+      },
+      {
+        "sei": "3344244",
+        "erro": "Documento não é PDF"
+      },
+      {
+        "sei": "3400385",
+        "erro": "Documento não é PDF"
+      },
+      {
+        "sei": "3461576",
+        "erro": "Documento não é PDF"
+      },
+      {
+        "sei": "3516570",
+        "erro": "Documento não é PDF"
+      },
+      {
+        "sei": "3520550",
+        "erro": "Documento não é PDF"
+      },
+      {
+        "sei": "3579247",
+        "erro": "Documento não é PDF"
+      },
+      {
+        "sei": "3638600",
+        "erro": "Documento não é PDF"
+      },
+      {
+        "sei": "3702012",
+        "erro": "Documento não é PDF"
+      },
+      {
+        "sei": "3799744",
+        "erro": "Documento não é PDF"
+      },
+      {
+        "sei": "3835667",
+        "erro": "Documento não é PDF"
+      },
+      {
+        "sei": "3857095",
+        "erro": "Documento não é PDF"
+      },
+      {
+        "sei": "3939933",
+        "erro": "Documento não é PDF"
+      },
+      {
+        "sei": "3973112",
+        "erro": "Documento não é PDF"
+      },
+      {
+        "sei": "4021303",
+        "erro": "Documento não é PDF"
+      },
+      {
+        "sei": "4198713",
+        "erro": "Documento não é PDF"
+      },
+      {
+        "sei": "4233241",
+        "erro": "Documento não é PDF"
+      },
+      {
+        "sei": "4270658",
+        "erro": "Documento não é PDF"
+      },
+      {
+        "sei": "4295301",
+        "erro": "Documento não é PDF"
+      },
+      {
+        "sei": "4430749",
+        "erro": "Documento não é PDF"
+      },
+      {
+        "sei": "4466104",
+        "erro": "Documento não é PDF"
+      },
+      {
+        "sei": "4540173",
+        "erro": "Documento não é PDF"
+      },
+      {
+        "sei": "4622529",
+        "erro": "Documento não é PDF"
+      }
+    ]
+  }
+}

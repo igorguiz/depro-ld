@@ -1,1 +1,20 @@
-{"schema_version":1,"atualizado_em":null,"contratos":[]}
+{
+  "schema_version": 1,
+  "atualizado_em": "2026-10-22T17:05:17+00:00",
+  "contratos": [
+    {
+      "id": "arcolon",
+      "id_comprasnet": 154227,
+      "numero": "18/2022",
+      "fornecedor": "82.395.773/0001-89 - ARCOLON REFRIGERACAO INDUSTRIAL E COMERCIAL LTDA",
+      "cnpj": "82.395.773/0001-89",
+      "processo_licitacao": "23064.029408/2022-38",
+      "vigencia_inicio": "25/07/2022",
+      "vigencia_fim": "25/07/2027",
+      "situacao": "Ativo",
+      "valor_global": "R$ 1.293.713,52",
+      "url_fonte": "https://contratos.comprasnet.gov.br/transparencia/contratos/154227",
+      "consultado_em": "2026-10-22T17:05:17+00:00"
+    }
+  ]
+}

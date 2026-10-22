@@ -1,0 +1,26 @@
+name: Atualizar pagamentos ARCOLON (base conciliada)
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '25 12 * * *'
+permissions:
+  contents: write
+jobs:
+  atualizar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Importar pagamentos conciliados do PWA anterior
+        run: python scripts/importar_pagamentos.py
+      - name: Publicar pagamentos validados
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/pagamentos.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Atualizar pagamentos ARCOLON em 2026'
+            git push
+          fi

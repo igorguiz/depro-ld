@@ -5,7 +5,7 @@
 <meta name="theme-color" content="#373435">
 <title>Gestão de Contratos - DEPRO-LD</title>
 <style>
-:root{--ouro:#FECB29;--escuro:#373435;--fundo:#f5f6f8;--branco:#fff}*{box-sizing:border-box}body{margin:0;font:16px system-ui,-apple-system,'Segoe UI',sans-serif;background:var(--fundo);color:var(--escuro)}header{padding:26px 20px;background:var(--escuro);border-bottom:5px solid var(--ouro)}header .inner{max-width:1100px;margin:auto}header h1{font-size:clamp(1.45rem,3vw,2rem);color:var(--ouro);margin:0 0 7px}header p{color:white;margin:0}main{max-width:1100px;margin:44px auto;padding:0 20px}.modulos{display:flex;justify-content:center;gap:25px;flex-wrap:wrap}.modulo{width:min(100%,270px);min-height:215px;border:1px solid #dbdde0;background:#fff;border-radius:16px;padding:24px;cursor:pointer;display:flex;align-items:center;flex-direction:column;gap:14px;box-shadow:0 4px 14px #0000000a;color:var(--escuro);transition:transform .2s,border .2s}.modulo:hover,.modulo:focus-visible{border-color:#bd9320;transform:translateY(-2px)}.modulo[aria-pressed=true]{outline:3px solid var(--ouro)}.icone{height:76px;width:76px;display:grid;place-items:center;background:var(--ouro);border-radius:18px}.icone svg{height:39px;width:39px;stroke:var(--escuro);stroke-width:1.8;fill:none;stroke-linecap:round;stroke-linejoin:round}.modulo strong{font-size:1.1rem}.modulo small{color:#666}.painel{margin:32px auto;max-width:850px;padding:24px;background:#fff;border-radius:14px;border:1px solid #ddd}.painel h2{margin:0 0 16px;font-size:1.2rem}label{display:block;font-weight:600;margin-bottom:8px}select{width:100%;max-width:470px;padding:13px;border-radius:8px;border:1px solid #bbb;font:inherit}dl{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:15px}dt{font-size:.82rem;color:#606060}dd{margin:5px 0 0;font-weight:600} .dado{background:#f6f6f6;padding:14px;border-radius:9px} .nota{font-size:.88rem;color:#666}.empenhos{border-top:1px solid #e5e5e5;margin-top:26px;padding-top:24px}.cartoes-empenho{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px}.empenhos h3{font-size:1rem;margin-top:22px}.empenhos ul{padding-left:20px}.empenhos li{margin:8px 0}footer{max-width:1100px;margin:50px auto;padding:0 20px;color:#666;font-size:.8rem}
+:root{--ouro:#FECB29;--escuro:#373435;--fundo:#f5f6f8;--branco:#fff}*{box-sizing:border-box}body{margin:0;font:16px system-ui,-apple-system,'Segoe UI',sans-serif;background:var(--fundo);color:var(--escuro)}header{padding:26px 20px;background:var(--escuro);border-bottom:5px solid var(--ouro)}header .inner{max-width:1100px;margin:auto}header h1{font-size:clamp(1.45rem,3vw,2rem);color:var(--ouro);margin:0 0 7px}header p{color:white;margin:0}main{max-width:1100px;margin:44px auto;padding:0 20px}.modulos{display:flex;justify-content:center;gap:25px;flex-wrap:wrap}.modulo{width:min(100%,270px);min-height:215px;border:1px solid #dbdde0;background:#fff;border-radius:16px;padding:24px;cursor:pointer;display:flex;align-items:center;flex-direction:column;gap:14px;box-shadow:0 4px 14px #0000000a;color:var(--escuro);transition:transform .2s,border .2s}.modulo:hover,.modulo:focus-visible{border-color:#bd9320;transform:translateY(-2px)}.modulo[aria-pressed=true]{outline:3px solid var(--ouro)}.icone{height:76px;width:76px;display:grid;place-items:center;background:var(--ouro);border-radius:18px}.icone svg{height:39px;width:39px;stroke:var(--escuro);stroke-width:1.8;fill:none;stroke-linecap:round;stroke-linejoin:round}.modulo strong{font-size:1.1rem}.modulo small{color:#666}.painel{margin:32px auto;max-width:850px;padding:24px;background:#fff;border-radius:14px;border:1px solid #ddd}.painel h2{margin:0 0 16px;font-size:1.2rem}label{display:block;font-weight:600;margin-bottom:8px}select{width:100%;max-width:470px;padding:13px;border-radius:8px;border:1px solid #bbb;font:inherit}dl{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:15px}dt{font-size:.82rem;color:#606060}dd{margin:5px 0 0;font-weight:600} .dado{background:#f6f6f6;padding:14px;border-radius:9px} .nota{font-size:.88rem;color:#666}.empenhos{border-top:1px solid #e5e5e5;margin-top:26px;padding-top:24px}.cartoes-empenho{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px}.empenhos h3{font-size:1rem;margin-top:22px}.empenhos ul{padding-left:20px}.empenhos li{margin:8px 0}.lista-empenhos{display:grid;gap:13px}.ne-cartao{border:1px solid #e0e0e0;border-radius:10px;padding:14px}.ne-cartao h3{margin:0 0 10px}.ne-cartao dl{margin:0}.tabela-rolagem{overflow-x:auto}table{width:100%;border-collapse:collapse;min-width:590px}th,td{text-align:right;padding:11px 8px;border-bottom:1px solid #ddd;font-size:.91rem}th:first-child,td:first-child{text-align:left}th{background:#f5f5f5}footer{max-width:1100px;margin:50px auto;padding:0 20px;color:#666;font-size:.8rem}
 </style>
 </head>
 <body>
@@ -34,12 +34,15 @@
   <section id="bloco-empenhos" class="empenhos" hidden aria-label="Controle documental de empenhos">
     <h2>Empenhos — UTFPR Londrina (UG 150148)</h2>
     <p class="nota" id="fonte-empenhos">Fonte: processo financeiro SEI.</p>
-    <div class="cartoes-empenho">
-      <div class="dado"><dt>Valor total empenhado · NE 2026NE000051</dt><dd id="e-total">—</dd></div>
-      <div class="dado"><dt>Saldo do empenho (a liquidar)</dt><dd id="e-saldo">A apurar</dd></div>
-    </div>
-    <p class="nota" id="e-aviso">O saldo não é calculado por simples subtração de notas fiscais.</p>
+    <div id="lista-empenhos" class="lista-empenhos"><p class="nota">Aguardando sincronização.</p></div>
+    <p class="nota" id="e-aviso">Os saldos contábeis dependem de comprovação das liquidações e estornos. Valores negativos de exercícios anteriores, quando estimados, não representam saldo contábil.</p>
     <div id="e-documentos"></div>
+  </section>
+  <section id="bloco-pagamentos" class="empenhos" hidden aria-label="Pagamentos por mês">
+    <h2>Pagamentos por mês — 2026</h2>
+    <p class="nota" id="fonte-pagamentos">Fonte: conciliação pública CGU + SEI do projeto anterior.</p>
+    <div class="tabela-rolagem"><table><thead><tr><th>Mês</th><th>Serviços</th><th>Materiais</th><th>Não classificados</th><th>Total bruto</th></tr></thead><tbody id="linhas-pagamentos"></tbody></table></div>
+    <p class="nota">Valores brutos incluem retenções e são agrupados pelo mês do pagamento, não pela emissão da nota.</p>
   </section>
 </div>
 <p id="status" class="nota" role="status" aria-live="polite">Selecione a empresa para consultar os dados.</p>
@@ -76,35 +79,39 @@ combo.addEventListener('change',async()=>{
     document.getElementById('atualizacao').textContent='Fonte: Contratos.gov.br · Consultado em '+(item.consultado_em?new Date(item.consultado_em).toLocaleString('pt-BR',{timeZone:'America/Sao_Paulo'}):'data não informada');
     document.getElementById('fonte').href=item.url_fonte;
     dados.hidden=false;status.textContent='';
-    // A consulta financeira é independente da consulta cadastral; uma falha não apaga o contrato.
+    const fmt=c=>new Intl.NumberFormat('pt-BR',{style:'currency',currency:'BRL'}).format(Number(c)/100);
     const bloco=document.getElementById('bloco-empenhos');bloco.hidden=true;
-    try {
+    try{
       const er=await fetch('./data/empenhos.json?ts='+Date.now(),{cache:'no-store'});
-      if(!er.ok)throw Error('Dados de empenhos ainda não publicados');
-      const ep=await er.json();
-      const ne=(ep.empenhos||[]).find(x=>x.numero==='2026NE000051');
-      if(ne){
-        const fmt=c=>new Intl.NumberFormat('pt-BR',{style:'currency',currency:'BRL'}).format(c/100);
-        document.getElementById('e-total').textContent=fmt(ne.valor_total_centavos);
-        document.getElementById('e-saldo').textContent=ne.saldo_a_liquidar_centavos===null?'A apurar':fmt(ne.saldo_a_liquidar_centavos);
-        document.getElementById('e-aviso').textContent=ne.situacao_saldo||'Saldo sujeito a verificação contábil';
-        document.getElementById('fonte-empenhos').textContent='Fonte: SEI '+ep.processo_financeiro+' · NE versão '+(ne.versao||'não informada')+' · extraído em '+new Date(ep.atualizado_em).toLocaleString('pt-BR',{timeZone:'America/Sao_Paulo'});
-        const doc=document.getElementById('e-documentos');doc.replaceChildren();
-        const links=(ep.documentos_pagamento||[]).filter(x=>x.empenho===ne.numero);
-        if(links.length){
-          const titulo=document.createElement('h3');titulo.textContent='Documentos de pagamento vinculados ('+links.length+')';doc.appendChild(titulo);
-          const ul=document.createElement('ul');
-          links.forEach(d=>{
-            const li=document.createElement('li');
-            const a=document.createElement('a');a.href=d.url;a.target='_blank';a.rel='noopener noreferrer';a.textContent='SEI '+d.sei;
-            li.appendChild(a);
-            const desc=' · OB '+(d.ordem_bancaria||'não identificada')+' · NFs '+(d.notas||[]).map(n=>n.numero+' ('+n.natureza+')').join(', ');
-            li.appendChild(document.createTextNode(desc));ul.appendChild(li);
-          });doc.appendChild(ul);
-        }
-        bloco.hidden=false;
+      if(!er.ok)throw Error('Empenhos não publicados');
+      const ep=await er.json();const els=document.getElementById('lista-empenhos');els.replaceChildren();
+      for(const ne of (ep.empenhos||[]).sort((a,b)=>b.numero.localeCompare(a.numero))){
+        const sec=document.createElement('section');sec.className='ne-cartao';
+        const title=document.createElement('h3');title.textContent=ne.numero+(ne.exercicio<2026?' · exercício anterior':'');sec.append(title);
+        const grid=document.createElement('div');grid.className='cartoes-empenho';
+        if(ne.exercicio===2026){const total=document.createElement('div');total.className='dado';const t=document.createElement('dt');t.textContent='Valor total empenhado';const v=document.createElement('dd');v.textContent=ne.valor_total_centavos==null?'A consultar':fmt(ne.valor_total_centavos);total.append(t,v);grid.append(total)}
+        const saldo=document.createElement('div');saldo.className='dado';const st=document.createElement('dt');st.textContent=ne.exercicio<2026?'Saldo / movimentação no exercício — validação pendente':'Saldo a liquidar';const sv=document.createElement('dd');sv.textContent=ne.saldo_a_liquidar_centavos==null?'A apurar':fmt(ne.saldo_a_liquidar_centavos);saldo.append(st,sv);grid.append(saldo);sec.append(grid);
+        const ref=document.createElement('p');ref.className='nota';ref.textContent=(ne.pagamentos_documentados||0)+' documento(s) de pagamento identificado(s) no SEI · '+(ne.situacao_saldo||'');sec.append(ref);
+        if(ne.url){const a=document.createElement('a');a.textContent='Abrir NE no SEI ↗';a.href=ne.url;a.rel='noopener noreferrer';a.target='_blank';sec.append(a)}els.append(sec)
       }
-    }catch(err){console.warn('Empenhos indisponíveis:',err.message);}
+      document.getElementById('fonte-empenhos').textContent='Fonte: SEI '+ep.processo_financeiro+' · extraído em '+new Date(ep.atualizado_em).toLocaleString('pt-BR',{timeZone:'America/Sao_Paulo'});
+      bloco.hidden=false;
+    }catch(e){console.warn('Empenhos:',e.message)}
+    const pagamentos=document.getElementById('bloco-pagamentos');pagamentos.hidden=true;
+    try{
+      const pr=await fetch('./data/pagamentos.json?ts='+Date.now(),{cache:'no-store'});
+      if(!pr.ok)throw Error('Pagamentos indisponíveis');const pd=await pr.json();
+      if(!pd.notas?.length)throw Error('Aguardando primeira importação');
+      const meses=new Map();for(const n of pd.notas){const mes=n.mes_pagamento;
+        if(!/^2026-(0[1-9]|1[0-2])$/.test(mes))continue;
+        if(!meses.has(mes))meses.set(mes,{s:0,m:0,u:0});
+        const x=meses.get(mes);x[n.categoria==='Serviços'?'s':n.categoria==='Materiais'?'m':'u']+=Number(n.valor_bruto_centavos||0)}
+      const tb=document.getElementById('linhas-pagamentos');tb.replaceChildren();
+      for(const [mes,x] of [...meses].sort((a,b)=>a[0].localeCompare(b[0]))){const tr=document.createElement('tr');
+        for(const value of [mes,fmt(x.s),fmt(x.m),fmt(x.u),fmt(x.s+x.m+x.u)]){const cell=document.createElement('td');cell.textContent=value;tr.append(cell)}tb.append(tr)}
+      document.getElementById('fonte-pagamentos').textContent='Fonte: dados públicos conciliados CGU + SEI do PWA anterior · atualizados em '+(pd.fonte_atualizada_em?new Date(pd.fonte_atualizada_em).toLocaleString('pt-BR',{timeZone:'America/Sao_Paulo'}):'data não informada');
+      pagamentos.hidden=false;
+    }catch(e){console.warn('Pagamentos:',e.message)}
 
   }catch(err){status.textContent='Não foi possível mostrar os dados: '+err.message;}
 });

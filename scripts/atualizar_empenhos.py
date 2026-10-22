@@ -107,33 +107,87 @@ def parse_payment(t):
     op=re.search(r'150148\s*/\s*(2026OP\d{6})\s*[-–]\s*([\d.]+,\d{2})',normalized,re.I)
     return {'empenho':EXPECTED,'notas':[{'numero':n,'natureza':type_} for n,type_ in nf], 'ordem_bancaria':ob.group(1) if ob else None,'documento_retencao':dr.group(1) if dr else None,'retencao_centavos':cents(dr.group(2)) if dr else None,'ordem_pagamento':op.group(1) if op else None,'ordem_pagamento_centavos':cents(op.group(2)) if op else None}
 
+def parse_any_payment(t):
+    if not re.search(r'INFORMA[CÇ][OÕ]ES SOBRE O PAGAMENTO',t,re.I): return None
+    n=textnorm(t)
+    ne=re.search(r'150148\s*/\s*((?:202[0-9])NE\d{6})\b',n,re.I)
+    if not ne:return None
+    item=parse_payment(t) if ne.group(1).upper()==EXPECTED else None
+    if item:return item
+    nf=re.findall(r'Nota Fiscal\s*(\d{1,6})\s*:\s*Ref\.\s*(?:a\s*)?(Servi[cç]os|Materiais)',n,re.I)
+    ob=re.search(r'150148\s*/\s*(2026OB\d{6})',n,re.I)
+    dr=re.search(r'150148\s*/\s*(2026DR\d{6})\s*[-–]\s*([\d.]+,\d{2})',n,re.I)
+    op=re.search(r'150148\s*/\s*(2026OP\d{6})\s*[-–]\s*([\d.]+,\d{2})',n,re.I)
+    return {'empenho':ne.group(1).upper(),'notas':[{'numero':x,'natureza':y} for x,y in nf],
+       'ordem_bancaria':ob.group(1) if ob else None,
+       'documento_retencao':dr.group(1) if dr else None,
+       'retencao_centavos':cents(dr.group(2)) if dr else None,
+       'ordem_pagamento':op.group(1) if op else None,
+       'ordem_pagamento_centavos':cents(op.group(2)) if op else None}
+
+def parse_any_ne(t):
+    n=textnorm(t)
+    if 'Nota de Empenho' not in n or '150148' not in n or '82.395.773/0001-89' not in n:return None
+    m=re.search(r'\b(202[0-9])\s+NE\s+(\d{1,6})\b',n,re.I)
+    if not m:return None
+    number=m.group(1)+'NE'+m.group(2).zfill(6)
+    if number==EXPECTED:return parse_ne(t)
+    sec=re.search(r'Lista de Itens(.*?)(?:Assinaturas|\Z)',t,re.I|re.S)
+    if not sec:return None
+    operations=[]
+    for line in sec.group(1).splitlines():
+        mm=re.search(r'^(\d\d/\d\d/\d{4})\s+(Inclus[aã]o|Refor[cç]o|Anula[cç][aã]o|Cancelamento|Redu[cç][aã]o)\b.*?([\d.]+,\d{2})\s*$',textnorm(line),re.I)
+        if mm:
+            sign=-1 if any(k in mm.group(2).lower() for k in ('anula','cancel','redu')) else 1
+            operations.append({'data':mm.group(1),'operacao':mm.group(2),'valor_centavos':sign*cents(mm.group(3))})
+    if not operations:return None
+    total=sum(v['valor_centavos'] for v in operations)
+    version=re.search(r'Vers[aã]o\s+Data/Hora.*?\n\s*(\d{3})\s+(\d\d/\d\d/\d{4})',t,re.I|re.S)
+    return {'numero':number,'valor_total_centavos':total,'movimentacoes':operations,
+       'versao':int(version.group(1)) if version else None,
+       'data_versao':version.group(2) if version else None}
+
 def run():
     sess=requests.Session();sess.headers.update({'User-Agent':'Mozilla/5.0','Accept-Language':'pt-BR,pt;q=0.9'})
     page=fetch(sess,SOURCE); docs=discover(page.text)
     print('Documentos financeiros com link público:',len(docs),flush=True)
     candidates=[];payments=[];errors=[]
-    for d in docs[:120]:
+    for d in docs[:240]:
         try:
             text=extract_pdf(fetch(sess,d['url'],True).content)
             if d['tipo']=='ne':
-                ne=parse_ne(text)
+                ne=parse_any_ne(text)
                 if ne:ne.update({'sei':d['sei'],'url':d['url']});candidates.append(ne)
             else:
-                item=parse_payment(text)
+                item=parse_any_payment(text)
                 if item:item.update({'sei':d['sei'],'url':d['url']});payments.append(item)
-        except Exception as exc:
-            errors.append({'sei':d['sei'],'erro':str(exc)[:140]})
-    # Documento mais recente por versão, nunca some versões da mesma NE.
-    candidates.sort(key=lambda x:(x['versao'] or 0,x['data_versao'] or ''),reverse=True)
-    ne=candidates[0] if candidates else None
-    if not ne:raise ValueError('NE 2026NE000051 não localizada/interpretada. Dados anteriores preservados.')
-    # Aviso: não inferir liquidação, pagamento bruto ou saldo por simples presença de documento.
-    payload={'schema_version':1,'atualizado_em':datetime.now(timezone.utc).isoformat(timespec='seconds'), 'processo_financeiro':'23064.037514/2022-95','contrato_id':'arcolon','empenhos':[{'numero':EXPECTED,'ug':'150148','valor_total_centavos':ne['valor_total_centavos'],'versao':ne['versao'],'data_versao':ne['data_versao'],'sei':ne['sei'],'url':ne['url'],'movimentacoes':ne['movimentacoes'],'saldo_a_liquidar_centavos':None,'situacao_saldo':'Não apurado: falta confronto com liquidações/estornos'}], 'documentos_pagamento':list({p['sei']:p for p in payments}.values()),'diagnostico':{'documentos_listados':len(docs),'notas_empenho_reconhecidas':len(candidates),'documentos_pagamento_reconhecidos':len(payments),'erros_leitura':errors[:30]}}
+        except Exception as exc:errors.append({'sei':d['sei'],'erro':str(exc)[:140]})
+    by_number={}
+    for ne in candidates:
+        key=ne['numero'];old=by_number.get(key)
+        if not old or (ne.get('versao') or 0,ne.get('data_versao') or '')>(old.get('versao') or 0,old.get('data_versao') or ''):by_number[key]=ne
+    if EXPECTED not in by_number:raise ValueError('NE 2026NE000051 não localizada: dados anteriores preservados')
+    nums=set(by_number)|{x['empenho'] for x in payments}
+    empenhos=[]
+    for number in sorted(nums,reverse=True):
+        ne=by_number.get(number);atual=number.startswith('2026')
+        empenhos.append({'numero':number,'ug':'150148','exercicio':int(number[:4]),
+          'valor_total_centavos':ne['valor_total_centavos'] if ne and atual else None,
+          'versao':ne['versao'] if ne else None,'data_versao':ne['data_versao'] if ne else None,
+          'sei':ne['sei'] if ne else None,'url':ne['url'] if ne else None,
+          'movimentacoes':ne['movimentacoes'] if ne else [],
+          'saldo_a_liquidar_centavos':None,'situacao_saldo':'A apurar: faltam liquidações e estornos validados',
+          'pagamentos_documentados':sum(x['empenho']==number for x in payments)})
+    payload={'schema_version':2,'atualizado_em':datetime.now(timezone.utc).isoformat(timespec='seconds'),
+      'processo_financeiro':'23064.037514/2022-95','contrato_id':'arcolon',
+      'empenhos':empenhos,'documentos_pagamento':list({x['sei']:x for x in payments}.values()),
+      'diagnostico':{'documentos_listados':len(docs),'notas_empenho_reconhecidas':len(candidates),
+       'documentos_pagamento_reconhecidos':len(payments),'erros_leitura':errors[:40],
+       'aviso':'Saldo contábil não é dedutível apenas de documentos de pagamentos.'}}
     OUT.parent.mkdir(parents=True,exist_ok=True)
     tmp=OUT.with_suffix('.tmp');tmp.write_text(json.dumps(payload,ensure_ascii=False,indent=2)+'\n',encoding='utf-8');tmp.replace(OUT)
-    print('OK empenho',EXPECTED,'versão',ne['versao'],'valor',br(ne['valor_total_centavos']))
-    print('Informações sobre pagamento vinculadas:',len(payments),'Erros de leitura:',len(errors))
-    print('Não foi calculado saldo a liquidar sem dados contábeis suficientes.')
+    print('Empenhos identificados:',', '.join(sorted(nums)), 'pagamentos:',len(payments))
+    print('NE 2026NE000051:',br(by_number[EXPECTED]['valor_total_centavos']),'— saldo a apurar')
 
 if __name__=='__main__':
     try:run()

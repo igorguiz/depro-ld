@@ -1,6 +1,534 @@
 {
   "schema_version": 1,
-  "fonte_atualizada_em": null,
-  "notas": [],
+  "fonte": "https://igorguiz.github.io/gestao-contratos-utfpr/data/resumo.json",
+  "fonte_atualizada_em": "2026-10-22T10:54:34.394884+00:00",
+  "importado_em": "2026-10-22T19:58:22+00:00",
+  "metodologia": "Valores brutos pagos, com retenções; conciliados no PWA anterior CGU+SEI",
+  "notas": [
+    {
+      "empresa": "ARCOLON",
+      "cnpj": "82395773000189",
+      "contrato": "18/2022",
+      "instrumento": "7",
+      "competencia": "12/2025",
+      "mes_pagamento": "2026-01",
+      "numero_nf": "7",
+      "tipo_fiscal": "NFS-e",
+      "documento_sei": "5476495",
+      "url_sei": "https://sei.utfpr.edu.br/sei/modulos/pesquisa/md_pesq_documento_consulta_externa.php?9LibXMqGnN7gSpLFOOgUQFziRouBJ5VnVL5b7-UrE5TNTgPDHegnyxD9Aw9aKWTJkrfU3ki5Uv3u_n9lwCcjjaiB0CA-tjytqYeAdieNsHPQ7wNWsx2rCvEUsN84n761",
+      "emissao": "21/01/2026",
+      "valor_bruto_centavos": 1450605,
+      "categoria": "Serviços",
+      "classificacao": "Conciliada com PDF público do SEI",
+      "tipo_registro": "nota_fiscal",
+      "nfs_na_cobranca": 1,
+      "documentos": [
+        {
+          "id": "150148152462026DR800004",
+          "resumido": "2026DR800004",
+          "data": "28/01/2026",
+          "tipo": "DR",
+          "valor_centavos": 58314,
+          "contrato_inferido_de_ob": true
+        },
+        {
+          "id": "150148152462026OB000228",
+          "resumido": "2026OB000228",
+          "data": "28/01/2026",
+          "tipo": "OB",
+          "valor_centavos": 1392291,
+          "contrato_inferido_de_ob": false
+        }
+      ],
+      "valor_ob_centavos": 1392291,
+      "valor_dr_centavos": 58314
+    },
+    {
+      "empresa": "ARCOLON",
+      "cnpj": "82395773000189",
+      "contrato": "18/2022",
+      "instrumento": "39",
+      "competencia": "01/2026",
+      "mes_pagamento": "2026-02",
+      "numero_nf": "281",
+      "tipo_fiscal": "NF-e",
+      "documento_sei": "5492798",
+      "url_sei": "https://sei.utfpr.edu.br/sei/modulos/pesquisa/md_pesq_documento_consulta_externa.php?9LibXMqGnN7gSpLFOOgUQFziRouBJ5VnVL5b7-UrE5TQPwqWw4up6MjzTMJIwr9V3I4FcItw6Ym1Uv42zCxAZOVd6OWkuOOlEKt93u6-8d9Q0cJ0LF6V4P3XEJecCsan",
+      "emissao": "03/02/2026",
+      "valor_bruto_centavos": 49264,
+      "categoria": "Materiais",
+      "classificacao": "Conciliada com PDF público do SEI",
+      "tipo_registro": "nota_fiscal",
+      "nfs_na_cobranca": 2,
+      "documentos": [
+        {
+          "id": "150148152462026DR800011",
+          "resumido": "2026DR800011",
+          "data": "09/02/2026",
+          "tipo": "DR",
+          "valor_centavos": 58750,
+          "contrato_inferido_de_ob": true
+        },
+        {
+          "id": "150148152462026OB000265",
+          "resumido": "2026OB000265",
+          "data": "11/02/2026",
+          "tipo": "OB",
+          "valor_centavos": 1441119,
+          "contrato_inferido_de_ob": false
+        }
+      ],
+      "valor_ob_centavos": 1441119,
+      "valor_dr_centavos": 58750
+    },
+    {
+      "empresa": "ARCOLON",
+      "cnpj": "82395773000189",
+      "contrato": "18/2022",
+      "instrumento": "39",
+      "competencia": "01/2026",
+      "mes_pagamento": "2026-02",
+      "numero_nf": "39",
+      "tipo_fiscal": "NFS-e",
+      "documento_sei": "5492599",
+      "url_sei": "https://sei.utfpr.edu.br/sei/modulos/pesquisa/md_pesq_documento_consulta_externa.php?9LibXMqGnN7gSpLFOOgUQFziRouBJ5VnVL5b7-UrE5QwCZo2zFzeEwi7eitOWsVmZtgCm0QUg_NBVrE1in83lrSWSmfkjuf1c94mjBw4Uf3hwCgk4R1lOOYmueaViFPT",
+      "emissao": "03/02/2026",
+      "valor_bruto_centavos": 1450605,
+      "categoria": "Serviços",
+      "classificacao": "Conciliada com PDF público do SEI",
+      "tipo_registro": "nota_fiscal",
+      "nfs_na_cobranca": 2,
+      "documentos": [
+        {
+          "id": "150148152462026DR800011",
+          "resumido": "2026DR800011",
+          "data": "09/02/2026",
+          "tipo": "DR",
+          "valor_centavos": 58750,
+          "contrato_inferido_de_ob": true
+        },
+        {
+          "id": "150148152462026OB000265",
+          "resumido": "2026OB000265",
+          "data": "11/02/2026",
+          "tipo": "OB",
+          "valor_centavos": 1441119,
+          "contrato_inferido_de_ob": false
+        }
+      ],
+      "valor_ob_centavos": 1441119,
+      "valor_dr_centavos": 58750
+    },
+    {
+      "empresa": "ARCOLON",
+      "cnpj": "82395773000189",
+      "contrato": "18/2022",
+      "instrumento": "78",
+      "competencia": "02/2026",
+      "mes_pagamento": "2026-03",
+      "numero_nf": "286",
+      "tipo_fiscal": "NF-e",
+      "documento_sei": "5588406",
+      "url_sei": "https://sei.utfpr.edu.br/sei/modulos/pesquisa/md_pesq_documento_consulta_externa.php?9LibXMqGnN7gSpLFOOgUQFziRouBJ5VnVL5b7-UrE5Ry1A3qI4qLSO2beEr9wIHvyX2-shzqAWZoJeJvqjgsu7ksNNOEas9NaWOiBU0HOgzvJdSeLovIRzbl2WBXscyL",
+      "emissao": "10/03/2026",
+      "valor_bruto_centavos": 88652,
+      "categoria": "Materiais",
+      "classificacao": "Conciliada com PDF público do SEI",
+      "tipo_registro": "nota_fiscal",
+      "nfs_na_cobranca": 2,
+      "documentos": [
+        {
+          "id": "150148152462026DR800027",
+          "resumido": "2026DR800027",
+          "data": "30/03/2026",
+          "tipo": "DR",
+          "valor_centavos": 63569,
+          "contrato_inferido_de_ob": false
+        },
+        {
+          "id": "150148152462026OB000777",
+          "resumido": "2026OB000777",
+          "data": "31/03/2026",
+          "tipo": "OB",
+          "valor_centavos": 1590819,
+          "contrato_inferido_de_ob": false
+        }
+      ],
+      "valor_ob_centavos": 1590819,
+      "valor_dr_centavos": 63569
+    },
+    {
+      "empresa": "ARCOLON",
+      "cnpj": "82395773000189",
+      "contrato": "18/2022",
+      "instrumento": "78",
+      "competencia": "02/2026",
+      "mes_pagamento": "2026-03",
+      "numero_nf": "78",
+      "tipo_fiscal": "NFS-e",
+      "documento_sei": "5588405",
+      "url_sei": "https://sei.utfpr.edu.br/sei/modulos/pesquisa/md_pesq_documento_consulta_externa.php?9LibXMqGnN7gSpLFOOgUQFziRouBJ5VnVL5b7-UrE5RHiyGLoIXqqrLaLysSKe7RuqoBeRtdZ-MUKQm4rT0L_tqjrBwYagi7W0FMwyfhGSYBRojTIv6TLoeMmTxTyzrr",
+      "emissao": "10/03/2026",
+      "valor_bruto_centavos": 1565736,
+      "categoria": "Serviços",
+      "classificacao": "Conciliada com PDF público do SEI",
+      "tipo_registro": "nota_fiscal",
+      "nfs_na_cobranca": 2,
+      "documentos": [
+        {
+          "id": "150148152462026DR800027",
+          "resumido": "2026DR800027",
+          "data": "30/03/2026",
+          "tipo": "DR",
+          "valor_centavos": 63569,
+          "contrato_inferido_de_ob": false
+        },
+        {
+          "id": "150148152462026OB000777",
+          "resumido": "2026OB000777",
+          "data": "31/03/2026",
+          "tipo": "OB",
+          "valor_centavos": 1590819,
+          "contrato_inferido_de_ob": false
+        }
+      ],
+      "valor_ob_centavos": 1590819,
+      "valor_dr_centavos": 63569
+    },
+    {
+      "empresa": "ARCOLON",
+      "cnpj": "82395773000189",
+      "contrato": "18/2022",
+      "instrumento": "142",
+      "competencia": "03/2026",
+      "mes_pagamento": "2026-04",
+      "numero_nf": "142",
+      "tipo_fiscal": "NFS-e",
+      "documento_sei": "5636323",
+      "url_sei": "https://sei.utfpr.edu.br/sei/modulos/pesquisa/md_pesq_documento_consulta_externa.php?9LibXMqGnN7gSpLFOOgUQFziRouBJ5VnVL5b7-UrE5R0rTVvqaXp4hAwLMQZmY0gPNLP2v8BgYjKJGWoNl-JSUgcxCmVdQoOYVXM6zvcEOkbCyuSObBzFUkf89e9U5QZ",
+      "emissao": "07/04/2026",
+      "valor_bruto_centavos": 1640993,
+      "categoria": "Serviços",
+      "classificacao": "Conciliada com PDF público do SEI",
+      "tipo_registro": "nota_fiscal",
+      "nfs_na_cobranca": 1,
+      "documentos": [
+        {
+          "id": "150148152462026DR800035",
+          "resumido": "2026DR800035",
+          "data": "13/04/2026",
+          "tipo": "DR",
+          "valor_centavos": 67773,
+          "contrato_inferido_de_ob": false
+        },
+        {
+          "id": "150148152462026OB000853",
+          "resumido": "2026OB000853",
+          "data": "15/04/2026",
+          "tipo": "OB",
+          "valor_centavos": 1573220,
+          "contrato_inferido_de_ob": false
+        }
+      ],
+      "valor_ob_centavos": 1573220,
+      "valor_dr_centavos": 67773
+    },
+    {
+      "empresa": "ARCOLON",
+      "cnpj": "82395773000189",
+      "contrato": "18/2022",
+      "instrumento": "289",
+      "competencia": "03/2026",
+      "mes_pagamento": "2026-04",
+      "numero_nf": "289",
+      "tipo_fiscal": "NF-e",
+      "documento_sei": "5636330",
+      "url_sei": "https://sei.utfpr.edu.br/sei/modulos/pesquisa/md_pesq_documento_consulta_externa.php?9LibXMqGnN7gSpLFOOgUQFziRouBJ5VnVL5b7-UrE5QAlXOVbbbhnoHm_8d14WAhsg7pmgbC7BMZkMFzltUk1Hv_ma-U5r5i-fhu8mLAj98LMpSC8FqIL0ltBuXcXzRk",
+      "emissao": "07/04/2026",
+      "valor_bruto_centavos": 186086,
+      "categoria": "Materiais",
+      "classificacao": "Conciliada com PDF público do SEI",
+      "tipo_registro": "nota_fiscal",
+      "nfs_na_cobranca": 1,
+      "documentos": [
+        {
+          "id": "150148152462026OB000857",
+          "resumido": "2026OB000857",
+          "data": "15/04/2026",
+          "tipo": "OB",
+          "valor_centavos": 186086,
+          "contrato_inferido_de_ob": false
+        }
+      ],
+      "valor_ob_centavos": 186086,
+      "valor_dr_centavos": 0
+    },
+    {
+      "empresa": "ARCOLON",
+      "cnpj": "82395773000189",
+      "contrato": "18/2022",
+      "instrumento": "178",
+      "competencia": "04/2026",
+      "mes_pagamento": "2026-05",
+      "numero_nf": "178",
+      "tipo_fiscal": "NFS-e",
+      "documento_sei": "5701451",
+      "url_sei": "https://sei.utfpr.edu.br/sei/modulos/pesquisa/md_pesq_documento_consulta_externa.php?9LibXMqGnN7gSpLFOOgUQFziRouBJ5VnVL5b7-UrE5R5auxyXA7gedrHkuGbQkbncW5cMIN9K7I6QTosv6KtDV_tszzeDiaIfjLi5ob_yXhdRG04i9ZdGnsxbLpKRf8K",
+      "emissao": "11/05/2026",
+      "valor_bruto_centavos": 1574444,
+      "categoria": "Serviços",
+      "classificacao": "Conciliada com PDF público do SEI",
+      "tipo_registro": "nota_fiscal",
+      "nfs_na_cobranca": 2,
+      "documentos": [
+        {
+          "id": "150148152462026DR800042",
+          "resumido": "2026DR800042",
+          "data": "26/05/2026",
+          "tipo": "DR",
+          "valor_centavos": 65497,
+          "contrato_inferido_de_ob": false
+        },
+        {
+          "id": "150148152462026OB001199",
+          "resumido": "2026OB001199",
+          "data": "26/05/2026",
+          "tipo": "OB",
+          "valor_centavos": 1554493,
+          "contrato_inferido_de_ob": false
+        }
+      ],
+      "valor_ob_centavos": 1554493,
+      "valor_dr_centavos": 65497
+    },
+    {
+      "empresa": "ARCOLON",
+      "cnpj": "82395773000189",
+      "contrato": "18/2022",
+      "instrumento": "178",
+      "competencia": "04/2026",
+      "mes_pagamento": "2026-05",
+      "numero_nf": "295",
+      "tipo_fiscal": "NF-e",
+      "documento_sei": "5701447",
+      "url_sei": "https://sei.utfpr.edu.br/sei/modulos/pesquisa/md_pesq_documento_consulta_externa.php?9LibXMqGnN7gSpLFOOgUQFziRouBJ5VnVL5b7-UrE5ReyiFzNCb3-hMufdpBhK2DdpDXaMosc4LKJ-iZsUXjNaxu-wiAWj-H0zg1t5sX2uAwJS9CAn8wl1qrgDmKwHGm",
+      "emissao": "11/05/2026",
+      "valor_bruto_centavos": 45546,
+      "categoria": "Materiais",
+      "classificacao": "Conciliada com PDF público do SEI",
+      "tipo_registro": "nota_fiscal",
+      "nfs_na_cobranca": 2,
+      "documentos": [
+        {
+          "id": "150148152462026DR800042",
+          "resumido": "2026DR800042",
+          "data": "26/05/2026",
+          "tipo": "DR",
+          "valor_centavos": 65497,
+          "contrato_inferido_de_ob": false
+        },
+        {
+          "id": "150148152462026OB001199",
+          "resumido": "2026OB001199",
+          "data": "26/05/2026",
+          "tipo": "OB",
+          "valor_centavos": 1554493,
+          "contrato_inferido_de_ob": false
+        }
+      ],
+      "valor_ob_centavos": 1554493,
+      "valor_dr_centavos": 65497
+    },
+    {
+      "empresa": "ARCOLON",
+      "cnpj": "82395773000189",
+      "contrato": "18/2022",
+      "instrumento": "182",
+      "competencia": "05/2026",
+      "mes_pagamento": "2026-06",
+      "numero_nf": "182",
+      "tipo_fiscal": "NFS-e",
+      "documento_sei": "5749582",
+      "url_sei": "https://sei.utfpr.edu.br/sei/modulos/pesquisa/md_pesq_documento_consulta_externa.php?9LibXMqGnN7gSpLFOOgUQFziRouBJ5VnVL5b7-UrE5RkM1pcBsBsOBg5r5gTqIKYjgiZG8yr0kezB5dLPUSSDvl8mBTr3ZI8wEQjmPAlSz3yfIW-QW2D-EYb_lDj1bmt",
+      "emissao": "02/06/2026",
+      "valor_bruto_centavos": 1550266,
+      "categoria": "Serviços",
+      "classificacao": "Conciliada com PDF público do SEI",
+      "tipo_registro": "nota_fiscal",
+      "nfs_na_cobranca": 1,
+      "documentos": [
+        {
+          "id": "150148152462026DR800053",
+          "resumido": "2026DR800053",
+          "data": "18/06/2026",
+          "tipo": "DR",
+          "valor_centavos": 65421,
+          "contrato_inferido_de_ob": false
+        },
+        {
+          "id": "150148152462026OB001428",
+          "resumido": "2026OB001428",
+          "data": "19/06/2026",
+          "tipo": "OB",
+          "valor_centavos": 1484845,
+          "contrato_inferido_de_ob": false
+        }
+      ],
+      "valor_ob_centavos": 1484845,
+      "valor_dr_centavos": 65421
+    },
+    {
+      "empresa": "ARCOLON",
+      "cnpj": "82395773000189",
+      "contrato": "18/2022",
+      "instrumento": "219",
+      "competencia": "06/2026",
+      "mes_pagamento": "2026-07",
+      "numero_nf": "219",
+      "tipo_fiscal": "NFS-e",
+      "documento_sei": "5811217",
+      "url_sei": "https://sei.utfpr.edu.br/sei/modulos/pesquisa/md_pesq_documento_consulta_externa.php?9LibXMqGnN7gSpLFOOgUQFziRouBJ5VnVL5b7-UrE5SM5h9S3VkvPq5M53FULFEs96p0Rgw-wTFg5zwSkv2xpUcUBcnhryCeWowQZBE2zpw4jAhmrlqozHIAQO83WgQl",
+      "emissao": "02/07/2026",
+      "valor_bruto_centavos": 1550266,
+      "categoria": "Serviços",
+      "classificacao": "Conciliada com PDF público do SEI",
+      "tipo_registro": "nota_fiscal",
+      "nfs_na_cobranca": 1,
+      "documentos": [
+        {
+          "id": "150148152462026DR800062",
+          "resumido": "2026DR800062",
+          "data": "20/07/2026",
+          "tipo": "DR",
+          "valor_centavos": 65886,
+          "contrato_inferido_de_ob": false
+        },
+        {
+          "id": "150148152462026OB001697",
+          "resumido": "2026OB001697",
+          "data": "21/07/2026",
+          "tipo": "OB",
+          "valor_centavos": 1484380,
+          "contrato_inferido_de_ob": false
+        }
+      ],
+      "valor_ob_centavos": 1484380,
+      "valor_dr_centavos": 65886
+    },
+    {
+      "empresa": "ARCOLON",
+      "cnpj": "82395773000189",
+      "contrato": "18/2022",
+      "instrumento": "305",
+      "competencia": "07/2026",
+      "mes_pagamento": "2026-08",
+      "numero_nf": "255",
+      "tipo_fiscal": "NFS-e",
+      "documento_sei": "5878873",
+      "url_sei": "https://sei.utfpr.edu.br/sei/modulos/pesquisa/md_pesq_documento_consulta_externa.php?9LibXMqGnN7gSpLFOOgUQFziRouBJ5VnVL5b7-UrE5TOWYWrrscwIBVuaRYmoDUbyK3DAZAJjQNC48arOvssZv2VZwqmIXpYtbHmAKRkMfecyvnfDAFSsF6foW14ipzM",
+      "emissao": "04/08/2026",
+      "valor_bruto_centavos": 1550266,
+      "categoria": "Serviços",
+      "classificacao": "Conciliada com PDF público do SEI",
+      "tipo_registro": "nota_fiscal",
+      "nfs_na_cobranca": 2,
+      "documentos": [
+        {
+          "id": "150148152462026DR800078",
+          "resumido": "2026DR800078",
+          "data": "10/08/2026",
+          "tipo": "DR",
+          "valor_centavos": 66351,
+          "contrato_inferido_de_ob": false
+        },
+        {
+          "id": "150148152462026OB002038",
+          "resumido": "2026OB002038",
+          "data": "10/08/2026",
+          "tipo": "OB",
+          "valor_centavos": 1535895,
+          "contrato_inferido_de_ob": false
+        }
+      ],
+      "valor_ob_centavos": 1535895,
+      "valor_dr_centavos": 66351
+    },
+    {
+      "empresa": "ARCOLON",
+      "cnpj": "82395773000189",
+      "contrato": "18/2022",
+      "instrumento": "305",
+      "competencia": "07/2026",
+      "mes_pagamento": "2026-08",
+      "numero_nf": "305",
+      "tipo_fiscal": "NF-e",
+      "documento_sei": "5878881",
+      "url_sei": "https://sei.utfpr.edu.br/sei/modulos/pesquisa/md_pesq_documento_consulta_externa.php?9LibXMqGnN7gSpLFOOgUQFziRouBJ5VnVL5b7-UrE5Qa5TGTAuikH45DAKxbAZF1e3gNfqvx5_RY1aj6cOOxdUugpW5Jjgnbc0UKNuJYMz6LKb9aay-iJgkrpwoRBWNn",
+      "emissao": "04/08/2026",
+      "valor_bruto_centavos": 51980,
+      "categoria": "Materiais",
+      "classificacao": "Conciliada com PDF público do SEI",
+      "tipo_registro": "nota_fiscal",
+      "nfs_na_cobranca": 2,
+      "documentos": [
+        {
+          "id": "150148152462026DR800078",
+          "resumido": "2026DR800078",
+          "data": "10/08/2026",
+          "tipo": "DR",
+          "valor_centavos": 66351,
+          "contrato_inferido_de_ob": false
+        },
+        {
+          "id": "150148152462026OB002038",
+          "resumido": "2026OB002038",
+          "data": "10/08/2026",
+          "tipo": "OB",
+          "valor_centavos": 1535895,
+          "contrato_inferido_de_ob": false
+        }
+      ],
+      "valor_ob_centavos": 1535895,
+      "valor_dr_centavos": 66351
+    },
+    {
+      "empresa": "ARCOLON",
+      "cnpj": "82395773000189",
+      "contrato": "18/2022",
+      "instrumento": "306",
+      "competencia": "08/2026",
+      "mes_pagamento": "2026-10",
+      "numero_nf": "306",
+      "tipo_fiscal": "NFS-e",
+      "documento_sei": "5988425",
+      "url_sei": "https://sei.utfpr.edu.br/sei/modulos/pesquisa/md_pesq_documento_consulta_externa.php?9LibXMqGnN7gSpLFOOgUQFziRouBJ5VnVL5b7-UrE5SR6OBT9UM8BxZPMR-L2yQCjv7H12lSx4kL2C9XK9O-T2CTP6i9iwRfL0l4ohsht4DSgFp6RuqfRYuNfFbQcQ0S",
+      "emissao": "15/09/2026",
+      "valor_bruto_centavos": 1627916,
+      "categoria": "Serviços",
+      "classificacao": "Conciliada com PDF público do SEI",
+      "tipo_registro": "nota_fiscal",
+      "nfs_na_cobranca": 1,
+      "documentos": [
+        {
+          "id": "150148152462026DR800092",
+          "resumido": "2026DR800092",
+          "data": "06/10/2026",
+          "tipo": "DR",
+          "valor_centavos": 70652,
+          "contrato_inferido_de_ob": false
+        },
+        {
+          "id": "150148152462026OB002501",
+          "resumido": "2026OB002501",
+          "data": "07/10/2026",
+          "tipo": "OB",
+          "valor_centavos": 1557264,
+          "contrato_inferido_de_ob": false
+        }
+      ],
+      "valor_ob_centavos": 1557264,
+      "valor_dr_centavos": 70652
+    }
+  ],
   "pendencias": []
 }

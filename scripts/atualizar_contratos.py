@@ -5,6 +5,7 @@ Não usa credenciais e não altera dados existentes se a validação falhar.
 import json
 import re
 import sys
+import time
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -15,6 +16,7 @@ ROOT = Path(__file__).resolve().parents[1]
 CONFIG = ROOT / 'contratos.json'
 OUTPUT = ROOT / 'data' / 'contratos.json'
 BASE = 'https://contratos.comprasnet.gov.br/transparencia/contratos/'
+TIMEOUTS = ((10, 30), (10, 60), (10, 90))  # (conexao, leitura), em segundos
 
 
 def tidy(s):
@@ -81,15 +83,41 @@ def extract(html, cfg):
     }
 
 
+def fetch_with_retry(session, url):
+    """Repete apenas falhas temporarias; nunca publica resposta invalida."""
+    for index, timeout in enumerate(TIMEOUTS, 1):
+        print(f'Tentativa {index}/{len(TIMEOUTS)}: {url} (timeout de leitura {timeout[1]}s)', flush=True)
+        try:
+            response = session.get(url, timeout=timeout, allow_redirects=True)
+            if response.status_code in (429, 500, 502, 503, 504):
+                response.raise_for_status()
+            response.raise_for_status()
+            if 'html' not in response.headers.get('Content-Type', '').lower():
+                raise ValueError(f'Resposta nao HTML: {response.headers.get("Content-Type", "")!r}')
+            print(f'HTTP {response.status_code}; {len(response.content)} bytes; URL {response.url}', flush=True)
+            return response
+        except (requests.Timeout, requests.ConnectionError) as exc:
+            print(f'Falha temporaria: {type(exc).__name__}: {str(exc)[:220]}', flush=True)
+            if index == len(TIMEOUTS):
+                raise
+        except requests.HTTPError as exc:
+            code = exc.response.status_code if exc.response is not None else None
+            if code not in (429, 500, 502, 503, 504) or index == len(TIMEOUTS):
+                raise
+            print(f'HTTP temporario {code}; tentando novamente.', flush=True)
+        if index < len(TIMEOUTS):
+            time.sleep(index * 4)
+    raise RuntimeError('Tentativas de acesso esgotadas')
+
+
 def run():
     config = json.loads(CONFIG.read_text(encoding='utf-8'))
     session = requests.Session()
-    session.headers.update({'User-Agent':'Mozilla/5.0 (compatible; UTFPR-DEPRO-LD/1.0; consulta-publica)', 'Accept-Language':'pt-BR,pt;q=0.9', 'Accept':'text/html'})
+    session.headers.update({'User-Agent':'Mozilla/5.0 (compatible; UTFPR-Contratos-Diagnostico/1.0; public-readonly)', 'Accept-Language':'pt-BR,pt;q=0.9', 'Accept':'text/html,application/json;q=0.9,*/*;q=0.8'})
     rows = []
     for cfg in config['contratos']:
         url = BASE+str(cfg['id_comprasnet'])
-        response = session.get(url, timeout=35)
-        response.raise_for_status()
+        response = fetch_with_retry(session, url)
         if 'html' not in response.headers.get('Content-Type','').lower():
             raise ValueError(f'Resposta não HTML para {cfg["id"]}')
         data = extract(response.text, cfg)

@@ -33,7 +33,8 @@ def discover(markup):
     for tr in soup.find_all('tr'):
         plain=textnorm(tr.get_text(' ',strip=True)); low=plain.casefold()
         if not ('nota de empenho' in low or 'informa' in low and 'pagamento' in low): continue
-        m=re.search(r'\b(\d{6,8})\b',plain)
+        m=re.search(r'(?:Financeiro\s*:\s*)?(?:Nota de Empenho|Informa[cç][oõ]es sobre o pagamento)\s*(?:150148/\d{4}NE\d{6})?\s*\(?\s*(\d{6,8})\b',plain,re.I)
+        if not m:m=re.search(r'\b(\d{7})\b',plain)
         if not m: continue
         url=None
         for tag in tr.find_all(True):
@@ -49,13 +50,13 @@ def discover(markup):
         if url:found.append({'sei':m.group(1),'rotulo':plain[:260],'url':url,'tipo':'ne' if 'nota de empenho' in low else 'pagamento'})
     return list({d['sei']:d for d in found}.values())
 
-def fetch(session,url,accept_pdf=False):
+def fetch(session,url,accept_pdf=False,document=False):
     for i,timeout in enumerate((20,40,70),1):
         try:
             r=session.get(url,timeout=(10,timeout));r.raise_for_status()
             if accept_pdf:
                 if not r.content.startswith(b'%PDF-'): raise ValueError('Documento não é PDF')
-            else:
+            elif not document:
                 if 'html' not in r.headers.get('Content-Type','').lower(): raise ValueError('Processo não retornou HTML')
             return r
         except (requests.Timeout,requests.ConnectionError):
@@ -63,12 +64,36 @@ def fetch(session,url,accept_pdf=False):
             time.sleep(i*2)
     raise RuntimeError('Sem resposta')
 
+def extract_document(response):
+    """Lê documentos externos PDF e documentos internos SEI em HTML.
+
+    Documentos 'Financeiro: Informações sobre o pagamento' aparecem frequentemente
+    como documentos internos, não como PDFs; exigir %PDF perde esses vínculos.
+    """
+    blob=response.content
+    if blob.startswith(b'%PDF-'):
+        doc=fitz.open(stream=blob,filetype='pdf')
+        if doc.page_count>15:raise ValueError('PDF acima do limite de páginas')
+        result='\n'.join(p.get_text(sort=True) for p in doc)
+    else:
+        content_type=response.headers.get('Content-Type','').lower()
+        if 'html' not in content_type and not blob.lstrip().startswith((b'<!DOCTYPE',b'<html',b'<HTML')):
+            raise ValueError('Documento não é PDF ou HTML')
+        # Respeita a codificação (SEI pode retornar ISO-8859-1).
+        raw=response.text
+        soup=BeautifulSoup(raw,'html.parser')
+        for tag in soup(['script','style','nav']):tag.decompose()
+        # Texto de todo o documento e células separadas por linha.
+        result=soup.get_text('\n',strip=True)
+    if len(result.strip())<40:raise ValueError('Documento sem texto suficiente')
+    return result
+
+# Mantém compatibilidade com testes de versões anteriores.
 def extract_pdf(blob):
-    doc=fitz.open(stream=blob,filetype='pdf')
-    if doc.page_count>15:raise ValueError('PDF acima do limite de páginas')
-    s='\n'.join(page.get_text(sort=True) for page in doc)
-    if len(s.strip())<70:raise ValueError('PDF sem texto extraível')
-    return s
+    class Response:
+        content=blob
+        headers={'Content-Type':'application/pdf'}
+    return extract_document(Response())
 
 def parse_ne(t):
     norm=textnorm(t)
@@ -97,7 +122,7 @@ def parse_ne(t):
     return {'numero':EXPECTED,'valor_total_centavos':total,'movimentacoes':ops,'versao':int(version.group(1)) if version else None,'data_versao':version.group(2) if version else None}
 
 def parse_payment(t):
-    if not re.search(r'INFORMA[CÇ][OÕ]ES SOBRE O PAGAMENTO',t,re.I):return None
+    if not re.search(r'INFORMA[CÇ][OÕ]ES\s+SOBRE\s+O\s+PAGAMENTO',t,re.I):return None
     normalized=textnorm(t)
     em=re.search(r'150148\s*/\s*(2026NE0*51)\b',normalized,re.I)
     if not em:return None
@@ -108,7 +133,7 @@ def parse_payment(t):
     return {'empenho':EXPECTED,'notas':[{'numero':n,'natureza':type_} for n,type_ in nf], 'ordem_bancaria':ob.group(1) if ob else None,'documento_retencao':dr.group(1) if dr else None,'retencao_centavos':cents(dr.group(2)) if dr else None,'ordem_pagamento':op.group(1) if op else None,'ordem_pagamento_centavos':cents(op.group(2)) if op else None}
 
 def parse_any_payment(t):
-    if not re.search(r'INFORMA[CÇ][OÕ]ES SOBRE O PAGAMENTO',t,re.I): return None
+    if not re.search(r'INFORMA[CÇ][OÕ]ES\s+SOBRE\s+O\s+PAGAMENTO',t,re.I): return None
     n=textnorm(t)
     ne=re.search(r'150148\s*/\s*((?:202[0-9])NE\d{6})\b',n,re.I)
     if not ne:return None
@@ -151,22 +176,29 @@ def run():
     sess=requests.Session();sess.headers.update({'User-Agent':'Mozilla/5.0','Accept-Language':'pt-BR,pt;q=0.9'})
     page=fetch(sess,SOURCE); docs=discover(page.text)
     print('Documentos financeiros com link público:',len(docs),flush=True)
+    print('Candidatos NE:',sum(d['tipo']=='ne' for d in docs),'pagamentos:',sum(d['tipo']=='pagamento' for d in docs),flush=True)
     candidates=[];payments=[];errors=[]
     for d in docs[:240]:
         try:
-            text=extract_pdf(fetch(sess,d['url'],True).content)
+            text=extract_document(fetch(sess,d['url'],document=True))
+            # Alguns links públicos redirecionam para páginas HTML sem o teor do documento.
             if d['tipo']=='ne':
                 ne=parse_any_ne(text)
                 if ne:ne.update({'sei':d['sei'],'url':d['url']});candidates.append(ne)
             else:
                 item=parse_any_payment(text)
                 if item:item.update({'sei':d['sei'],'url':d['url']});payments.append(item)
-        except Exception as exc:errors.append({'sei':d['sei'],'erro':str(exc)[:140]})
+                else:errors.append({'sei':d['sei'],'erro':'Documento de pagamento lido, mas NE não reconhecida','tipo':'associacao'})
+        except Exception as exc:errors.append({'sei':d['sei'],'erro':str(exc)[:140],'tipo':'leitura'})
     by_number={}
     for ne in candidates:
         key=ne['numero'];old=by_number.get(key)
         if not old or (ne.get('versao') or 0,ne.get('data_versao') or '')>(old.get('versao') or 0,old.get('data_versao') or ''):by_number[key]=ne
     if EXPECTED not in by_number:raise ValueError('NE 2026NE000051 não localizada: dados anteriores preservados')
+    # Publicação de pagamento só com vínculo documental à NE.
+    print('Documentos de pagamento reconhecidos:',len(payments),'Erros:',len(errors),flush=True)
+    for p in payments[:15]:print('Pagamento SEI',p['sei'],'NE',p['empenho'],'OB',p.get('ordem_bancaria'),'NFs',','.join(x['numero'] for x in p['notas']),flush=True)
+    for e in errors[:8]:print('Aviso SEI',e['sei'],e['erro'],flush=True)
     nums=set(by_number)|{x['empenho'] for x in payments}
     empenhos=[]
     for number in sorted(nums,reverse=True):

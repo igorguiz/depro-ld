@@ -1,0 +1,28 @@
+name: Consultar empenhos SEI - ARCOLON
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  consultar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Instalar dependencias
+        run: python -m pip install -r requirements.txt
+      - name: Consultar documentos publicos do SEI
+        run: python scripts/atualizar_empenhos.py
+      - name: Publicar dados financeiros identificados
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/empenhos.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Atualizar empenhos públicos do SEI'
+            git push
+          else
+            echo 'Nenhuma mudança.'
+          fi

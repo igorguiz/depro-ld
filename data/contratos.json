@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "atualizado_em": "2026-10-23T16:36:41+00:00",
+  "atualizado_em": "2026-10-23T16:38:25+00:00",
   "contratos": [
     {
       "id": "arcolon",
@@ -14,7 +14,7 @@
       "situacao": "Ativo",
       "valor_global": "R$ 1.293.713,52",
       "url_fonte": "https://contratos.comprasnet.gov.br/transparencia/contratos/154227",
-      "consultado_em": "2026-10-23T16:36:41+00:00"
+      "consultado_em": "2026-10-23T16:38:25+00:00"
     }
   ]
 }

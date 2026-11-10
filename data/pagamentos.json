@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "fonte": "https://igorguiz.github.io/gestao-contratos-utfpr/data/resumo.json",
-  "fonte_atualizada_em": "2026-11-09T11:16:22.933196+00:00",
-  "importado_em": "2026-11-09T13:40:18+00:00",
+  "fonte_atualizada_em": "2026-11-10T11:10:37.510746+00:00",
+  "importado_em": "2026-11-10T13:30:14+00:00",
   "metodologia": "Valores brutos pagos, com retenções; conciliados no PWA anterior CGU+SEI",
   "notas": [
     {

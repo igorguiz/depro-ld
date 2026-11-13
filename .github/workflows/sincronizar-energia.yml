@@ -1,0 +1,69 @@
+name: Sincronizar faturas Copel na Nuvem UTFPR
+on:
+  workflow_dispatch:
+    inputs:
+      somente_teste_conexao:
+        description: 'Apenas testar WebDAV sem alterar os dados'
+        type: boolean
+        required: false
+        default: false
+  schedule:
+    - cron: '17 */6 * * *'
+permissions:
+  contents: write
+concurrency:
+  group: sincronizar-energia
+  cancel-in-progress: false
+jobs:
+  sincronizar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+      - name: Instalar dependências
+        run: python -m pip install -r requirements.txt
+      - name: Testar apenas a conexão com a Nuvem UTFPR
+        if: ${{ inputs.somente_teste_conexao == true }}
+        env:
+          NUVEM_BASE_URL: https://nuvem.utfpr.edu.br
+          NEXTCLOUD_SHARE_TOKEN: ${{ secrets.NEXTCLOUD_SHARE_TOKEN }}
+          NEXTCLOUD_SHARE_PASSWORD: ${{ secrets.NEXTCLOUD_SHARE_PASSWORD }}
+        run: python scripts/sincronizar_energia.py --teste-conexao
+      - name: Verificar a Nuvem UTFPR e extrair novas faturas
+        if: ${{ inputs.somente_teste_conexao != true }}
+        id: extracao
+        env:
+          NUVEM_BASE_URL: https://nuvem.utfpr.edu.br
+          NEXTCLOUD_SHARE_TOKEN: ${{ secrets.NEXTCLOUD_SHARE_TOKEN }}
+          NEXTCLOUD_SHARE_PASSWORD: ${{ secrets.NEXTCLOUD_SHARE_PASSWORD }}
+          ENERGIA_ID_CHAVE: ${{ secrets.ENERGIA_ID_CHAVE }}
+        shell: bash
+        run: |
+          set +e
+          python scripts/sincronizar_energia.py
+          codigo=$?
+          echo "codigo=$codigo" >> "$GITHUB_OUTPUT"
+          exit 0
+      - name: Publicar dados e estado da sincronização
+        if: ${{ inputs.somente_teste_conexao != true }}
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/energia.json data/energia_estado.json data/energia_status.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Sincronizar indicador de energia da Copel'
+            git pull --rebase origin "${GITHUB_REF_NAME}"
+            git push origin "HEAD:${GITHUB_REF_NAME}"
+          else
+            echo 'Nenhuma mudança.'
+          fi
+      - name: Sinalizar erro de integração
+        if: ${{ inputs.somente_teste_conexao != true && steps.extracao.outputs.codigo != '0' }}
+        run: |
+          echo 'Falha no acesso ou processamento. Consulte data/energia_status.json.'
+          exit 1

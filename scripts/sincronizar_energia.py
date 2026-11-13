@@ -22,7 +22,7 @@ from pathlib import Path
 from urllib.parse import quote, unquote, urljoin, urlsplit
 from xml.etree import ElementTree as ET
 
-import fitz
+import pymupdf as fitz
 import requests
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -37,6 +37,7 @@ MAX_FILES = 3000
 MAX_PDF_BYTES = 15 * 1024 * 1024
 MAX_XML_BYTES = 3 * 1024 * 1024
 HEADERS = {'X-Requested-With': 'XMLHttpRequest'}
+PARSER_VERSION = 'copel-danf3e-2'
 
 
 def now_utc():
@@ -96,23 +97,20 @@ def find_after_label(text, expressions, number_pattern):
     return None
 
 
-def parse_pdf_invoice(pdf_bytes):
-    """Extracao conservadora; dados ambiguos nunca viram valores estimados."""
-    try:
-        with fitz.open(stream=pdf_bytes, filetype='pdf') as doc:
-            if doc.is_encrypted:
-                return {'status': 'conferencia', 'motivo': 'PDF protegido por senha'}
-            text = '\n'.join(page.get_text(sort=True) for page in (doc[i] for i in range(min(len(doc), 8))))
-    except Exception:
-        return {'status': 'conferencia', 'motivo': 'PDF inválido ou ilegível'}
-    if len(text.strip()) < 55:
-        return {'status': 'conferencia', 'motivo': 'PDF sem texto pesquisável (OCR necessário)'}
+def parse_invoice_text(text):
+    """Campos conferíveis do DANF3E / extrato tarifário da Copel.
 
-    # Procura somente rotulos especificos para nao confundir consumo com leitura de medidor
-    # nem valor da conta com imposto, base de calculo ou outros subtotais.
+    Usa os títulos presentes no próprio documento. Valores de energia injetada,
+    tarifas e histórico de outros meses nunca substituem consumo ou valor atual.
+    """
+    number = r'(?:\d{1,3}(?:\.\d{3})+|\d+)(?:,\d+)?'
+    money = r'-?\d{1,3}(?:\.\d{3})*,\d{2}|-?\d+,\d{2}'
     month = find_after_label(text, [
-        r'(?<!\w)M[eê]s\s+de\s+refer[eê]ncia', r'(?<!\w)Refer[eê]ncia(?:\s+de\s+faturamento)?',
-        r'(?<!\w)Compet[eê]ncia', r'(?<!\w)M[eê]s\s*/\s*Ano',
+        r'(?<!\w)M[eê]s\s*/\s*Ano\s+Consumo\s*/\s*Uso\s+do\s+Sistema',
+        r'(?<!\w)M[eê]s\s+de\s+refer[eê]ncia',
+        r'(?<!\w)Refer[eê]ncia(?:\s+de\s+faturamento)?',
+        r'(?<!\w)Compet[eê]ncia',
+        r'(?<!\w)M[eê]s\s*/\s*Ano',
     ], r'(?:0?[1-9]|1[0-2])\s*/\s*20\d{2}|20\d{2}\s*[-/]\s*(?:0?[1-9]|1[0-2])')
     comp = None
     if month:
@@ -123,32 +121,84 @@ def parse_pdf_invoice(pdf_bytes):
             match = re.match(r'(20\d{2})\s*[-/]\s*(\d{1,2})', month)
             if match:
                 comp = f'{match.group(1)}-{int(match.group(2)):02d}'
-    # Nao procurar valor generico "TOTAL", pois pode ser valor de impostos/encargos.
+
+    # Fatura DANF3E: na primeira página, a referência, o vencimento e o total
+    # aparecem juntos; na página de continuação há também uma linha TOTAL.
     amount = find_after_label(text, [
-        r'(?<!\w)TOTAL\s+A\s+PAGAR', r'(?<!\w)VALOR\s+TOTAL\s+DA\s+FATURA',
-        r'(?<!\w)VALOR\s+DA\s+FATURA', r'(?<!\w)TOTAL\s+DA\s+FATURA',
+        r'(?<!\w)TOTAL\s+A\s+PAGAR',
+        r'(?<!\w)VALOR\s+TOTAL\s+DA\s+FATURA',
+        r'(?<!\w)VALOR\s+DA\s+FATURA',
+        r'(?<!\w)TOTAL\s+DA\s+FATURA',
         r'(?<!\w)VALOR\s+A\s+PAGAR',
-    ], r'-?\d{1,3}(?:\.\d{3})*,\d{2}|-?\d+,\d{2}')
+    ], money)
+    if amount is None and comp:
+        ref = f'{int(comp[5:]):02d}/{comp[:4]}'
+        # Evita capturar valores de impostos e meses anteriores do histórico.
+        match = re.search(r'(?m)^\s*'+re.escape(ref)+r'\s+\d{2}/\d{2}/20\d{2}\s+R\$\s*('+money+r')', text)
+        if match:
+            amount = match.group(1)
+    if amount is None:
+        match = re.search(r'(?m)^\s*TOTAL\s{2,}('+money+r')(?=\s|$)', text)
+        if match:
+            amount = match.group(1)
+
+    # O extrato da Copel contém um item específico "ENERGIA ELETRICA CONSUMO"
+    # com leitura anterior, leitura atual e medição. Isso evita somar TE+TUSD
+    # (mesmo kWh faturado duas vezes) e evita confundir injeção solar com carga.
     consumption = find_after_label(text, [
         r'(?<!\w)CONSUMO\s+TOTAL\s*(?:\(\s*kWh\s*\)|em\s+kWh)',
         r'(?<!\w)CONSUMO\s*(?:\(\s*kWh\s*\)|EM\s+kWh|kWh)',
         r'(?<!\w)ENERGIA\s+CONSUMIDA\s*(?:\(\s*kWh\s*\)|kWh)',
-    ], r'(?:\d{1,3}(?:\.\d{3})+|\d+)(?:,\d+)?')
-    # Somente campos com expressao de demanda medida (nao contratada).
+    ], number)
+    # A regra genérica acima só é usada se rotulada com o valor diretamente;
+    # "CONSUMO kWh PT [leituras...]" não é um valor direto.
+    match_total = re.search(r'(?m)^\s*ENERGIA\s+ELETRICA\s+CONSUMO\s+\d+\s+\d+\s+('+number+r')(?=\s|$)', text, re.I)
+    if match_total:
+        consumption = match_total.group(1)
+    else:
+        # Algumas faturas trazem apenas os itens TE em ponta e fora de ponta.
+        # Cada item aparece também como USD/TUSD: nunca somar os dois.
+        p = re.search(r'(?m)^\s*ENERGIA\s+ELETRICA\s+TE\s+PONTA\s+(?:kWh\s+)?('+number+r')(?=\s|$)', text, re.I)
+        fp = re.search(r'(?m)^\s*ENERGIA\s+ELETRICA\s+TE\s+F\s*PONTA\s+(?:kWh\s+)?('+number+r')(?=\s|$)', text, re.I)
+        if p and fp:
+            a, b = parse_decimal(p.group(1)), parse_decimal(fp.group(1))
+            if a is not None and b is not None:
+                consumption = str(a+b).replace('.', ',') if (a+b)%1 else str(int(a+b))
+
     demand = find_after_label(text, [
         r'(?<!\w)DEMANDA\s+MEDIDA\s*(?:\(\s*kW\s*\)|kW)?',
         r'(?<!\w)DEMANDA\s+REGISTRADA\s*(?:\(\s*kW\s*\)|kW)?',
-    ], r'(?:\d{1,3}(?:\.\d{3})+|\d+)(?:,\d+)?')
-    # Identificador interno: NUNCA e publicado (nao usar como chave publica).
+    ], number)
+    contracted = find_after_label(text, [
+        r'(?<!\w)Demanda\s+Todos\s+os\s+Per[ií]odos',
+    ], number)
+    # Linha do extrato detalhado: anterior, atual, medido, contratado,
+    # faturado, tarifa e total. "DEMANDA USD ISENTA ICMS" NÃO é demanda medida.
+    demand_line = re.search(r'(?m)^\s*DEMANDA\s+USD\s+\d+\s+\d+\s+('+number+r')\s+('+number+r')\s+('+number+r')\s+', text, re.I)
+    if demand_line:
+        demand = demand_line.group(1)
+        contracted = contracted or demand_line.group(2)
+
+    injected = None
+    injection_line = re.search(r'(?m)^\s*ENERGIA\s+GERADA\s*/\s*INJETADA\s+FORA\s+P\s+\d+\s+\d+\s+('+number+r')(?=\s|$)', text, re.I)
+    if injection_line:
+        injected = parse_decimal(injection_line.group(1))
+
     uc = find_after_label(text, [
         r'(?<!\w)UNIDADE\s+CONSUMIDORA\s*(?:N[º°o.]*)?',
         r'(?<!\w)N[º°o.]*\s+DA\s+UC',
         r'(?<!\w)INSTALA[CÇ][AÃ]O\s*N[º°o.]*',
     ], r'\d[\d.\-]{4,20}')
-
+    if not uc and comp:
+        ref = f'{int(comp[5:]):02d}/{comp[:4]}'
+        # DANF3E: terceira página inclui UC + referência + vencimento + total.
+        match = re.search(r'(?m)^\s*(\d{12,16})\s+'+re.escape(ref)+r'\s+\d{2}/\d{2}/20\d{2}\s+R\$', text)
+        if match:
+            uc = match.group(1)
     value = parse_money(amount)
     kwh = parse_decimal(consumption)
     kw = parse_decimal(demand)
+    contracted_kw = parse_decimal(contracted)
     problems = []
     if comp is None:
         problems.append('competência não identificada')
@@ -156,7 +206,7 @@ def parse_pdf_invoice(pdf_bytes):
         problems.append('valor total não identificado')
     if kwh is None or kwh < 0:
         problems.append('consumo em kWh não identificado')
-    if consumption is not None and kwh is not None and kwh > 100000000:
+    if kwh is not None and kwh > 100000000:
         problems.append('consumo fora do intervalo esperado')
     return {
         'status': 'conferencia' if problems else 'ok',
@@ -165,9 +215,24 @@ def parse_pdf_invoice(pdf_bytes):
         'valor_centavos': value if value is not None and value >= 0 else None,
         'consumo_kwh': kwh if kwh is not None and kwh >= 0 else None,
         'demanda_medida_kw': kw if kw is not None and kw >= 0 else None,
+        'demanda_contratada_kw': contracted_kw if contracted_kw is not None and contracted_kw >= 0 else None,
+        'energia_injetada_kwh': injected if injected is not None and injected >= 0 else None,
         '_uc': re.sub(r'\D', '', uc) if uc else None,
     }
 
+
+def parse_pdf_invoice(pdf_bytes):
+    """Extrai texto do PDF; não tenta OCR e nunca estima valores ausentes."""
+    try:
+        with fitz.open(stream=pdf_bytes, filetype='pdf') as doc:
+            if doc.is_encrypted:
+                return {'status': 'conferencia', 'motivo': 'PDF protegido por senha'}
+            text = '\n'.join(page.get_text(sort=True) for page in (doc[i] for i in range(min(len(doc), 8))))
+    except Exception:
+        return {'status': 'conferencia', 'motivo': 'PDF inválido ou ilegível'}
+    if len(text.strip()) < 55:
+        return {'status': 'conferencia', 'motivo': 'PDF sem texto pesquisável (OCR necessário)'}
+    return parse_invoice_text(text)
 
 def stable_id(secret, value, length=12):
     return hmac.new(secret.encode('utf-8'), value.encode('utf-8'), hashlib.sha256).hexdigest()[:length]
@@ -324,7 +389,9 @@ def scan():
         file_id = stable_id(key, item['relative'], 20)
         identity = {'etag': item['etag'], 'tamanho': item['size']}
         next_files[file_id] = identity
-        if item['etag'] and identity == previous_files.get(file_id) and file_id in old_bills:
+        if (item['etag'] and identity == previous_files.get(file_id)
+                and file_id in old_bills
+                and old_bills[file_id].get('extrator_versao') == PARSER_VERSION):
             cached = dict(old_bills[file_id])
             cached.pop('origem_removida', None)
             cached['status'] = cached.get('status_extracao', cached['status'])
@@ -340,6 +407,7 @@ def scan():
             record = parse_pdf_invoice(pdf)
         source_group = record.pop('_uc', None) or ('pasta:' + item['relative'].rsplit('/', 1)[0])
         record['id'] = file_id
+        record['extrator_versao'] = PARSER_VERSION
         record['status_extracao'] = record['status']
         record['motivo_extracao'] = record['motivo']
         record['unidade'] = 'UC-' + stable_id(key, source_group, 6).upper()

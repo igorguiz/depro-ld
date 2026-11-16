@@ -37,7 +37,7 @@ MAX_FILES = 3000
 MAX_PDF_BYTES = 15 * 1024 * 1024
 MAX_XML_BYTES = 3 * 1024 * 1024
 HEADERS = {'X-Requested-With': 'XMLHttpRequest'}
-PARSER_VERSION = 'copel-danf3e-2'
+PARSER_VERSION = 'copel-danf3e-3'
 
 
 def now_utc():
@@ -142,6 +142,13 @@ def parse_invoice_text(text):
         if match:
             amount = match.group(1)
 
+    # Fatura Copel antiga: total monetário em linha isolada do cabeçalho.
+    # Só utiliza o valor com prefixo R$; não usa montantes de tributos.
+    if amount is None:
+        match = re.search(r'(?m)^.{0,180}\b\d{2}/\d{2}/20\d{2}\s+R\$\s*('+money+r')(?=\s|$)', text)
+        if match:
+            amount = match.group(1)
+
     # O extrato da Copel contém um item específico "ENERGIA ELETRICA CONSUMO"
     # com leitura anterior, leitura atual e medição. Isso evita somar TE+TUSD
     # (mesmo kWh faturado duas vezes) e evita confundir injeção solar com carga.
@@ -178,6 +185,15 @@ def parse_invoice_text(text):
     if demand_line:
         demand = demand_line.group(1)
         contracted = contracted or demand_line.group(2)
+
+    # Extrato antigo Copel: DEMANDA (sem USD), leituras anterior e atual,
+    # valores medido, contratado e faturado, nesta ordem.
+    legacy_demand = re.search(
+        r'(?m)^\s*DEMANDA\s+(?!ISENTA|USD)\d+\s+\d+\s+'
+        r'('+number+r')\s+('+number+r')\s+('+number+r')(?=\s|$)', text, re.I)
+    if legacy_demand:
+        demand = legacy_demand.group(1)
+        contracted = contracted or legacy_demand.group(2)
 
     injected = None
     injection_line = re.search(r'(?m)^\s*ENERGIA\s+GERADA\s*/\s*INJETADA\s+FORA\s+P\s+\d+\s+\d+\s+('+number+r')(?=\s|$)', text, re.I)

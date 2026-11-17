@@ -10,7 +10,7 @@
   const string = raw => (raw == null ? '—' : String(raw));
 
   function setFilters(items) {
-    const years = [...new Set(items.map(i => (i.competencia || '').slice(0,4)).filter(x => /^20\d\d$/.test(x)))].sort().reverse();
+    const years = [...new Set(items.map(i => (i.mes_consumo || i.competencia || '').slice(0,4)).filter(x => /^20\d\d$/.test(x)))].sort().reverse();
     const units = [...new Set(items.map(i=>i.unidade).filter(Boolean))].sort();
     const yearSelect = byId('en-year'), unitSelect = byId('en-unit');
     const year = yearSelect.value, unit = unitSelect.value;
@@ -24,13 +24,13 @@
 
   function getVisible() {
     const year=byId('en-year').value,month=byId('en-month').value,unit=byId('en-unit').value;
-    return energyState.invoices.filter(b=> (!year||b.competencia?.startsWith(year)) && (!month||b.competencia?.slice(5,7)===month) && (!unit||b.unidade===unit));
+    return energyState.invoices.filter(b=> (!year||(b.mes_consumo || b.competencia)?.startsWith(year)) && (!month||(b.mes_consumo || b.competencia)?.slice(5,7)===month) && (!unit||b.unidade===unit));
   }
   function addCell(row, val) {const td=document.createElement('td');td.textContent=string(val);row.append(td);}
   function render() {
     const visible=getVisible();
-    const ok=visible.filter(b=>b.status==='ok'&&!b.origem_removida);
-    const pending=visible.filter(b=>b.status!=='ok'||b.origem_removida);
+    const ok=visible.filter(b=>(b.status==='ok'||b.status==='parcial')&&!b.origem_removida);
+    const pending=visible.filter(b=>(b.status!=='ok'&&b.status!=='parcial')||b.origem_removida);
     const kwh=ok.reduce((acc,b)=>acc+Number(b.consumo_kwh||0),0);
     const cents=ok.reduce((acc,b)=>acc+Number(b.valor_centavos||0),0);
     fill('en-invoices',String(ok.length));
@@ -43,7 +43,7 @@
 
     const months=new Map();
     for(const bill of ok) {
-      const key=bill.competencia;
+      const key=bill.mes_consumo||bill.competencia;
       const entry=months.get(key)||{kwh:0,cents:0,n:0};
       entry.kwh+=Number(bill.consumo_kwh);
       entry.cents+=Number(bill.valor_centavos);
@@ -69,12 +69,12 @@
       const tr=document.createElement('tr');[month,v.n,fmt(v.kwh)+' kWh',money(v.cents)].forEach(item=>addCell(tr,item));monthsBody.append(tr);
     }
     const billsBody=byId('en-bills');billsBody.replaceChildren();
-    const bills=[...visible].sort((a,b)=>(b.competencia||'').localeCompare(a.competencia||''));
+    const bills=[...visible].sort((a,b)=>(b.mes_consumo||b.competencia||'').localeCompare(a.mes_consumo||a.competencia||''));
     for(const bill of bills.slice(0,200)) {
       const tr=document.createElement('tr');
-      if(bill.status!=='ok'||bill.origem_removida) tr.className='en-review';
-      const status=bill.origem_removida?'Origem ausente':bill.status==='ok'?'Validada':'Conferir';
-      [bill.competencia||'—',bill.unidade||'—',bill.consumo_kwh==null?'—':fmt(bill.consumo_kwh),
+      if((bill.status!=='ok'&&bill.status!=='parcial')||bill.origem_removida) tr.className='en-review';
+      const status=bill.origem_removida?'Origem ausente':bill.status==='ok'?'Validada':bill.status==='parcial'?'Histórico parcial':bill.status==='duplicado'?'Duplicada':'Conferir';
+      [bill.mes_consumo||bill.competencia||'—',bill.unidade||'—',bill.consumo_kwh==null?'—':fmt(bill.consumo_kwh),
        bill.valor_centavos==null?'—':money(bill.valor_centavos),status,bill.motivo||'—'].forEach(v=>addCell(tr,v));
       billsBody.append(tr);
     }

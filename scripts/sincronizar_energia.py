@@ -37,7 +37,7 @@ MAX_FILES = 3000
 MAX_PDF_BYTES = 15 * 1024 * 1024
 MAX_XML_BYTES = 3 * 1024 * 1024
 HEADERS = {'X-Requested-With': 'XMLHttpRequest'}
-PARSER_VERSION = 'copel-danf3e-3'
+PARSER_VERSION = 'copel-multiformato-4'
 
 
 def now_utc():
@@ -237,6 +237,176 @@ def parse_invoice_text(text):
     }
 
 
+
+def br_money_float(raw):
+    v = parse_money(raw)
+    return None if v is None else round(v / 100, 2)
+
+
+def extract_detailed_bill(pdf_bytes):
+    """Completa a extração clássica; usa principalmente o extrato de faturamento,
+    sem duplicar quantidades em linhas TE/TUSD ou créditos de energia.
+    """
+    with fitz.open(stream=pdf_bytes, filetype='pdf') as doc:
+        text = '\n'.join(page.get_text(sort=True) for page in doc)
+    base = parse_invoice_text(text)
+    fields = dict(base)
+    fields['tipo_documento'] = 'fatura_individual'
+    fields['competencia_copel'] = base.get('competencia')
+    # Leituras são datas vinculadas aos rótulos específicos da tabela técnica.
+    previous = re.search(r'Data Real Leit Anterior\s+(\d{2}/\d{2}/\d{4})', text, re.I)
+    current = re.search(r'Data Real Leit Atual\s+(\d{2}/\d{2}/\d{4})', text, re.I)
+    if not previous or not current:
+        # DANF3E cabeçalho: anterior / atual / número de dias / próxima leitura
+        lead = re.search(r'(?m)^.*?(\d{2}/\d{2}/\d{4})\s+(\d{2}/\d{2}/\d{4})\s+\d{1,3}\s+\d{2}/\d{2}/\d{4}', text)
+        if lead:
+            previous = previous or lead.group(1)
+            current = current or lead.group(2)
+    def datefmt(match):
+        if match is None: return None
+        d = match.group(1) if hasattr(match,'group') else match
+        try: return datetime.strptime(d,'%d/%m/%Y').date().isoformat()
+        except ValueError: return None
+    fields['leitura_anterior'] = datefmt(previous)
+    fields['leitura_atual'] = datefmt(current)
+    fields['mes_consumo'] = (fields['leitura_atual'] or '')[:7] or base.get('competencia')
+    if fields['leitura_atual'] and fields['leitura_anterior'] and fields['leitura_anterior'] >= fields['leitura_atual']:
+        fields['status'] = 'conferencia'
+        fields['motivo'] = 'Datas de leitura inconsistentes'
+    # Extrato com leituras; identificar postos pelos rótulos TE, ou modelo antigo ELET.
+    numeric = r'[-]?(?:\d{1,3}(?:\.\d{3})+|\d+)(?:,\d+)?'
+    for suffix, labels in {
+        'ponta': [r'ENERGIA ELETRICA TE PONTA',r'ENERGIA ELET CONSUMO PTA'],
+        'fora_ponta': [r'ENERGIA ELETRICA TE F\s*PONTA',r'ENERGIA ELET CONSUMO F PTA'],
+    }.items():
+        value = None
+        for label in labels:
+            # Primeira página: 'kWh quantidade preço unitário valor';
+            # páginas de extrato podem trazer leituras antes da quantidade.
+            m = re.search(r'(?m)^\s*'+label+r'\s+(?:kWh\s+)?('+numeric+r')\s+('+numeric+r')\s+('+numeric+r')(?:\s+('+numeric+r'))?',text,re.I)
+            if m:
+                vals = [parse_decimal(x) for x in m.groups() if x is not None]
+                # Se o segundo campo é preço de seis casas, primeiro é quantidade.
+                if len(vals)>=3 and vals[1] is not None and vals[1] < 10 and ',' in m.group(2):
+                    value=vals[0]
+                elif len(vals)>=3 and vals[0] >= 100 and vals[1] >= 100:
+                    value=vals[2]
+                elif len(vals)>=3:
+                    value=vals[0]
+                break
+        fields['consumo_kwh_'+suffix] = value
+    p1=fields['consumo_kwh_ponta'];p2=fields['consumo_kwh_fora_ponta']
+    if p1 is not None and p2 is not None:
+        total=p1+p2
+        if base.get('consumo_kwh') is not None and abs(total-base['consumo_kwh'])>1.01:
+            fields['status']='conferencia';fields['motivo']='Consumos por posto divergem do total medido'
+        fields['consumo_kwh']=base['consumo_kwh'] if base.get('consumo_kwh') is not None else total
+    # Medição DANF3E, ou medição legada na linha do extrato.
+    # Linhas DA DEMANDA USD podem ter 400kW faturado e 227kW medido.
+    m = re.search(r'(?m)^\s*DEMANDA\s+(?:USD\s+)?(?!ISENTA)(\d+)\s+(\d+)\s+('+numeric+r')\s+('+numeric+r')\s+('+numeric+r')',text,re.I)
+    if m:
+        fields['demanda_medida_kw']=parse_decimal(m.group(3))
+        fields['demanda_contratada_kw']=parse_decimal(m.group(4))
+        fields['demanda_faturada_kw']=parse_decimal(m.group(5))
+    else:
+        fields['demanda_faturada_kw']=None
+    with fitz.open(stream=pdf_bytes,filetype='pdf') as doc:
+        extrato=doc[-1].get_text(sort=True)
+    # Injeção: preferir linha de medição 'ENERGIA GERADA/INJETADA'.
+    # NÃO somar linhas TE + TUSD, pois são as mesmas quantidades de créditos.
+    for key,position in [('ponta','PONTA'),('fora_ponta',r'FORA\s+P')]:
+        mm=re.search(r'ENERGIA GERADA/INJETADA\s+'+position+r'\s+\d+\s+\d+\s+('+numeric+r')(?=\s|$)',extrato,re.I)
+        fields['energia_injetada_kwh_'+key]=parse_decimal(mm.group(1)) if mm else None
+    # Preços e montantes saem do extrato individual na última página,
+    # cujas colunas Medido/Faturado/Tarifa/Total estão alinhadas.
+    line_patterns={
+        'te_ponta':r'ENERGIA ELETRICA TE PONTA',
+        'tusd_ponta':r'ENERGIA ELETRICA (?:USD|TUSD) PONTA',
+        'te_fora_ponta':r'ENERGIA ELETRICA TE F\s*PONTA',
+        'tusd_fora_ponta':r'ENERGIA ELETRICA (?:USD|TUSD) F\s*PONTA'
+    }
+    for key,label in line_patterns.items():
+        match=re.search(r'(?m)^\s*'+label+r'\s+(\d+)\s+(\d+)\s+('+numeric+r')\s+('+numeric+r')\s+('+numeric+r')\s+('+numeric+r')',extrato,re.I)
+        fields['preco_faturado_'+key]=parse_decimal(match.group(5)) if match else None
+        fields['valor_'+key+'_reais']=br_money_float(match.group(6)) if match else None
+        fields['tarifa_'+key]=None
+    section=extrato[extrato.find('Informações Suplementares'):] if 'Informações Suplementares' in extrato else ''
+    for label,postfix in [('CONSUMO F PONTA','fora_ponta'),('CONSUMO PTA','ponta')]:
+        m=re.search(r'(?m)^\s*'+label+r'\s+('+numeric+r')(?:\s+('+numeric+r'))?',section,re.I)
+        if m and m.group(2):
+            fields['tarifa_tusd_'+postfix]=parse_decimal(m.group(1))
+            fields['tarifa_te_'+postfix]=parse_decimal(m.group(2))
+    for prefix in ('tarifa','preco_faturado'):
+        for postfix in ('ponta','fora_ponta'):
+            te=fields.get(prefix+'_te_'+postfix);tusd=fields.get(prefix+'_tusd_'+postfix)
+            fields[prefix+'_total_'+postfix] = round(te+tusd,6) if te is not None and tusd is not None else None
+    injected=[fields['energia_injetada_kwh_ponta'],fields['energia_injetada_kwh_fora_ponta']]
+    fields['energia_injetada_kwh']=sum(x for x in injected if x is not None) if any(x is not None for x in injected) else base.get('energia_injetada_kwh')
+    fields['valor_reais']=round(fields['valor_centavos']/100,2) if fields.get('valor_centavos') is not None else None
+    fields['validacao_campos']={k:('identificado' if fields.get(k) is not None else 'indisponivel') for k in
+        ['consumo_kwh_ponta','consumo_kwh_fora_ponta','demanda_medida_kw','demanda_contratada_kw','energia_injetada_kwh_fora_ponta','tarifa_te_ponta','tarifa_tusd_ponta','tarifa_te_fora_ponta','tarifa_tusd_fora_ponta']}
+    return fields
+
+
+def parse_historical_pdf(pdf_bytes):
+    """Histórico Copel CMEHFAT0: 3 referências por página, texto lateral.
+    Os blocos são lidos por coordenadas de texto vetorial, não por OCR.
+    Retorna registros independentes por mês, com tarifas e leituras desconhecidas.
+    """
+    results=[]
+    with fitz.open(stream=pdf_bytes,filetype='pdf') as doc:
+        for page in doc:
+            words=page.get_text('words')
+            dates=sorted([w for w in words if re.fullmatch(r'(?:0[1-9]|1[0-2])/20\d{2}',w[4]) and 140<w[0]<500 and w[1]>720],key=lambda w:w[0])
+            for w in dates:
+                ref=w[4]; x=w[0]
+                def at(dx, y, tolerance=16):
+                    candidates=[z for z in words if abs(z[0]-(x+dx))<tolerance and abs((z[1]+z[3])/2-y)<20 and re.fullmatch(r'[\d,.]+',z[4])]
+                    return min(candidates,key=lambda z:abs(z[0]-(x+dx))+abs((z[1]+z[3])/2-y)) [4] if candidates else None
+                # coordenadas fixas do formulário CMEHFAT0 (colunas deslocadas 121,92 pt)
+                p=at(15,665); fp=at(15,617); demand=at(75,566); contract=at(74,82); total=at(91,71)
+                # total monetário fica perto de x+91, y=70; medida no bloco em x+75.
+                k1=parse_decimal(p); k2=parse_decimal(fp); d=parse_decimal(demand); c=parse_decimal(contract)
+                v=int(round(float(total.replace(',',''))*100)) if total and re.fullmatch(r'[\d,]+\.\d{2}',total) else None
+                problems=[]
+                if k1 is None or k2 is None: problems.append('consumo por posto não identificado')
+                if v is None: problems.append('total da fatura não identificado')
+                if d is None: problems.append('demanda medida não identificada')
+                if c is None: problems.append('demanda contratada não identificada')
+                period=ref[3:]+'-'+ref[:2]
+                record={'tipo_documento':'historico_faturamento','competencia':period,'competencia_copel':period,'mes_consumo':period,
+                    'leitura_anterior':None,'leitura_atual':None,'consumo_kwh_ponta':k1,'consumo_kwh_fora_ponta':k2,
+                    'consumo_kwh':(k1+k2 if k1 is not None and k2 is not None else None),
+                    'demanda_medida_kw':d,'demanda_contratada_kw':c,'demanda_faturada_kw':None,
+                    'energia_injetada_kwh_ponta':None,'energia_injetada_kwh_fora_ponta':None,'energia_injetada_kwh':None,
+                    'valor_centavos':v,'valor_reais':round(v/100,2) if v is not None else None,
+                    'status':'conferencia' if problems else 'parcial','motivo':'; '.join(problems) if problems else 'Histórico sem tarifas TE/TUSD e datas exatas de leitura',
+                    '_uc':None}
+                for prefix in ('tarifa','preco_faturado'):
+                    for key in ('te_ponta','tusd_ponta','te_fora_ponta','tusd_fora_ponta','total_ponta','total_fora_ponta'):
+                        record[prefix+'_'+key]=None
+                for key in ('te_ponta','tusd_ponta','te_fora_ponta','tusd_fora_ponta'):
+                    record['valor_'+key+'_reais']=None
+                record['validacao_campos']={'consumo_kwh_ponta':'identificado' if k1 is not None else 'indisponivel',
+                    'consumo_kwh_fora_ponta':'identificado' if k2 is not None else 'indisponivel',
+                    'valor_reais':'identificado' if v is not None else 'indisponivel'}
+                results.append(record)
+    return results
+
+
+def parse_pdf_records(pdf_bytes):
+    try:
+        with fitz.open(stream=pdf_bytes,filetype='pdf') as doc:
+            if doc.is_encrypted: return [{'status':'conferencia','motivo':'PDF protegido por senha'}]
+            prefix='\n'.join(page.get_text(sort=False)[:1500] for page in doc)
+        if 'CMEHFAT0' in prefix or 'Histórico de Faturamento' in prefix:
+            records=parse_historical_pdf(pdf_bytes)
+            return records or [{'status':'conferencia','motivo':'Nenhum mês identificado no histórico'}]
+        return [extract_detailed_bill(pdf_bytes)]
+    except Exception:
+        return [{'status':'conferencia','motivo':'PDF não interpretável'}]
+
+
 def parse_pdf_invoice(pdf_bytes):
     """Extrai texto do PDF; não tenta OCR e nunca estima valores ausentes."""
     try:
@@ -399,68 +569,80 @@ def scan():
     next_bills = {}
     processed = 0
     key = os.environ.get('ENERGIA_ID_CHAVE', '').strip() or password
-    # A chave HMAC e usada apenas na geracao de identificadores pseudonimos;
-    # configurar chave exclusiva evita altera-los quando a senha WebDAV for trocada.
     for item in files:
         file_id = stable_id(key, item['relative'], 20)
         identity = {'etag': item['etag'], 'tamanho': item['size']}
         next_files[file_id] = identity
-        if (item['etag'] and identity == previous_files.get(file_id)
-                and file_id in old_bills
-                and old_bills[file_id].get('extrator_versao') == PARSER_VERSION):
-            cached = dict(old_bills[file_id])
-            cached.pop('origem_removida', None)
-            cached['status'] = cached.get('status_extracao', cached['status'])
-            cached['motivo'] = cached.get('motivo_extracao', cached.get('motivo'))
-            next_bills[file_id] = cached
+        cached = [dict(b) for b in old_bills.values() if b.get('arquivo_id',b['id']) == file_id]
+        if (item['etag'] and identity == previous_files.get(file_id) and cached
+                and all(b.get('extrator_versao') == PARSER_VERSION for b in cached)):
+            for rec in cached:
+                rec.pop('origem_removida', None)
+                rec['status'] = rec.get('status_extracao', rec['status'])
+                rec['motivo'] = rec.get('motivo_extracao', rec.get('motivo'))
+                next_bills[rec['id']] = rec
             continue
         pdf = client.download(item)
-        if pdf is None:
-            record = {'status': 'conferencia', 'motivo': 'PDF excede 15 MB',
-                      'competencia': None, 'valor_centavos': None, 'consumo_kwh': None,
-                      'demanda_medida_kw': None, '_uc': None}
-        else:
-            record = parse_pdf_invoice(pdf)
-        source_group = record.pop('_uc', None) or ('pasta:' + item['relative'].rsplit('/', 1)[0])
-        record['id'] = file_id
-        record['extrator_versao'] = PARSER_VERSION
-        record['status_extracao'] = record['status']
-        record['motivo_extracao'] = record['motivo']
-        record['unidade'] = 'UC-' + stable_id(key, source_group, 6).upper()
-        record['versao'] = item['etag'] or hashlib.sha256(pdf or b'').hexdigest()[:16]
-        next_bills[file_id] = record
+        records = parse_pdf_records(pdf) if pdf is not None else [{'status':'conferencia','motivo':'PDF excede 15 MB'}]
+        # A UC pode ser identificada por um trecho único do documento histórico,
+        # sem armazenar ou publicar a UC real.
+        historical_uc=None
+        if pdf is not None and any(b.get('tipo_documento')=='historico_faturamento' for b in records):
+            with fitz.open(stream=pdf,filetype='pdf') as d:
+                t=d[0].get_text(sort=False)
+                match=re.search(r'Nº\. da UC\.:?\s*(?:.{0,100}\n)?',t)
+                nums=re.findall(r'(?m)^\s*\d{8,16}\s*$',t)
+                historical_uc=nums[0].strip() if nums else None
+        for index,record in enumerate(records):
+            source_group = record.pop('_uc', None) or historical_uc or ('pasta:' + item['relative'].rsplit('/', 1)[0])
+            rec_id=file_id if len(records)==1 else stable_id(key,file_id+'|'+str(record.get('competencia'))+'|'+str(index),20)
+            record['id']=rec_id
+            record['arquivo_id']=file_id
+            record['extrator_versao']=PARSER_VERSION
+            record['status_extracao']=record.get('status','conferencia')
+            record['motivo_extracao']=record.get('motivo')
+            record['unidade']='UC-'+stable_id(key,source_group,6).upper()
+            record['versao']=item['etag'] or hashlib.sha256(pdf or b'').hexdigest()[:16]
+            next_bills[rec_id]=record
         processed += 1
     # Itens removidos da origem nao sao apagados automaticamente da base historica;
     # sao mantidos e sinalizados para auditoria, se ja haviam sido importados.
     missing = 0
     for file_id, bill in old_bills.items():
-        if file_id not in next_files:
+        if bill.get('arquivo_id', file_id) not in next_files:
             item = dict(bill)
             item['origem_removida'] = True
             next_bills[file_id] = item
             missing += 1
-    items = sorted(next_bills.values(), key=lambda x: ((x.get('competencia') or ''), x['id']))
-    # PDFs com o mesmo valor/mes e UC nao devem ser somados de forma silenciosa.
-    # Marcar duplicidade para conferencia; nenhuma contagem financeira dupla.
+    items = sorted(next_bills.values(), key=lambda x: ((x.get('mes_consumo') or x.get('competencia') or ''), x['id']))
+    # Uma referência mensal pode aparecer no relatório e na fatura individual.
+    # Priorizar documento individual; nunca somar dois documentos da mesma UC/mês.
     grouped = {}
     for r in items:
-        if r.get('status') == 'ok' and not r.get('origem_removida'):
-            grouped.setdefault((r['unidade'], r['competencia']), []).append(r)
+        if r.get('status') in ('ok','parcial') and not r.get('origem_removida'):
+            grouped.setdefault((r['unidade'],r.get('mes_consumo') or r.get('competencia')),[]).append(r)
     for group in grouped.values():
-        if len(group) > 1:
-            for r in group:
-                r['status'] = 'conferencia'
-                r['motivo'] = 'Mais de uma fatura para a mesma unidade e competência'
+        if len(group)>1:
+            singles=[b for b in group if b.get('tipo_documento')=='fatura_individual']
+            if len(singles)==1:
+                for b in group:
+                    if b is not singles[0]:
+                        b['status']='duplicado';b['motivo']='Substituído por fatura individual da mesma unidade e período'
+            else:
+                for b in group:
+                    b['status']='conferencia';b['motivo']='Múltiplos documentos para a mesma unidade e período'
 
     now = now_utc()
-    result = {'schema': 1, 'atualizado_em': now, 'faturas': items}
+    result = {'schema': 2, 'atualizado_em': now, 'faturas': items}
     save_json(DATA_FILE, result)
     save_json(STATE_FILE, {'schema': 1, 'arquivos': next_files})
     save_json(STATUS_FILE, {'estado': 'sucesso', 'ultima_tentativa': now,
                             'ultima_sincronizacao': now, 'arquivos_localizados': len(files),
                             'novos_ou_alterados': processed,
-                            'faturas_processadas': sum(b.get('status') == 'ok' and not b.get('origem_removida') for b in items),
-                            'faturas_conferencia': sum(b.get('status') != 'ok' or bool(b.get('origem_removida')) for b in items),
+                            'faturas_processadas': sum(b.get('status') in ('ok','parcial') and not b.get('origem_removida') for b in items),
+                            'faturas_conferencia': sum(b.get('status') == 'conferencia' or bool(b.get('origem_removida')) for b in items),
+                            'faturas_parciais': sum(b.get('status') == 'parcial' for b in items),
+                            'faturas_duplicadas': sum(b.get('status') == 'duplicado' for b in items),
                             'origens_removidas': missing, 'mensagem': 'Consulta WebDAV concluída'})
     return len(files), processed
 

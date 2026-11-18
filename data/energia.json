@@ -1,6 +1,17 @@
 {
-  "atualizado_em": "2026-11-18T07:36:39Z",
+  "atualizado_em": "2026-11-18T20:37:17Z",
   "faturas": [
+    {
+      "arquivo_id": "4110d0ee4a000ef3c8d7",
+      "extrator_versao": "copel-multiformato-4",
+      "id": "4110d0ee4a000ef3c8d7",
+      "motivo": "PDF protegido por senha",
+      "motivo_extracao": "PDF protegido por senha",
+      "status": "conferencia",
+      "status_extracao": "conferencia",
+      "unidade": "UC-1565EF",
+      "versao": "5f33096126ce3a653dac5216c46c5fe8"
+    },
     {
       "arquivo_id": "db3d7c6e6292008db53b",
       "competencia": "2018-04",

@@ -54,7 +54,7 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/energia.json data/energia_estado.json data/energia_status.json
+          git add data/energia.json data/energia_estado.json data/energia_status.json data/energia_auditoria.json
           if ! git diff --cached --quiet; then
             git commit -m 'Sincronizar indicador de energia da Copel'
             git pull --rebase origin "${GITHUB_REF_NAME}"

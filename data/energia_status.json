@@ -1,13 +1,13 @@
 {
   "arquivos_localizados": 64,
   "estado": "sucesso",
-  "faturas_conferencia": 24,
+  "faturas_conferencia": 0,
   "faturas_duplicadas": 0,
-  "faturas_parciais": 60,
+  "faturas_parciais": 36,
   "faturas_processadas": 97,
   "mensagem": "Consulta WebDAV concluída",
-  "novos_ou_alterados": 0,
+  "novos_ou_alterados": 64,
   "origens_removidas": 24,
-  "ultima_sincronizacao": "2026-11-23T07:46:56Z",
-  "ultima_tentativa": "2026-11-23T07:46:56Z"
+  "ultima_sincronizacao": "2026-11-23T14:31:35Z",
+  "ultima_tentativa": "2026-11-23T14:31:35Z"
 }

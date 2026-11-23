@@ -1,7 +1,8 @@
 {
-  "atualizado_em": "2026-11-23T07:46:56Z",
+  "atualizado_em": "2026-11-23T14:31:35Z",
   "faturas": [
     {
+      "_uc": null,
       "arquivo_id": "db3d7c6e6292008db53b",
       "competencia": "2018-04",
       "competencia_copel": "2018-04",
@@ -14,8 +15,9 @@
       "energia_injetada_kwh": null,
       "energia_injetada_kwh_fora_ponta": null,
       "energia_injetada_kwh_ponta": null,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "42b4a49ad8dd77523a0d",
+      "layout_detectado": "historico_cmehfat0",
       "leitura_anterior": null,
       "leitura_atual": null,
       "mes_consumo": "2018-04",
@@ -36,7 +38,7 @@
       "tarifa_tusd_fora_ponta": null,
       "tarifa_tusd_ponta": null,
       "tipo_documento": "historico_faturamento",
-      "unidade": "UC-27E88A",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -51,6 +53,7 @@
       "versao": "9e663e0ce4aca0b8305aa74a99dfd8aa"
     },
     {
+      "_uc": null,
       "arquivo_id": "db3d7c6e6292008db53b",
       "competencia": "2018-05",
       "competencia_copel": "2018-05",
@@ -63,8 +66,9 @@
       "energia_injetada_kwh": null,
       "energia_injetada_kwh_fora_ponta": null,
       "energia_injetada_kwh_ponta": null,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "bfaa97b27db5b123975f",
+      "layout_detectado": "historico_cmehfat0",
       "leitura_anterior": null,
       "leitura_atual": null,
       "mes_consumo": "2018-05",
@@ -85,7 +89,7 @@
       "tarifa_tusd_fora_ponta": null,
       "tarifa_tusd_ponta": null,
       "tipo_documento": "historico_faturamento",
-      "unidade": "UC-27E88A",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -100,6 +104,7 @@
       "versao": "9e663e0ce4aca0b8305aa74a99dfd8aa"
     },
     {
+      "_uc": null,
       "arquivo_id": "db3d7c6e6292008db53b",
       "competencia": "2018-06",
       "competencia_copel": "2018-06",
@@ -112,8 +117,9 @@
       "energia_injetada_kwh": null,
       "energia_injetada_kwh_fora_ponta": null,
       "energia_injetada_kwh_ponta": null,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "fad38b5ed653b35e1cfb",
+      "layout_detectado": "historico_cmehfat0",
       "leitura_anterior": null,
       "leitura_atual": null,
       "mes_consumo": "2018-06",
@@ -134,7 +140,7 @@
       "tarifa_tusd_fora_ponta": null,
       "tarifa_tusd_ponta": null,
       "tipo_documento": "historico_faturamento",
-      "unidade": "UC-27E88A",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -149,6 +155,7 @@
       "versao": "9e663e0ce4aca0b8305aa74a99dfd8aa"
     },
     {
+      "_uc": null,
       "arquivo_id": "db3d7c6e6292008db53b",
       "competencia": "2018-07",
       "competencia_copel": "2018-07",
@@ -161,8 +168,9 @@
       "energia_injetada_kwh": null,
       "energia_injetada_kwh_fora_ponta": null,
       "energia_injetada_kwh_ponta": null,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "f37701b44f212a27547e",
+      "layout_detectado": "historico_cmehfat0",
       "leitura_anterior": null,
       "leitura_atual": null,
       "mes_consumo": "2018-07",
@@ -183,7 +191,7 @@
       "tarifa_tusd_fora_ponta": null,
       "tarifa_tusd_ponta": null,
       "tipo_documento": "historico_faturamento",
-      "unidade": "UC-27E88A",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -198,6 +206,7 @@
       "versao": "9e663e0ce4aca0b8305aa74a99dfd8aa"
     },
     {
+      "_uc": null,
       "arquivo_id": "db3d7c6e6292008db53b",
       "competencia": "2018-08",
       "competencia_copel": "2018-08",
@@ -210,8 +219,9 @@
       "energia_injetada_kwh": null,
       "energia_injetada_kwh_fora_ponta": null,
       "energia_injetada_kwh_ponta": null,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "1287c3f45b49ba6b3094",
+      "layout_detectado": "historico_cmehfat0",
       "leitura_anterior": null,
       "leitura_atual": null,
       "mes_consumo": "2018-08",
@@ -232,7 +242,7 @@
       "tarifa_tusd_fora_ponta": null,
       "tarifa_tusd_ponta": null,
       "tipo_documento": "historico_faturamento",
-      "unidade": "UC-27E88A",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -247,6 +257,7 @@
       "versao": "9e663e0ce4aca0b8305aa74a99dfd8aa"
     },
     {
+      "_uc": null,
       "arquivo_id": "db3d7c6e6292008db53b",
       "competencia": "2018-09",
       "competencia_copel": "2018-09",
@@ -259,8 +270,9 @@
       "energia_injetada_kwh": null,
       "energia_injetada_kwh_fora_ponta": null,
       "energia_injetada_kwh_ponta": null,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "6c54d257005a06461224",
+      "layout_detectado": "historico_cmehfat0",
       "leitura_anterior": null,
       "leitura_atual": null,
       "mes_consumo": "2018-09",
@@ -281,7 +293,7 @@
       "tarifa_tusd_fora_ponta": null,
       "tarifa_tusd_ponta": null,
       "tipo_documento": "historico_faturamento",
-      "unidade": "UC-27E88A",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -296,6 +308,7 @@
       "versao": "9e663e0ce4aca0b8305aa74a99dfd8aa"
     },
     {
+      "_uc": null,
       "arquivo_id": "db3d7c6e6292008db53b",
       "competencia": "2018-10",
       "competencia_copel": "2018-10",
@@ -308,8 +321,9 @@
       "energia_injetada_kwh": null,
       "energia_injetada_kwh_fora_ponta": null,
       "energia_injetada_kwh_ponta": null,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "6e6bf8e2960b0d6d19d9",
+      "layout_detectado": "historico_cmehfat0",
       "leitura_anterior": null,
       "leitura_atual": null,
       "mes_consumo": "2018-10",
@@ -330,7 +344,7 @@
       "tarifa_tusd_fora_ponta": null,
       "tarifa_tusd_ponta": null,
       "tipo_documento": "historico_faturamento",
-      "unidade": "UC-27E88A",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -345,6 +359,7 @@
       "versao": "9e663e0ce4aca0b8305aa74a99dfd8aa"
     },
     {
+      "_uc": null,
       "arquivo_id": "db3d7c6e6292008db53b",
       "competencia": "2018-11",
       "competencia_copel": "2018-11",
@@ -357,8 +372,9 @@
       "energia_injetada_kwh": null,
       "energia_injetada_kwh_fora_ponta": null,
       "energia_injetada_kwh_ponta": null,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "f492cfe864443c8663b6",
+      "layout_detectado": "historico_cmehfat0",
       "leitura_anterior": null,
       "leitura_atual": null,
       "mes_consumo": "2018-11",
@@ -379,7 +395,7 @@
       "tarifa_tusd_fora_ponta": null,
       "tarifa_tusd_ponta": null,
       "tipo_documento": "historico_faturamento",
-      "unidade": "UC-27E88A",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -394,6 +410,7 @@
       "versao": "9e663e0ce4aca0b8305aa74a99dfd8aa"
     },
     {
+      "_uc": null,
       "arquivo_id": "db3d7c6e6292008db53b",
       "competencia": "2018-12",
       "competencia_copel": "2018-12",
@@ -406,8 +423,9 @@
       "energia_injetada_kwh": null,
       "energia_injetada_kwh_fora_ponta": null,
       "energia_injetada_kwh_ponta": null,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "173d5eb4eef8d9d8f137",
+      "layout_detectado": "historico_cmehfat0",
       "leitura_anterior": null,
       "leitura_atual": null,
       "mes_consumo": "2018-12",
@@ -428,7 +446,7 @@
       "tarifa_tusd_fora_ponta": null,
       "tarifa_tusd_ponta": null,
       "tipo_documento": "historico_faturamento",
-      "unidade": "UC-27E88A",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -443,6 +461,7 @@
       "versao": "9e663e0ce4aca0b8305aa74a99dfd8aa"
     },
     {
+      "_uc": null,
       "arquivo_id": "db3d7c6e6292008db53b",
       "competencia": "2019-01",
       "competencia_copel": "2019-01",
@@ -455,8 +474,9 @@
       "energia_injetada_kwh": null,
       "energia_injetada_kwh_fora_ponta": null,
       "energia_injetada_kwh_ponta": null,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "e5a8f4f67b4564a3144c",
+      "layout_detectado": "historico_cmehfat0",
       "leitura_anterior": null,
       "leitura_atual": null,
       "mes_consumo": "2019-01",
@@ -477,7 +497,7 @@
       "tarifa_tusd_fora_ponta": null,
       "tarifa_tusd_ponta": null,
       "tipo_documento": "historico_faturamento",
-      "unidade": "UC-27E88A",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -492,6 +512,7 @@
       "versao": "9e663e0ce4aca0b8305aa74a99dfd8aa"
     },
     {
+      "_uc": null,
       "arquivo_id": "db3d7c6e6292008db53b",
       "competencia": "2019-02",
       "competencia_copel": "2019-02",
@@ -504,8 +525,9 @@
       "energia_injetada_kwh": null,
       "energia_injetada_kwh_fora_ponta": null,
       "energia_injetada_kwh_ponta": null,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "b30837e73dfdd8a39f98",
+      "layout_detectado": "historico_cmehfat0",
       "leitura_anterior": null,
       "leitura_atual": null,
       "mes_consumo": "2019-02",
@@ -526,7 +548,7 @@
       "tarifa_tusd_fora_ponta": null,
       "tarifa_tusd_ponta": null,
       "tipo_documento": "historico_faturamento",
-      "unidade": "UC-27E88A",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -541,6 +563,7 @@
       "versao": "9e663e0ce4aca0b8305aa74a99dfd8aa"
     },
     {
+      "_uc": null,
       "arquivo_id": "db3d7c6e6292008db53b",
       "competencia": "2019-03",
       "competencia_copel": "2019-03",
@@ -553,8 +576,9 @@
       "energia_injetada_kwh": null,
       "energia_injetada_kwh_fora_ponta": null,
       "energia_injetada_kwh_ponta": null,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "273cbc963cec9470d89e",
+      "layout_detectado": "historico_cmehfat0",
       "leitura_anterior": null,
       "leitura_atual": null,
       "mes_consumo": "2019-03",
@@ -575,7 +599,7 @@
       "tarifa_tusd_fora_ponta": null,
       "tarifa_tusd_ponta": null,
       "tipo_documento": "historico_faturamento",
-      "unidade": "UC-27E88A",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -590,6 +614,7 @@
       "versao": "9e663e0ce4aca0b8305aa74a99dfd8aa"
     },
     {
+      "_uc": null,
       "arquivo_id": "41e77be9ca633df74496",
       "competencia": "2019-04",
       "competencia_copel": "2019-04",
@@ -602,8 +627,9 @@
       "energia_injetada_kwh": null,
       "energia_injetada_kwh_fora_ponta": null,
       "energia_injetada_kwh_ponta": null,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "c541e7ec605d0bdd49dd",
+      "layout_detectado": "historico_cmehfat0",
       "leitura_anterior": null,
       "leitura_atual": null,
       "mes_consumo": "2019-04",
@@ -624,7 +650,7 @@
       "tarifa_tusd_fora_ponta": null,
       "tarifa_tusd_ponta": null,
       "tipo_documento": "historico_faturamento",
-      "unidade": "UC-27E88A",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -639,6 +665,7 @@
       "versao": "f4c2bb94455c3b4fb9936d955b4ee694"
     },
     {
+      "_uc": null,
       "arquivo_id": "41e77be9ca633df74496",
       "competencia": "2019-05",
       "competencia_copel": "2019-05",
@@ -651,8 +678,9 @@
       "energia_injetada_kwh": null,
       "energia_injetada_kwh_fora_ponta": null,
       "energia_injetada_kwh_ponta": null,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "24d6e2b755ded0567ab8",
+      "layout_detectado": "historico_cmehfat0",
       "leitura_anterior": null,
       "leitura_atual": null,
       "mes_consumo": "2019-05",
@@ -673,7 +701,7 @@
       "tarifa_tusd_fora_ponta": null,
       "tarifa_tusd_ponta": null,
       "tipo_documento": "historico_faturamento",
-      "unidade": "UC-27E88A",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -688,6 +716,7 @@
       "versao": "f4c2bb94455c3b4fb9936d955b4ee694"
     },
     {
+      "_uc": null,
       "arquivo_id": "41e77be9ca633df74496",
       "competencia": "2019-06",
       "competencia_copel": "2019-06",
@@ -700,8 +729,9 @@
       "energia_injetada_kwh": null,
       "energia_injetada_kwh_fora_ponta": null,
       "energia_injetada_kwh_ponta": null,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "d53cfcb218e8f9280c2f",
+      "layout_detectado": "historico_cmehfat0",
       "leitura_anterior": null,
       "leitura_atual": null,
       "mes_consumo": "2019-06",
@@ -722,7 +752,7 @@
       "tarifa_tusd_fora_ponta": null,
       "tarifa_tusd_ponta": null,
       "tipo_documento": "historico_faturamento",
-      "unidade": "UC-27E88A",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -737,6 +767,7 @@
       "versao": "f4c2bb94455c3b4fb9936d955b4ee694"
     },
     {
+      "_uc": null,
       "arquivo_id": "41e77be9ca633df74496",
       "competencia": "2019-07",
       "competencia_copel": "2019-07",
@@ -749,8 +780,9 @@
       "energia_injetada_kwh": null,
       "energia_injetada_kwh_fora_ponta": null,
       "energia_injetada_kwh_ponta": null,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "d28dde3863e0b9d66d00",
+      "layout_detectado": "historico_cmehfat0",
       "leitura_anterior": null,
       "leitura_atual": null,
       "mes_consumo": "2019-07",
@@ -771,7 +803,7 @@
       "tarifa_tusd_fora_ponta": null,
       "tarifa_tusd_ponta": null,
       "tipo_documento": "historico_faturamento",
-      "unidade": "UC-27E88A",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -786,6 +818,7 @@
       "versao": "f4c2bb94455c3b4fb9936d955b4ee694"
     },
     {
+      "_uc": null,
       "arquivo_id": "41e77be9ca633df74496",
       "competencia": "2019-08",
       "competencia_copel": "2019-08",
@@ -798,8 +831,9 @@
       "energia_injetada_kwh": null,
       "energia_injetada_kwh_fora_ponta": null,
       "energia_injetada_kwh_ponta": null,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "0c694c289473a7b569b7",
+      "layout_detectado": "historico_cmehfat0",
       "leitura_anterior": null,
       "leitura_atual": null,
       "mes_consumo": "2019-08",
@@ -820,7 +854,7 @@
       "tarifa_tusd_fora_ponta": null,
       "tarifa_tusd_ponta": null,
       "tipo_documento": "historico_faturamento",
-      "unidade": "UC-27E88A",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -835,6 +869,7 @@
       "versao": "f4c2bb94455c3b4fb9936d955b4ee694"
     },
     {
+      "_uc": null,
       "arquivo_id": "41e77be9ca633df74496",
       "competencia": "2019-09",
       "competencia_copel": "2019-09",
@@ -847,8 +882,9 @@
       "energia_injetada_kwh": null,
       "energia_injetada_kwh_fora_ponta": null,
       "energia_injetada_kwh_ponta": null,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "83198bd3cb3aa1dbc1a7",
+      "layout_detectado": "historico_cmehfat0",
       "leitura_anterior": null,
       "leitura_atual": null,
       "mes_consumo": "2019-09",
@@ -869,7 +905,7 @@
       "tarifa_tusd_fora_ponta": null,
       "tarifa_tusd_ponta": null,
       "tipo_documento": "historico_faturamento",
-      "unidade": "UC-27E88A",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -884,6 +920,7 @@
       "versao": "f4c2bb94455c3b4fb9936d955b4ee694"
     },
     {
+      "_uc": null,
       "arquivo_id": "41e77be9ca633df74496",
       "competencia": "2019-10",
       "competencia_copel": "2019-10",
@@ -896,8 +933,9 @@
       "energia_injetada_kwh": null,
       "energia_injetada_kwh_fora_ponta": null,
       "energia_injetada_kwh_ponta": null,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "3c3044efbf977ac8ebb2",
+      "layout_detectado": "historico_cmehfat0",
       "leitura_anterior": null,
       "leitura_atual": null,
       "mes_consumo": "2019-10",
@@ -918,7 +956,7 @@
       "tarifa_tusd_fora_ponta": null,
       "tarifa_tusd_ponta": null,
       "tipo_documento": "historico_faturamento",
-      "unidade": "UC-27E88A",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -933,6 +971,7 @@
       "versao": "f4c2bb94455c3b4fb9936d955b4ee694"
     },
     {
+      "_uc": null,
       "arquivo_id": "41e77be9ca633df74496",
       "competencia": "2019-11",
       "competencia_copel": "2019-11",
@@ -945,8 +984,9 @@
       "energia_injetada_kwh": null,
       "energia_injetada_kwh_fora_ponta": null,
       "energia_injetada_kwh_ponta": null,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "253e44c4f96adc56a66e",
+      "layout_detectado": "historico_cmehfat0",
       "leitura_anterior": null,
       "leitura_atual": null,
       "mes_consumo": "2019-11",
@@ -967,7 +1007,7 @@
       "tarifa_tusd_fora_ponta": null,
       "tarifa_tusd_ponta": null,
       "tipo_documento": "historico_faturamento",
-      "unidade": "UC-27E88A",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -982,6 +1022,7 @@
       "versao": "f4c2bb94455c3b4fb9936d955b4ee694"
     },
     {
+      "_uc": null,
       "arquivo_id": "41e77be9ca633df74496",
       "competencia": "2019-12",
       "competencia_copel": "2019-12",
@@ -994,8 +1035,9 @@
       "energia_injetada_kwh": null,
       "energia_injetada_kwh_fora_ponta": null,
       "energia_injetada_kwh_ponta": null,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "d1763ec6e878f19403fc",
+      "layout_detectado": "historico_cmehfat0",
       "leitura_anterior": null,
       "leitura_atual": null,
       "mes_consumo": "2019-12",
@@ -1016,7 +1058,7 @@
       "tarifa_tusd_fora_ponta": null,
       "tarifa_tusd_ponta": null,
       "tipo_documento": "historico_faturamento",
-      "unidade": "UC-27E88A",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -1031,6 +1073,7 @@
       "versao": "f4c2bb94455c3b4fb9936d955b4ee694"
     },
     {
+      "_uc": null,
       "arquivo_id": "41e77be9ca633df74496",
       "competencia": "2020-01",
       "competencia_copel": "2020-01",
@@ -1043,8 +1086,9 @@
       "energia_injetada_kwh": null,
       "energia_injetada_kwh_fora_ponta": null,
       "energia_injetada_kwh_ponta": null,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "8c69dafb8348b3c2b5ad",
+      "layout_detectado": "historico_cmehfat0",
       "leitura_anterior": null,
       "leitura_atual": null,
       "mes_consumo": "2020-01",
@@ -1065,7 +1109,7 @@
       "tarifa_tusd_fora_ponta": null,
       "tarifa_tusd_ponta": null,
       "tipo_documento": "historico_faturamento",
-      "unidade": "UC-27E88A",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -1080,6 +1124,7 @@
       "versao": "f4c2bb94455c3b4fb9936d955b4ee694"
     },
     {
+      "_uc": null,
       "arquivo_id": "41e77be9ca633df74496",
       "competencia": "2020-02",
       "competencia_copel": "2020-02",
@@ -1092,8 +1137,9 @@
       "energia_injetada_kwh": null,
       "energia_injetada_kwh_fora_ponta": null,
       "energia_injetada_kwh_ponta": null,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "a7856012556e5b5516b3",
+      "layout_detectado": "historico_cmehfat0",
       "leitura_anterior": null,
       "leitura_atual": null,
       "mes_consumo": "2020-02",
@@ -1114,7 +1160,7 @@
       "tarifa_tusd_fora_ponta": null,
       "tarifa_tusd_ponta": null,
       "tipo_documento": "historico_faturamento",
-      "unidade": "UC-27E88A",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -1129,6 +1175,7 @@
       "versao": "f4c2bb94455c3b4fb9936d955b4ee694"
     },
     {
+      "_uc": null,
       "arquivo_id": "41e77be9ca633df74496",
       "competencia": "2020-03",
       "competencia_copel": "2020-03",
@@ -1141,8 +1188,9 @@
       "energia_injetada_kwh": null,
       "energia_injetada_kwh_fora_ponta": null,
       "energia_injetada_kwh_ponta": null,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "878f59fcc0d795c296ae",
+      "layout_detectado": "historico_cmehfat0",
       "leitura_anterior": null,
       "leitura_atual": null,
       "mes_consumo": "2020-03",
@@ -1163,7 +1211,7 @@
       "tarifa_tusd_fora_ponta": null,
       "tarifa_tusd_ponta": null,
       "tipo_documento": "historico_faturamento",
-      "unidade": "UC-27E88A",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -1178,6 +1226,7 @@
       "versao": "f4c2bb94455c3b4fb9936d955b4ee694"
     },
     {
+      "_uc": null,
       "arquivo_id": "280c479f7ee65218d059",
       "competencia": "2020-04",
       "competencia_copel": "2020-04",
@@ -1190,8 +1239,9 @@
       "energia_injetada_kwh": null,
       "energia_injetada_kwh_fora_ponta": null,
       "energia_injetada_kwh_ponta": null,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "932c36bbfd38eb59bc9e",
+      "layout_detectado": "historico_cmehfat0",
       "leitura_anterior": null,
       "leitura_atual": null,
       "mes_consumo": "2020-04",
@@ -1212,7 +1262,7 @@
       "tarifa_tusd_fora_ponta": null,
       "tarifa_tusd_ponta": null,
       "tipo_documento": "historico_faturamento",
-      "unidade": "UC-27E88A",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -1227,6 +1277,7 @@
       "versao": "fc8af3bb12a928192cc2fe1f2e4d1f0a"
     },
     {
+      "_uc": null,
       "arquivo_id": "280c479f7ee65218d059",
       "competencia": "2020-05",
       "competencia_copel": "2020-05",
@@ -1239,8 +1290,9 @@
       "energia_injetada_kwh": null,
       "energia_injetada_kwh_fora_ponta": null,
       "energia_injetada_kwh_ponta": null,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "29b864aac89be27ae9a4",
+      "layout_detectado": "historico_cmehfat0",
       "leitura_anterior": null,
       "leitura_atual": null,
       "mes_consumo": "2020-05",
@@ -1261,7 +1313,7 @@
       "tarifa_tusd_fora_ponta": null,
       "tarifa_tusd_ponta": null,
       "tipo_documento": "historico_faturamento",
-      "unidade": "UC-27E88A",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -1276,6 +1328,7 @@
       "versao": "fc8af3bb12a928192cc2fe1f2e4d1f0a"
     },
     {
+      "_uc": null,
       "arquivo_id": "280c479f7ee65218d059",
       "competencia": "2020-06",
       "competencia_copel": "2020-06",
@@ -1288,8 +1341,9 @@
       "energia_injetada_kwh": null,
       "energia_injetada_kwh_fora_ponta": null,
       "energia_injetada_kwh_ponta": null,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "db559c81bc7a5e604a52",
+      "layout_detectado": "historico_cmehfat0",
       "leitura_anterior": null,
       "leitura_atual": null,
       "mes_consumo": "2020-06",
@@ -1310,7 +1364,7 @@
       "tarifa_tusd_fora_ponta": null,
       "tarifa_tusd_ponta": null,
       "tipo_documento": "historico_faturamento",
-      "unidade": "UC-27E88A",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -1325,6 +1379,7 @@
       "versao": "fc8af3bb12a928192cc2fe1f2e4d1f0a"
     },
     {
+      "_uc": null,
       "arquivo_id": "280c479f7ee65218d059",
       "competencia": "2020-07",
       "competencia_copel": "2020-07",
@@ -1337,8 +1392,9 @@
       "energia_injetada_kwh": null,
       "energia_injetada_kwh_fora_ponta": null,
       "energia_injetada_kwh_ponta": null,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "173d1ee7a50b12c29d01",
+      "layout_detectado": "historico_cmehfat0",
       "leitura_anterior": null,
       "leitura_atual": null,
       "mes_consumo": "2020-07",
@@ -1359,7 +1415,7 @@
       "tarifa_tusd_fora_ponta": null,
       "tarifa_tusd_ponta": null,
       "tipo_documento": "historico_faturamento",
-      "unidade": "UC-27E88A",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -1374,6 +1430,7 @@
       "versao": "fc8af3bb12a928192cc2fe1f2e4d1f0a"
     },
     {
+      "_uc": null,
       "arquivo_id": "280c479f7ee65218d059",
       "competencia": "2020-08",
       "competencia_copel": "2020-08",
@@ -1386,8 +1443,9 @@
       "energia_injetada_kwh": null,
       "energia_injetada_kwh_fora_ponta": null,
       "energia_injetada_kwh_ponta": null,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "21266a5ae753f5accded",
+      "layout_detectado": "historico_cmehfat0",
       "leitura_anterior": null,
       "leitura_atual": null,
       "mes_consumo": "2020-08",
@@ -1408,7 +1466,7 @@
       "tarifa_tusd_fora_ponta": null,
       "tarifa_tusd_ponta": null,
       "tipo_documento": "historico_faturamento",
-      "unidade": "UC-27E88A",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -1423,6 +1481,7 @@
       "versao": "fc8af3bb12a928192cc2fe1f2e4d1f0a"
     },
     {
+      "_uc": null,
       "arquivo_id": "280c479f7ee65218d059",
       "competencia": "2020-09",
       "competencia_copel": "2020-09",
@@ -1435,8 +1494,9 @@
       "energia_injetada_kwh": null,
       "energia_injetada_kwh_fora_ponta": null,
       "energia_injetada_kwh_ponta": null,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "c9d7658e39e86a38cd61",
+      "layout_detectado": "historico_cmehfat0",
       "leitura_anterior": null,
       "leitura_atual": null,
       "mes_consumo": "2020-09",
@@ -1457,7 +1517,7 @@
       "tarifa_tusd_fora_ponta": null,
       "tarifa_tusd_ponta": null,
       "tipo_documento": "historico_faturamento",
-      "unidade": "UC-27E88A",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -1472,6 +1532,7 @@
       "versao": "fc8af3bb12a928192cc2fe1f2e4d1f0a"
     },
     {
+      "_uc": null,
       "arquivo_id": "280c479f7ee65218d059",
       "competencia": "2020-10",
       "competencia_copel": "2020-10",
@@ -1484,8 +1545,9 @@
       "energia_injetada_kwh": null,
       "energia_injetada_kwh_fora_ponta": null,
       "energia_injetada_kwh_ponta": null,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "837f6cb165e8cb0e710b",
+      "layout_detectado": "historico_cmehfat0",
       "leitura_anterior": null,
       "leitura_atual": null,
       "mes_consumo": "2020-10",
@@ -1506,7 +1568,7 @@
       "tarifa_tusd_fora_ponta": null,
       "tarifa_tusd_ponta": null,
       "tipo_documento": "historico_faturamento",
-      "unidade": "UC-27E88A",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -1521,6 +1583,7 @@
       "versao": "fc8af3bb12a928192cc2fe1f2e4d1f0a"
     },
     {
+      "_uc": null,
       "arquivo_id": "280c479f7ee65218d059",
       "competencia": "2020-11",
       "competencia_copel": "2020-11",
@@ -1533,8 +1596,9 @@
       "energia_injetada_kwh": null,
       "energia_injetada_kwh_fora_ponta": null,
       "energia_injetada_kwh_ponta": null,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "650917d68277506d7e71",
+      "layout_detectado": "historico_cmehfat0",
       "leitura_anterior": null,
       "leitura_atual": null,
       "mes_consumo": "2020-11",
@@ -1555,7 +1619,7 @@
       "tarifa_tusd_fora_ponta": null,
       "tarifa_tusd_ponta": null,
       "tipo_documento": "historico_faturamento",
-      "unidade": "UC-27E88A",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -1570,6 +1634,7 @@
       "versao": "fc8af3bb12a928192cc2fe1f2e4d1f0a"
     },
     {
+      "_uc": null,
       "arquivo_id": "280c479f7ee65218d059",
       "competencia": "2020-12",
       "competencia_copel": "2020-12",
@@ -1582,8 +1647,9 @@
       "energia_injetada_kwh": null,
       "energia_injetada_kwh_fora_ponta": null,
       "energia_injetada_kwh_ponta": null,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "d2c68f36aeab768ca65f",
+      "layout_detectado": "historico_cmehfat0",
       "leitura_anterior": null,
       "leitura_atual": null,
       "mes_consumo": "2020-12",
@@ -1604,7 +1670,7 @@
       "tarifa_tusd_fora_ponta": null,
       "tarifa_tusd_ponta": null,
       "tipo_documento": "historico_faturamento",
-      "unidade": "UC-27E88A",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -1619,6 +1685,7 @@
       "versao": "fc8af3bb12a928192cc2fe1f2e4d1f0a"
     },
     {
+      "_uc": null,
       "arquivo_id": "280c479f7ee65218d059",
       "competencia": "2021-01",
       "competencia_copel": "2021-01",
@@ -1631,8 +1698,9 @@
       "energia_injetada_kwh": null,
       "energia_injetada_kwh_fora_ponta": null,
       "energia_injetada_kwh_ponta": null,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "ecc0684f0f728cf4dc96",
+      "layout_detectado": "historico_cmehfat0",
       "leitura_anterior": null,
       "leitura_atual": null,
       "mes_consumo": "2021-01",
@@ -1653,7 +1721,7 @@
       "tarifa_tusd_fora_ponta": null,
       "tarifa_tusd_ponta": null,
       "tipo_documento": "historico_faturamento",
-      "unidade": "UC-27E88A",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -1668,6 +1736,7 @@
       "versao": "fc8af3bb12a928192cc2fe1f2e4d1f0a"
     },
     {
+      "_uc": null,
       "arquivo_id": "280c479f7ee65218d059",
       "competencia": "2021-02",
       "competencia_copel": "2021-02",
@@ -1680,8 +1749,9 @@
       "energia_injetada_kwh": null,
       "energia_injetada_kwh_fora_ponta": null,
       "energia_injetada_kwh_ponta": null,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "dd17439043178b3f95f9",
+      "layout_detectado": "historico_cmehfat0",
       "leitura_anterior": null,
       "leitura_atual": null,
       "mes_consumo": "2021-02",
@@ -1702,7 +1772,7 @@
       "tarifa_tusd_fora_ponta": null,
       "tarifa_tusd_ponta": null,
       "tipo_documento": "historico_faturamento",
-      "unidade": "UC-27E88A",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -1717,6 +1787,7 @@
       "versao": "fc8af3bb12a928192cc2fe1f2e4d1f0a"
     },
     {
+      "_uc": null,
       "arquivo_id": "280c479f7ee65218d059",
       "competencia": "2021-03",
       "competencia_copel": "2021-03",
@@ -1729,8 +1800,9 @@
       "energia_injetada_kwh": null,
       "energia_injetada_kwh_fora_ponta": null,
       "energia_injetada_kwh_ponta": null,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "e51def4af26a92c63888",
+      "layout_detectado": "historico_cmehfat0",
       "leitura_anterior": null,
       "leitura_atual": null,
       "mes_consumo": "2021-03",
@@ -1751,7 +1823,7 @@
       "tarifa_tusd_fora_ponta": null,
       "tarifa_tusd_ponta": null,
       "tipo_documento": "historico_faturamento",
-      "unidade": "UC-27E88A",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -2016,6 +2088,7 @@
       "versao": "94e993d92087129e11353324de357504"
     },
     {
+      "_uc": null,
       "arquivo_id": "79b05b36cf95123edc2e",
       "competencia": "2021-10",
       "competencia_copel": "2021-10",
@@ -2028,8 +2101,9 @@
       "energia_injetada_kwh": 0.0,
       "energia_injetada_kwh_fora_ponta": 0.0,
       "energia_injetada_kwh_ponta": null,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "79b05b36cf95123edc2e",
+      "layout_detectado": "fatura_legada",
       "leitura_anterior": "2021-08-31",
       "leitura_atual": "2021-09-30",
       "mes_consumo": "2021-09",
@@ -2050,7 +2124,7 @@
       "tarifa_tusd_fora_ponta": null,
       "tarifa_tusd_ponta": null,
       "tipo_documento": "fatura_individual",
-      "unidade": "UC-68AF0B",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -2121,6 +2195,7 @@
       "versao": "94e993d92087129e11353324de357504"
     },
     {
+      "_uc": null,
       "arquivo_id": "6e508776285ecb4230a5",
       "competencia": "2021-11",
       "competencia_copel": "2021-11",
@@ -2133,8 +2208,9 @@
       "energia_injetada_kwh": 0.0,
       "energia_injetada_kwh_fora_ponta": 0.0,
       "energia_injetada_kwh_ponta": null,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "6e508776285ecb4230a5",
+      "layout_detectado": "fatura_legada",
       "leitura_anterior": "2021-09-30",
       "leitura_atual": "2021-10-31",
       "mes_consumo": "2021-10",
@@ -2155,7 +2231,7 @@
       "tarifa_tusd_fora_ponta": null,
       "tarifa_tusd_ponta": null,
       "tipo_documento": "fatura_individual",
-      "unidade": "UC-8CDF36",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -2276,6 +2352,7 @@
       "versao": "94e993d92087129e11353324de357504"
     },
     {
+      "_uc": null,
       "arquivo_id": "bbfa5811be9292cac753",
       "competencia": "2021-12",
       "competencia_copel": "2021-12",
@@ -2288,8 +2365,9 @@
       "energia_injetada_kwh": 0.0,
       "energia_injetada_kwh_fora_ponta": 0.0,
       "energia_injetada_kwh_ponta": null,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "bbfa5811be9292cac753",
+      "layout_detectado": "fatura_legada",
       "leitura_anterior": "2021-10-31",
       "leitura_atual": "2021-11-30",
       "mes_consumo": "2021-11",
@@ -2310,7 +2388,7 @@
       "tarifa_tusd_fora_ponta": null,
       "tarifa_tusd_ponta": null,
       "tipo_documento": "fatura_individual",
-      "unidade": "UC-04236F",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -2331,6 +2409,7 @@
       "versao": "efbfebc08c3fc38ed6a2305eaa6d224c"
     },
     {
+      "_uc": null,
       "arquivo_id": "38ed1865fc8ba1664dd6",
       "competencia": "2022-01",
       "competencia_copel": "2022-01",
@@ -2343,8 +2422,9 @@
       "energia_injetada_kwh": 0.0,
       "energia_injetada_kwh_fora_ponta": 0.0,
       "energia_injetada_kwh_ponta": null,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "38ed1865fc8ba1664dd6",
+      "layout_detectado": "fatura_legada",
       "leitura_anterior": "2021-11-30",
       "leitura_atual": "2021-12-31",
       "mes_consumo": "2021-12",
@@ -2365,7 +2445,7 @@
       "tarifa_tusd_fora_ponta": null,
       "tarifa_tusd_ponta": null,
       "tipo_documento": "fatura_individual",
-      "unidade": "UC-53393A",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -2486,6 +2566,7 @@
       "versao": "94e993d92087129e11353324de357504"
     },
     {
+      "_uc": null,
       "arquivo_id": "ef90863c5eb3c91eae7e",
       "competencia": "2022-02",
       "competencia_copel": "2022-02",
@@ -2498,8 +2579,9 @@
       "energia_injetada_kwh": 0.0,
       "energia_injetada_kwh_fora_ponta": 0.0,
       "energia_injetada_kwh_ponta": null,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "ef90863c5eb3c91eae7e",
+      "layout_detectado": "fatura_legada",
       "leitura_anterior": "2021-12-31",
       "leitura_atual": "2022-01-31",
       "mes_consumo": "2022-01",
@@ -2520,7 +2602,7 @@
       "tarifa_tusd_fora_ponta": null,
       "tarifa_tusd_ponta": null,
       "tipo_documento": "fatura_individual",
-      "unidade": "UC-81121E",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -2591,6 +2673,7 @@
       "versao": "94e993d92087129e11353324de357504"
     },
     {
+      "_uc": null,
       "arquivo_id": "f460a86d8c5d8796f602",
       "competencia": "2022-03",
       "competencia_copel": "2022-03",
@@ -2603,8 +2686,9 @@
       "energia_injetada_kwh": 0.0,
       "energia_injetada_kwh_fora_ponta": 0.0,
       "energia_injetada_kwh_ponta": null,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "f460a86d8c5d8796f602",
+      "layout_detectado": "fatura_legada",
       "leitura_anterior": "2022-01-31",
       "leitura_atual": "2022-02-28",
       "mes_consumo": "2022-02",
@@ -2625,7 +2709,7 @@
       "tarifa_tusd_fora_ponta": null,
       "tarifa_tusd_ponta": null,
       "tipo_documento": "fatura_individual",
-      "unidade": "UC-F2E285",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -2646,6 +2730,7 @@
       "versao": "6abd096698da0af44c14ed7dd750816b"
     },
     {
+      "_uc": null,
       "arquivo_id": "2f0f3b9bf276732afabc",
       "competencia": "2022-04",
       "competencia_copel": "2022-04",
@@ -2658,8 +2743,9 @@
       "energia_injetada_kwh": 0.0,
       "energia_injetada_kwh_fora_ponta": 0.0,
       "energia_injetada_kwh_ponta": null,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "2f0f3b9bf276732afabc",
+      "layout_detectado": "fatura_legada",
       "leitura_anterior": "2022-02-28",
       "leitura_atual": "2022-03-31",
       "mes_consumo": "2022-03",
@@ -2680,7 +2766,7 @@
       "tarifa_tusd_fora_ponta": null,
       "tarifa_tusd_ponta": null,
       "tipo_documento": "fatura_individual",
-      "unidade": "UC-DA2427",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -2751,6 +2837,7 @@
       "versao": "94e993d92087129e11353324de357504"
     },
     {
+      "_uc": null,
       "arquivo_id": "397d2d4246881ada4506",
       "competencia": "2022-05",
       "competencia_copel": "2022-05",
@@ -2763,8 +2850,9 @@
       "energia_injetada_kwh": 0.0,
       "energia_injetada_kwh_fora_ponta": 0.0,
       "energia_injetada_kwh_ponta": null,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "397d2d4246881ada4506",
+      "layout_detectado": "fatura_legada",
       "leitura_anterior": "2022-03-31",
       "leitura_atual": "2022-04-30",
       "mes_consumo": "2022-04",
@@ -2785,7 +2873,7 @@
       "tarifa_tusd_fora_ponta": null,
       "tarifa_tusd_ponta": null,
       "tipo_documento": "fatura_individual",
-      "unidade": "UC-E2AA44",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -2856,6 +2944,7 @@
       "versao": "928b60e8a409a3cb2e54f0892c9da04c"
     },
     {
+      "_uc": null,
       "arquivo_id": "351a764f343a32bbccce",
       "competencia": "2022-06",
       "competencia_copel": "2022-06",
@@ -2868,8 +2957,9 @@
       "energia_injetada_kwh": 0.0,
       "energia_injetada_kwh_fora_ponta": 0.0,
       "energia_injetada_kwh_ponta": null,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "351a764f343a32bbccce",
+      "layout_detectado": "fatura_legada",
       "leitura_anterior": "2022-04-30",
       "leitura_atual": "2022-05-31",
       "mes_consumo": "2022-05",
@@ -2890,7 +2980,7 @@
       "tarifa_tusd_fora_ponta": null,
       "tarifa_tusd_ponta": null,
       "tipo_documento": "fatura_individual",
-      "unidade": "UC-6ADBC4",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -3011,6 +3101,7 @@
       "versao": "928b60e8a409a3cb2e54f0892c9da04c"
     },
     {
+      "_uc": null,
       "arquivo_id": "edea29b67a5b9406a1cf",
       "competencia": "2022-07",
       "competencia_copel": "2022-07",
@@ -3023,8 +3114,9 @@
       "energia_injetada_kwh": 0.0,
       "energia_injetada_kwh_fora_ponta": 0.0,
       "energia_injetada_kwh_ponta": null,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "edea29b67a5b9406a1cf",
+      "layout_detectado": "fatura_legada",
       "leitura_anterior": "2022-05-31",
       "leitura_atual": "2022-06-30",
       "mes_consumo": "2022-06",
@@ -3045,7 +3137,7 @@
       "tarifa_tusd_fora_ponta": null,
       "tarifa_tusd_ponta": null,
       "tipo_documento": "fatura_individual",
-      "unidade": "UC-7C0CFC",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -3066,6 +3158,7 @@
       "versao": "518a3ec828ac6cc1d28d7765f04fb084"
     },
     {
+      "_uc": null,
       "arquivo_id": "37c5e16f1dbeca4f8d28",
       "competencia": "2022-08",
       "competencia_copel": "2022-08",
@@ -3078,8 +3171,9 @@
       "energia_injetada_kwh": 0.0,
       "energia_injetada_kwh_fora_ponta": 0.0,
       "energia_injetada_kwh_ponta": null,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "37c5e16f1dbeca4f8d28",
+      "layout_detectado": "fatura_legada",
       "leitura_anterior": "2022-06-30",
       "leitura_atual": "2022-07-31",
       "mes_consumo": "2022-07",
@@ -3100,7 +3194,7 @@
       "tarifa_tusd_fora_ponta": null,
       "tarifa_tusd_ponta": null,
       "tipo_documento": "fatura_individual",
-      "unidade": "UC-7816DF",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -3171,6 +3265,7 @@
       "versao": "928b60e8a409a3cb2e54f0892c9da04c"
     },
     {
+      "_uc": null,
       "arquivo_id": "4ba3b50a04565ed298ae",
       "competencia": "2022-09",
       "competencia_copel": "2022-09",
@@ -3183,8 +3278,9 @@
       "energia_injetada_kwh": 0.0,
       "energia_injetada_kwh_fora_ponta": 0.0,
       "energia_injetada_kwh_ponta": null,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "4ba3b50a04565ed298ae",
+      "layout_detectado": "fatura_legada",
       "leitura_anterior": "2022-07-31",
       "leitura_atual": "2022-08-31",
       "mes_consumo": "2022-08",
@@ -3205,7 +3301,7 @@
       "tarifa_tusd_fora_ponta": 0.11085,
       "tarifa_tusd_ponta": 1.02746,
       "tipo_documento": "fatura_individual",
-      "unidade": "UC-64BC4F",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -3326,7 +3422,9 @@
       "versao": "928b60e8a409a3cb2e54f0892c9da04c"
     },
     {
+      "_uc": null,
       "arquivo_id": "a2de4c9a895c37085069",
+      "chave_nf3e_id": "922b8e4d2a5c48e606b25ce4",
       "competencia": "2022-11",
       "competencia_copel": "2022-11",
       "consumo_kwh": 49962.0,
@@ -3338,8 +3436,9 @@
       "energia_injetada_kwh": 0.0,
       "energia_injetada_kwh_fora_ponta": 0.0,
       "energia_injetada_kwh_ponta": null,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "a2de4c9a895c37085069",
+      "layout_detectado": "danf3e",
       "leitura_anterior": "2022-09-30",
       "leitura_atual": "2022-10-31",
       "mes_consumo": "2022-10",
@@ -3360,7 +3459,7 @@
       "tarifa_tusd_fora_ponta": 0.11085,
       "tarifa_tusd_ponta": 1.02746,
       "tipo_documento": "fatura_individual",
-      "unidade": "UC-38F4D2",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -3481,7 +3580,9 @@
       "versao": "928b60e8a409a3cb2e54f0892c9da04c"
     },
     {
+      "_uc": null,
       "arquivo_id": "52dcad774a4300a91934",
+      "chave_nf3e_id": "7034a203f7d2deff2c0ce314",
       "competencia": "2022-12",
       "competencia_copel": "2022-12",
       "consumo_kwh": 50846.0,
@@ -3493,8 +3594,9 @@
       "energia_injetada_kwh": 0.0,
       "energia_injetada_kwh_fora_ponta": 0.0,
       "energia_injetada_kwh_ponta": null,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "52dcad774a4300a91934",
+      "layout_detectado": "danf3e",
       "leitura_anterior": "2022-10-31",
       "leitura_atual": "2022-11-30",
       "mes_consumo": "2022-11",
@@ -3515,7 +3617,7 @@
       "tarifa_tusd_fora_ponta": 0.11085,
       "tarifa_tusd_ponta": 1.02746,
       "tipo_documento": "fatura_individual",
-      "unidade": "UC-69995C",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -3586,7 +3688,9 @@
       "versao": "928b60e8a409a3cb2e54f0892c9da04c"
     },
     {
+      "_uc": null,
       "arquivo_id": "f5e138f647df33340a14",
+      "chave_nf3e_id": "9bfc6b83d071ca2ef45a23b9",
       "competencia": "2023-01",
       "competencia_copel": "2023-01",
       "consumo_kwh": 47763.0,
@@ -3598,8 +3702,9 @@
       "energia_injetada_kwh": 0.0,
       "energia_injetada_kwh_fora_ponta": 0.0,
       "energia_injetada_kwh_ponta": null,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "f5e138f647df33340a14",
+      "layout_detectado": "danf3e",
       "leitura_anterior": "2022-11-30",
       "leitura_atual": "2022-12-31",
       "mes_consumo": "2022-12",
@@ -3620,7 +3725,7 @@
       "tarifa_tusd_fora_ponta": 0.11085,
       "tarifa_tusd_ponta": 1.02746,
       "tipo_documento": "fatura_individual",
-      "unidade": "UC-835E34",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -3691,7 +3796,9 @@
       "versao": "928b60e8a409a3cb2e54f0892c9da04c"
     },
     {
+      "_uc": null,
       "arquivo_id": "d0c280cfb49f9badfe9e",
+      "chave_nf3e_id": "67d7f149e49df5c2afd2aca3",
       "competencia": "2023-02",
       "competencia_copel": "2023-02",
       "consumo_kwh": 35690.0,
@@ -3703,8 +3810,9 @@
       "energia_injetada_kwh": 0.0,
       "energia_injetada_kwh_fora_ponta": 0.0,
       "energia_injetada_kwh_ponta": null,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "d0c280cfb49f9badfe9e",
+      "layout_detectado": "danf3e",
       "leitura_anterior": "2022-12-31",
       "leitura_atual": "2023-01-31",
       "mes_consumo": "2023-01",
@@ -3725,7 +3833,7 @@
       "tarifa_tusd_fora_ponta": 0.11085,
       "tarifa_tusd_ponta": 1.02746,
       "tipo_documento": "fatura_individual",
-      "unidade": "UC-D5CF07",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -3796,7 +3904,9 @@
       "versao": "928b60e8a409a3cb2e54f0892c9da04c"
     },
     {
+      "_uc": null,
       "arquivo_id": "b5b7748420037c2937d2",
+      "chave_nf3e_id": "7e168512a4c602de24886963",
       "competencia": "2023-03",
       "competencia_copel": "2023-03",
       "consumo_kwh": 36768.0,
@@ -3808,8 +3918,9 @@
       "energia_injetada_kwh": 0.0,
       "energia_injetada_kwh_fora_ponta": 0.0,
       "energia_injetada_kwh_ponta": null,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "b5b7748420037c2937d2",
+      "layout_detectado": "danf3e",
       "leitura_anterior": "2023-01-31",
       "leitura_atual": "2023-02-28",
       "mes_consumo": "2023-02",
@@ -3830,7 +3941,7 @@
       "tarifa_tusd_fora_ponta": 0.11085,
       "tarifa_tusd_ponta": 1.02746,
       "tipo_documento": "fatura_individual",
-      "unidade": "UC-514730",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -3901,7 +4012,9 @@
       "versao": "928b60e8a409a3cb2e54f0892c9da04c"
     },
     {
+      "_uc": null,
       "arquivo_id": "7a5489ee45214dffc287",
+      "chave_nf3e_id": "b3af69f43b45009630877de2",
       "competencia": "2023-04",
       "competencia_copel": "2023-04",
       "consumo_kwh": 63706.0,
@@ -3913,8 +4026,9 @@
       "energia_injetada_kwh": 1489.0,
       "energia_injetada_kwh_fora_ponta": 1489.0,
       "energia_injetada_kwh_ponta": null,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "7a5489ee45214dffc287",
+      "layout_detectado": "danf3e",
       "leitura_anterior": "2023-02-28",
       "leitura_atual": "2023-03-31",
       "mes_consumo": "2023-03",
@@ -3935,7 +4049,7 @@
       "tarifa_tusd_fora_ponta": 0.11085,
       "tarifa_tusd_ponta": 1.02746,
       "tipo_documento": "fatura_individual",
-      "unidade": "UC-9F1569",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -3956,7 +4070,9 @@
       "versao": "e53bf5a821f121b18050e0ec69d29a1e"
     },
     {
+      "_uc": null,
       "arquivo_id": "1f1e45b37ac1bbb74cc4",
+      "chave_nf3e_id": "83a0ca39c5780ce03d721b95",
       "competencia": "2023-05",
       "competencia_copel": "2023-05",
       "consumo_kwh": 41433.0,
@@ -3968,8 +4084,9 @@
       "energia_injetada_kwh": 10476.0,
       "energia_injetada_kwh_fora_ponta": 10476.0,
       "energia_injetada_kwh_ponta": null,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "1f1e45b37ac1bbb74cc4",
+      "layout_detectado": "danf3e",
       "leitura_anterior": "2023-03-31",
       "leitura_atual": "2023-04-30",
       "mes_consumo": "2023-04",
@@ -3990,7 +4107,7 @@
       "tarifa_tusd_fora_ponta": 0.11085,
       "tarifa_tusd_ponta": 1.02746,
       "tipo_documento": "fatura_individual",
-      "unidade": "UC-2BDF4E",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -4011,7 +4128,9 @@
       "versao": "29c42ad9af9ff486413a6ba5856a494d"
     },
     {
+      "_uc": null,
       "arquivo_id": "89a46e8c888a963ff70f",
+      "chave_nf3e_id": "63167ff9f002f935ea7867a7",
       "competencia": "2023-06",
       "competencia_copel": "2023-06",
       "consumo_kwh": 34234.0,
@@ -4023,8 +4142,9 @@
       "energia_injetada_kwh": 28264.0,
       "energia_injetada_kwh_fora_ponta": 28264.0,
       "energia_injetada_kwh_ponta": null,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "89a46e8c888a963ff70f",
+      "layout_detectado": "danf3e",
       "leitura_anterior": "2023-04-30",
       "leitura_atual": "2023-05-31",
       "mes_consumo": "2023-05",
@@ -4045,7 +4165,7 @@
       "tarifa_tusd_fora_ponta": 0.11085,
       "tarifa_tusd_ponta": 1.02746,
       "tipo_documento": "fatura_individual",
-      "unidade": "UC-5BA23E",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -4066,7 +4186,9 @@
       "versao": "38c56af64c42322bc784056bf4ad5ca7"
     },
     {
+      "_uc": null,
       "arquivo_id": "46943b74b861ebc39f68",
+      "chave_nf3e_id": "cb6e8e1a974c5d3b789757d5",
       "competencia": "2023-07",
       "competencia_copel": "2023-07",
       "consumo_kwh": 31279.0,
@@ -4078,8 +4200,9 @@
       "energia_injetada_kwh": 27791.0,
       "energia_injetada_kwh_fora_ponta": 27791.0,
       "energia_injetada_kwh_ponta": null,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "46943b74b861ebc39f68",
+      "layout_detectado": "danf3e",
       "leitura_anterior": "2023-05-31",
       "leitura_atual": "2023-06-30",
       "mes_consumo": "2023-06",
@@ -4100,7 +4223,7 @@
       "tarifa_tusd_fora_ponta": 0.09856,
       "tarifa_tusd_ponta": 1.16819,
       "tipo_documento": "fatura_individual",
-      "unidade": "UC-CECBEE",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -4121,7 +4244,9 @@
       "versao": "7007977948f2ae6e950f25e471b88f55"
     },
     {
+      "_uc": null,
       "arquivo_id": "054481c82efc8e0176d3",
+      "chave_nf3e_id": "72a1c288e5762e68c8dee72b",
       "competencia": "2023-08",
       "competencia_copel": "2023-08",
       "consumo_kwh": 22981.0,
@@ -4133,8 +4258,9 @@
       "energia_injetada_kwh": 31867.0,
       "energia_injetada_kwh_fora_ponta": 31867.0,
       "energia_injetada_kwh_ponta": null,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "054481c82efc8e0176d3",
+      "layout_detectado": "danf3e",
       "leitura_anterior": "2023-06-30",
       "leitura_atual": "2023-07-31",
       "mes_consumo": "2023-07",
@@ -4155,7 +4281,7 @@
       "tarifa_tusd_fora_ponta": 0.09856,
       "tarifa_tusd_ponta": 1.16819,
       "tipo_documento": "fatura_individual",
-      "unidade": "UC-8695C8",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -4176,7 +4302,9 @@
       "versao": "30148e49bfd7d830a79dbb3673aed095"
     },
     {
+      "_uc": null,
       "arquivo_id": "dd0809beba26d3ecb131",
+      "chave_nf3e_id": "abd79f4aba6db5abdc66e661",
       "competencia": "2023-09",
       "competencia_copel": "2023-09",
       "consumo_kwh": 33185.0,
@@ -4188,8 +4316,9 @@
       "energia_injetada_kwh": 20181.0,
       "energia_injetada_kwh_fora_ponta": 20181.0,
       "energia_injetada_kwh_ponta": null,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "dd0809beba26d3ecb131",
+      "layout_detectado": "danf3e",
       "leitura_anterior": "2023-07-31",
       "leitura_atual": "2023-08-31",
       "mes_consumo": "2023-08",
@@ -4210,7 +4339,7 @@
       "tarifa_tusd_fora_ponta": 0.09856,
       "tarifa_tusd_ponta": 1.16819,
       "tipo_documento": "fatura_individual",
-      "unidade": "UC-F6B4DF",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -4231,7 +4360,9 @@
       "versao": "f86857e3c4a5d6e15f4052f7eafcdff8"
     },
     {
+      "_uc": null,
       "arquivo_id": "ab64ab46fb31e99e2dcc",
+      "chave_nf3e_id": "c1df2639d754fdfd9b090f0c",
       "competencia": "2023-10",
       "competencia_copel": "2023-10",
       "consumo_kwh": 37736.0,
@@ -4243,8 +4374,9 @@
       "energia_injetada_kwh": 19982.0,
       "energia_injetada_kwh_fora_ponta": 19982.0,
       "energia_injetada_kwh_ponta": null,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "ab64ab46fb31e99e2dcc",
+      "layout_detectado": "danf3e",
       "leitura_anterior": "2023-08-31",
       "leitura_atual": "2023-09-30",
       "mes_consumo": "2023-09",
@@ -4265,7 +4397,7 @@
       "tarifa_tusd_fora_ponta": 0.09856,
       "tarifa_tusd_ponta": 1.16819,
       "tipo_documento": "fatura_individual",
-      "unidade": "UC-57BAF4",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -4286,7 +4418,9 @@
       "versao": "e6a122c29bc4ada056faf62eb54bdb32"
     },
     {
+      "_uc": null,
       "arquivo_id": "e19435c6fa39a74e82cc",
+      "chave_nf3e_id": "5ca8566fda937861b093332f",
       "competencia": "2023-11",
       "competencia_copel": "2023-11",
       "consumo_kwh": 41624.0,
@@ -4298,8 +4432,9 @@
       "energia_injetada_kwh": 22605.0,
       "energia_injetada_kwh_fora_ponta": 22605.0,
       "energia_injetada_kwh_ponta": null,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "e19435c6fa39a74e82cc",
+      "layout_detectado": "danf3e",
       "leitura_anterior": "2023-09-30",
       "leitura_atual": "2023-10-31",
       "mes_consumo": "2023-10",
@@ -4320,7 +4455,7 @@
       "tarifa_tusd_fora_ponta": 0.09856,
       "tarifa_tusd_ponta": 1.16819,
       "tipo_documento": "fatura_individual",
-      "unidade": "UC-C21C26",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -4341,7 +4476,9 @@
       "versao": "247a8120eb3d77487095116a78463238"
     },
     {
+      "_uc": null,
       "arquivo_id": "b1ac7bea3e5b9b34fb8d",
+      "chave_nf3e_id": "94c519f86554361463def5be",
       "competencia": "2023-12",
       "competencia_copel": "2023-12",
       "consumo_kwh": 37965.0,
@@ -4353,8 +4490,9 @@
       "energia_injetada_kwh": 25575.0,
       "energia_injetada_kwh_fora_ponta": 25575.0,
       "energia_injetada_kwh_ponta": null,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "b1ac7bea3e5b9b34fb8d",
+      "layout_detectado": "danf3e",
       "leitura_anterior": "2023-10-31",
       "leitura_atual": "2023-11-30",
       "mes_consumo": "2023-11",
@@ -4375,7 +4513,7 @@
       "tarifa_tusd_fora_ponta": 0.09856,
       "tarifa_tusd_ponta": 1.16819,
       "tipo_documento": "fatura_individual",
-      "unidade": "UC-E574B4",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -4396,7 +4534,9 @@
       "versao": "b100ae2b673d130f1ca380be4ae26811"
     },
     {
+      "_uc": null,
       "arquivo_id": "ffdbe145b4864f432f52",
+      "chave_nf3e_id": "081e27c49263f3c1c10f5a0c",
       "competencia": "2024-01",
       "competencia_copel": "2024-01",
       "consumo_kwh": 31188.0,
@@ -4408,8 +4548,9 @@
       "energia_injetada_kwh": 37660.0,
       "energia_injetada_kwh_fora_ponta": 37660.0,
       "energia_injetada_kwh_ponta": 0.0,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "ffdbe145b4864f432f52",
+      "layout_detectado": "danf3e",
       "leitura_anterior": "2023-11-30",
       "leitura_atual": "2023-12-31",
       "mes_consumo": "2023-12",
@@ -4430,7 +4571,7 @@
       "tarifa_tusd_fora_ponta": 0.09856,
       "tarifa_tusd_ponta": 1.16819,
       "tipo_documento": "fatura_individual",
-      "unidade": "UC-7CBB0E",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -4451,7 +4592,9 @@
       "versao": "70b8b9fb089f4e30bc414f039c5f5913"
     },
     {
+      "_uc": null,
       "arquivo_id": "bdb42a1df5d405f47c0c",
+      "chave_nf3e_id": "fc2701d7d2d7dd0bdc091a81",
       "competencia": "2024-02",
       "competencia_copel": "2024-02",
       "consumo_kwh": 24862.0,
@@ -4463,8 +4606,9 @@
       "energia_injetada_kwh": 40263.0,
       "energia_injetada_kwh_fora_ponta": 40263.0,
       "energia_injetada_kwh_ponta": 0.0,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "bdb42a1df5d405f47c0c",
+      "layout_detectado": "danf3e",
       "leitura_anterior": "2023-12-31",
       "leitura_atual": "2024-01-31",
       "mes_consumo": "2024-01",
@@ -4485,7 +4629,7 @@
       "tarifa_tusd_fora_ponta": 0.09856,
       "tarifa_tusd_ponta": 1.16819,
       "tipo_documento": "fatura_individual",
-      "unidade": "UC-1C4861",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -4506,7 +4650,9 @@
       "versao": "4162e786a8ab9a936e69858f8afab0ed"
     },
     {
+      "_uc": null,
       "arquivo_id": "e19d03b4a39f63c638c4",
+      "chave_nf3e_id": "14afc8d16fe306f48e780fea",
       "competencia": "2024-03",
       "competencia_copel": "2024-03",
       "consumo_kwh": 27117.0,
@@ -4518,8 +4664,9 @@
       "energia_injetada_kwh": 24502.0,
       "energia_injetada_kwh_fora_ponta": 24502.0,
       "energia_injetada_kwh_ponta": 0.0,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "e19d03b4a39f63c638c4",
+      "layout_detectado": "danf3e",
       "leitura_anterior": "2024-01-31",
       "leitura_atual": "2024-02-29",
       "mes_consumo": "2024-02",
@@ -4540,7 +4687,7 @@
       "tarifa_tusd_fora_ponta": 0.09856,
       "tarifa_tusd_ponta": 1.16819,
       "tipo_documento": "fatura_individual",
-      "unidade": "UC-99A975",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -4561,7 +4708,9 @@
       "versao": "992f570e4daec93faedfe8a19cd74172"
     },
     {
+      "_uc": null,
       "arquivo_id": "39f90d21c8073350a775",
+      "chave_nf3e_id": "75c455357d9b953b9812c58e",
       "competencia": "2024-04",
       "competencia_copel": "2024-04",
       "consumo_kwh": 43836.0,
@@ -4573,8 +4722,9 @@
       "energia_injetada_kwh": 14693.0,
       "energia_injetada_kwh_fora_ponta": 14693.0,
       "energia_injetada_kwh_ponta": 0.0,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "39f90d21c8073350a775",
+      "layout_detectado": "danf3e",
       "leitura_anterior": "2024-02-29",
       "leitura_atual": "2024-03-31",
       "mes_consumo": "2024-03",
@@ -4595,7 +4745,7 @@
       "tarifa_tusd_fora_ponta": 0.09856,
       "tarifa_tusd_ponta": 1.16819,
       "tipo_documento": "fatura_individual",
-      "unidade": "UC-3BA299",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -4616,7 +4766,9 @@
       "versao": "fb7d397d6037cb8ef50dd08e4f6cfe41"
     },
     {
+      "_uc": null,
       "arquivo_id": "ae32d79e9c65eeec386d",
+      "chave_nf3e_id": "c0f1cf50733d0903bd9d2ae5",
       "competencia": "2024-05",
       "competencia_copel": "2024-05",
       "consumo_kwh": 41111.0,
@@ -4628,8 +4780,9 @@
       "energia_injetada_kwh": 12265.0,
       "energia_injetada_kwh_fora_ponta": 12265.0,
       "energia_injetada_kwh_ponta": 0.0,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "ae32d79e9c65eeec386d",
+      "layout_detectado": "danf3e",
       "leitura_anterior": "2024-03-31",
       "leitura_atual": "2024-04-30",
       "mes_consumo": "2024-04",
@@ -4650,7 +4803,7 @@
       "tarifa_tusd_fora_ponta": 0.09856,
       "tarifa_tusd_ponta": 1.16819,
       "tipo_documento": "fatura_individual",
-      "unidade": "UC-11BF43",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -4671,7 +4824,9 @@
       "versao": "749f04a09d2b06a597e15e87604c6a0c"
     },
     {
+      "_uc": null,
       "arquivo_id": "79026effc5638a1619c7",
+      "chave_nf3e_id": "bf0a4231675ca1a63d9a8750",
       "competencia": "2024-06",
       "competencia_copel": "2024-06",
       "consumo_kwh": 33116.0,
@@ -4683,8 +4838,9 @@
       "energia_injetada_kwh": 12045.0,
       "energia_injetada_kwh_fora_ponta": 12045.0,
       "energia_injetada_kwh_ponta": 0.0,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "79026effc5638a1619c7",
+      "layout_detectado": "danf3e",
       "leitura_anterior": "2024-04-30",
       "leitura_atual": "2024-05-31",
       "mes_consumo": "2024-05",
@@ -4705,7 +4861,7 @@
       "tarifa_tusd_fora_ponta": 0.09856,
       "tarifa_tusd_ponta": 1.16819,
       "tipo_documento": "fatura_individual",
-      "unidade": "UC-235356",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -4726,7 +4882,9 @@
       "versao": "b9b056df32f26cdbc893bc688b4c46a3"
     },
     {
+      "_uc": null,
       "arquivo_id": "b4a99f57b7c53d8396ef",
+      "chave_nf3e_id": "f4c27ba7e349050fc419d8c0",
       "competencia": "2024-07",
       "competencia_copel": "2024-07",
       "consumo_kwh": 26565.0,
@@ -4738,8 +4896,9 @@
       "energia_injetada_kwh": 15633.0,
       "energia_injetada_kwh_fora_ponta": 15633.0,
       "energia_injetada_kwh_ponta": 0.0,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "b4a99f57b7c53d8396ef",
+      "layout_detectado": "danf3e",
       "leitura_anterior": "2024-05-31",
       "leitura_atual": "2024-06-30",
       "mes_consumo": "2024-06",
@@ -4760,7 +4919,7 @@
       "tarifa_tusd_fora_ponta": 0.09275,
       "tarifa_tusd_ponta": 1.2512,
       "tipo_documento": "fatura_individual",
-      "unidade": "UC-5F8517",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -4781,7 +4940,9 @@
       "versao": "d5ad47820e81ea54392ea3f553bfdb66"
     },
     {
+      "_uc": null,
       "arquivo_id": "5c30aa86512a1bd70740",
+      "chave_nf3e_id": "08b508aa421311a95a804e76",
       "competencia": "2024-08",
       "competencia_copel": "2024-08",
       "consumo_kwh": 27190.0,
@@ -4793,8 +4954,9 @@
       "energia_injetada_kwh": 19620.0,
       "energia_injetada_kwh_fora_ponta": 19620.0,
       "energia_injetada_kwh_ponta": 0.0,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "5c30aa86512a1bd70740",
+      "layout_detectado": "danf3e",
       "leitura_anterior": "2024-06-30",
       "leitura_atual": "2024-07-31",
       "mes_consumo": "2024-07",
@@ -4815,7 +4977,7 @@
       "tarifa_tusd_fora_ponta": 0.09275,
       "tarifa_tusd_ponta": 1.2512,
       "tipo_documento": "fatura_individual",
-      "unidade": "UC-491496",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -4836,7 +4998,9 @@
       "versao": "2bf6b6634065a57af047e2c6e6f58f33"
     },
     {
+      "_uc": null,
       "arquivo_id": "3060203255533752483b",
+      "chave_nf3e_id": "c37828cb522a451079c35f2a",
       "competencia": "2024-09",
       "competencia_copel": "2024-09",
       "consumo_kwh": 35608.0,
@@ -4848,8 +5012,9 @@
       "energia_injetada_kwh": 14615.0,
       "energia_injetada_kwh_fora_ponta": 14615.0,
       "energia_injetada_kwh_ponta": 0.0,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "3060203255533752483b",
+      "layout_detectado": "danf3e",
       "leitura_anterior": "2024-07-31",
       "leitura_atual": "2024-08-31",
       "mes_consumo": "2024-08",
@@ -4870,7 +5035,7 @@
       "tarifa_tusd_fora_ponta": 0.09275,
       "tarifa_tusd_ponta": 1.2512,
       "tipo_documento": "fatura_individual",
-      "unidade": "UC-2D9039",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -4891,7 +5056,9 @@
       "versao": "67f077581c94b87d6a45a5ee0d2dfaa7"
     },
     {
+      "_uc": null,
       "arquivo_id": "0abefcd522256a56a8f8",
+      "chave_nf3e_id": "0dc93da98e890756c1650c1c",
       "competencia": "2024-10",
       "competencia_copel": "2024-10",
       "consumo_kwh": 31676.0,
@@ -4903,8 +5070,9 @@
       "energia_injetada_kwh": 25771.0,
       "energia_injetada_kwh_fora_ponta": 25771.0,
       "energia_injetada_kwh_ponta": 0.0,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "0abefcd522256a56a8f8",
+      "layout_detectado": "danf3e",
       "leitura_anterior": "2024-08-31",
       "leitura_atual": "2024-09-30",
       "mes_consumo": "2024-09",
@@ -4925,7 +5093,7 @@
       "tarifa_tusd_fora_ponta": 0.09275,
       "tarifa_tusd_ponta": 1.2512,
       "tipo_documento": "fatura_individual",
-      "unidade": "UC-38F60C",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -4946,7 +5114,9 @@
       "versao": "5eea4233621edf124d3edc2201aeb742"
     },
     {
+      "_uc": null,
       "arquivo_id": "cee061462271969836b0",
+      "chave_nf3e_id": "84fa1b6ea5d2960a44ce802f",
       "competencia": "2024-11",
       "competencia_copel": "2024-11",
       "consumo_kwh": 48091.0,
@@ -4958,8 +5128,9 @@
       "energia_injetada_kwh": 12913.0,
       "energia_injetada_kwh_fora_ponta": 12913.0,
       "energia_injetada_kwh_ponta": 0.0,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "cee061462271969836b0",
+      "layout_detectado": "danf3e",
       "leitura_anterior": "2024-09-30",
       "leitura_atual": "2024-10-31",
       "mes_consumo": "2024-10",
@@ -4980,7 +5151,7 @@
       "tarifa_tusd_fora_ponta": 0.09275,
       "tarifa_tusd_ponta": 1.2512,
       "tipo_documento": "fatura_individual",
-      "unidade": "UC-83517D",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -5001,7 +5172,9 @@
       "versao": "692640ce65280788689d18452e627b7f"
     },
     {
+      "_uc": null,
       "arquivo_id": "43b7a4ef2dc686d2a52e",
+      "chave_nf3e_id": "3049189fc6d0a2239531cdfd",
       "competencia": "2024-12",
       "competencia_copel": "2024-12",
       "consumo_kwh": 42598.0,
@@ -5013,8 +5186,9 @@
       "energia_injetada_kwh": 15806.0,
       "energia_injetada_kwh_fora_ponta": 15806.0,
       "energia_injetada_kwh_ponta": null,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "43b7a4ef2dc686d2a52e",
+      "layout_detectado": "danf3e",
       "leitura_anterior": "2024-10-31",
       "leitura_atual": "2024-11-30",
       "mes_consumo": "2024-11",
@@ -5035,7 +5209,7 @@
       "tarifa_tusd_fora_ponta": 0.09275,
       "tarifa_tusd_ponta": 1.2512,
       "tipo_documento": "fatura_individual",
-      "unidade": "UC-CD5F80",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -5056,7 +5230,9 @@
       "versao": "5b5c87c2d704923badcb5d5b8a62a139"
     },
     {
+      "_uc": null,
       "arquivo_id": "a831723ebab2f7352440",
+      "chave_nf3e_id": "e2c8e515ef4961657c5456fe",
       "competencia": "2025-01",
       "competencia_copel": "2025-01",
       "consumo_kwh": 34940.0,
@@ -5068,8 +5244,9 @@
       "energia_injetada_kwh": 15539.0,
       "energia_injetada_kwh_fora_ponta": 15539.0,
       "energia_injetada_kwh_ponta": null,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "a831723ebab2f7352440",
+      "layout_detectado": "danf3e",
       "leitura_anterior": "2024-11-30",
       "leitura_atual": "2024-12-31",
       "mes_consumo": "2024-12",
@@ -5090,7 +5267,7 @@
       "tarifa_tusd_fora_ponta": 0.09275,
       "tarifa_tusd_ponta": 1.2512,
       "tipo_documento": "fatura_individual",
-      "unidade": "UC-19C292",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -5111,7 +5288,9 @@
       "versao": "adf2259a6247529b32917e277f427566"
     },
     {
+      "_uc": null,
       "arquivo_id": "0aa6c53a16ccb0129dc9",
+      "chave_nf3e_id": "97e0a7a103dc657da5285828",
       "competencia": "2025-02",
       "competencia_copel": "2025-02",
       "consumo_kwh": 21888.0,
@@ -5123,8 +5302,9 @@
       "energia_injetada_kwh": 36952.0,
       "energia_injetada_kwh_fora_ponta": 36951.0,
       "energia_injetada_kwh_ponta": 1.0,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "0aa6c53a16ccb0129dc9",
+      "layout_detectado": "danf3e",
       "leitura_anterior": "2024-12-31",
       "leitura_atual": "2025-01-31",
       "mes_consumo": "2025-01",
@@ -5145,7 +5325,7 @@
       "tarifa_tusd_fora_ponta": 0.09275,
       "tarifa_tusd_ponta": 1.2512,
       "tipo_documento": "fatura_individual",
-      "unidade": "UC-D9769F",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -5166,7 +5346,9 @@
       "versao": "161ee05942ad922e8ee0c566a04176eb"
     },
     {
+      "_uc": null,
       "arquivo_id": "cddce9e898f990b25ac3",
+      "chave_nf3e_id": "8c2e64b10909f1f4cb5b629a",
       "competencia": "2025-03",
       "competencia_copel": "2025-03",
       "consumo_kwh": 38097.0,
@@ -5178,8 +5360,9 @@
       "energia_injetada_kwh": 18608.0,
       "energia_injetada_kwh_fora_ponta": 18608.0,
       "energia_injetada_kwh_ponta": 0.0,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "cddce9e898f990b25ac3",
+      "layout_detectado": "danf3e",
       "leitura_anterior": "2025-01-31",
       "leitura_atual": "2025-02-28",
       "mes_consumo": "2025-02",
@@ -5200,7 +5383,7 @@
       "tarifa_tusd_fora_ponta": 0.09275,
       "tarifa_tusd_ponta": 1.2512,
       "tipo_documento": "fatura_individual",
-      "unidade": "UC-22792E",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -5221,7 +5404,9 @@
       "versao": "46a27dc01a31b2d8a02c10572184f6db"
     },
     {
+      "_uc": null,
       "arquivo_id": "d3f3d1cf294f9c1fa526",
+      "chave_nf3e_id": "5e8ce610d68be2910314d8ba",
       "competencia": "2025-04",
       "competencia_copel": "2025-04",
       "consumo_kwh": 33156.0,
@@ -5233,8 +5418,9 @@
       "energia_injetada_kwh": 29544.0,
       "energia_injetada_kwh_fora_ponta": 29544.0,
       "energia_injetada_kwh_ponta": 0.0,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "d3f3d1cf294f9c1fa526",
+      "layout_detectado": "danf3e",
       "leitura_anterior": "2025-02-28",
       "leitura_atual": "2025-03-31",
       "mes_consumo": "2025-03",
@@ -5255,7 +5441,7 @@
       "tarifa_tusd_fora_ponta": 0.09275,
       "tarifa_tusd_ponta": 1.2512,
       "tipo_documento": "fatura_individual",
-      "unidade": "UC-0CC13B",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -5276,7 +5462,9 @@
       "versao": "924a91c2ea8ed3b1f0bc9564b7d43969"
     },
     {
+      "_uc": null,
       "arquivo_id": "b5443800c0f219e729c3",
+      "chave_nf3e_id": "e286937be344ec88ff9c35be",
       "competencia": "2025-05",
       "competencia_copel": "2025-05",
       "consumo_kwh": 41016.0,
@@ -5288,8 +5476,9 @@
       "energia_injetada_kwh": 14508.0,
       "energia_injetada_kwh_fora_ponta": 14508.0,
       "energia_injetada_kwh_ponta": 0.0,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "b5443800c0f219e729c3",
+      "layout_detectado": "danf3e",
       "leitura_anterior": "2025-03-31",
       "leitura_atual": "2025-04-30",
       "mes_consumo": "2025-04",
@@ -5310,7 +5499,7 @@
       "tarifa_tusd_fora_ponta": 0.09275,
       "tarifa_tusd_ponta": 1.2512,
       "tipo_documento": "fatura_individual",
-      "unidade": "UC-4E2A2A",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -5331,7 +5520,9 @@
       "versao": "92c1e0dca927a15bb0c202e6ce8a6d20"
     },
     {
+      "_uc": null,
       "arquivo_id": "6ba949e5dc93ca9739a6",
+      "chave_nf3e_id": "bcd337d3bc73a60663aa7fd6",
       "competencia": "2025-06",
       "competencia_copel": "2025-06",
       "consumo_kwh": 37485.0,
@@ -5343,8 +5534,9 @@
       "energia_injetada_kwh": 20842.0,
       "energia_injetada_kwh_fora_ponta": 20842.0,
       "energia_injetada_kwh_ponta": 0.0,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "6ba949e5dc93ca9739a6",
+      "layout_detectado": "danf3e",
       "leitura_anterior": "2025-04-30",
       "leitura_atual": "2025-05-31",
       "mes_consumo": "2025-05",
@@ -5365,7 +5557,7 @@
       "tarifa_tusd_fora_ponta": 0.09275,
       "tarifa_tusd_ponta": 1.2512,
       "tipo_documento": "fatura_individual",
-      "unidade": "UC-3F5DAB",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -5386,7 +5578,9 @@
       "versao": "5cbefc5d464c419f085b704c52348f3c"
     },
     {
+      "_uc": null,
       "arquivo_id": "2945817519006d505e4c",
+      "chave_nf3e_id": "200434417f365afc4f0ce9b3",
       "competencia": "2025-07",
       "competencia_copel": "2025-07",
       "consumo_kwh": 33407.0,
@@ -5398,8 +5592,9 @@
       "energia_injetada_kwh": 14322.0,
       "energia_injetada_kwh_fora_ponta": 14322.0,
       "energia_injetada_kwh_ponta": 0.0,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "2945817519006d505e4c",
+      "layout_detectado": "danf3e",
       "leitura_anterior": "2025-05-31",
       "leitura_atual": "2025-06-30",
       "mes_consumo": "2025-06",
@@ -5420,7 +5615,7 @@
       "tarifa_tusd_fora_ponta": 0.12091,
       "tarifa_tusd_ponta": 1.21156,
       "tipo_documento": "fatura_individual",
-      "unidade": "UC-5173B7",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -5441,7 +5636,9 @@
       "versao": "ed931df7040352d23fad121164cf86aa"
     },
     {
+      "_uc": null,
       "arquivo_id": "cc93a4854853ceca2113",
+      "chave_nf3e_id": "ad382da96228dada0fabd65a",
       "competencia": "2025-08",
       "competencia_copel": "2025-08",
       "consumo_kwh": 25791.0,
@@ -5453,8 +5650,9 @@
       "energia_injetada_kwh": 29175.0,
       "energia_injetada_kwh_fora_ponta": 29175.0,
       "energia_injetada_kwh_ponta": 0.0,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "cc93a4854853ceca2113",
+      "layout_detectado": "danf3e",
       "leitura_anterior": "2025-06-30",
       "leitura_atual": "2025-07-31",
       "mes_consumo": "2025-07",
@@ -5475,7 +5673,7 @@
       "tarifa_tusd_fora_ponta": 0.12091,
       "tarifa_tusd_ponta": 1.21156,
       "tipo_documento": "fatura_individual",
-      "unidade": "UC-08A381",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -5496,7 +5694,9 @@
       "versao": "ddbee33a08634aa5211a768a0179212a"
     },
     {
+      "_uc": null,
       "arquivo_id": "4f2d2708f16ae3816f46",
+      "chave_nf3e_id": "116a2ab0a4da72664729acb8",
       "competencia": "2025-09",
       "competencia_copel": "2025-09",
       "consumo_kwh": 30116.0,
@@ -5508,8 +5708,9 @@
       "energia_injetada_kwh": 31757.0,
       "energia_injetada_kwh_fora_ponta": 31757.0,
       "energia_injetada_kwh_ponta": null,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "4f2d2708f16ae3816f46",
+      "layout_detectado": "danf3e",
       "leitura_anterior": "2025-07-31",
       "leitura_atual": "2025-08-31",
       "mes_consumo": "2025-08",
@@ -5530,7 +5731,7 @@
       "tarifa_tusd_fora_ponta": 0.12091,
       "tarifa_tusd_ponta": 1.21156,
       "tipo_documento": "fatura_individual",
-      "unidade": "UC-732013",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -5551,7 +5752,9 @@
       "versao": "7e8143d0f9b9ddc7c22f33d87172b36c"
     },
     {
+      "_uc": null,
       "arquivo_id": "60868c1d3acc61bdbd38",
+      "chave_nf3e_id": "b1216db7033b2051b16f03d4",
       "competencia": "2025-10",
       "competencia_copel": "2025-10",
       "consumo_kwh": 38575.0,
@@ -5563,8 +5766,9 @@
       "energia_injetada_kwh": 25391.0,
       "energia_injetada_kwh_fora_ponta": 25391.0,
       "energia_injetada_kwh_ponta": 0.0,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "60868c1d3acc61bdbd38",
+      "layout_detectado": "danf3e",
       "leitura_anterior": "2025-08-31",
       "leitura_atual": "2025-09-30",
       "mes_consumo": "2025-09",
@@ -5585,7 +5789,7 @@
       "tarifa_tusd_fora_ponta": 0.12091,
       "tarifa_tusd_ponta": 1.21156,
       "tipo_documento": "fatura_individual",
-      "unidade": "UC-4CBDE0",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -5606,7 +5810,9 @@
       "versao": "e8f730cb62c54544c3ab4214c06272d8"
     },
     {
+      "_uc": null,
       "arquivo_id": "0920d138fc0c02131f29",
+      "chave_nf3e_id": "ca1143936947260119156c3b",
       "competencia": "2025-11",
       "competencia_copel": "2025-11",
       "consumo_kwh": 40865.0,
@@ -5618,8 +5824,9 @@
       "energia_injetada_kwh": 20253.0,
       "energia_injetada_kwh_fora_ponta": 20253.0,
       "energia_injetada_kwh_ponta": 0.0,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "0920d138fc0c02131f29",
+      "layout_detectado": "danf3e",
       "leitura_anterior": "2025-09-30",
       "leitura_atual": "2025-10-31",
       "mes_consumo": "2025-10",
@@ -5640,7 +5847,7 @@
       "tarifa_tusd_fora_ponta": 0.12091,
       "tarifa_tusd_ponta": 1.21156,
       "tipo_documento": "fatura_individual",
-      "unidade": "UC-82E15C",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -5661,7 +5868,9 @@
       "versao": "8a65a5f9859650a751aca4b05304b5fb"
     },
     {
+      "_uc": null,
       "arquivo_id": "409fdad7858e439c6854",
+      "chave_nf3e_id": "aa6f031933b50d03ec4f11f8",
       "competencia": "2025-12",
       "competencia_copel": "2025-12",
       "consumo_kwh": 35853.0,
@@ -5673,8 +5882,9 @@
       "energia_injetada_kwh": 24297.0,
       "energia_injetada_kwh_fora_ponta": 24297.0,
       "energia_injetada_kwh_ponta": 0.0,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "409fdad7858e439c6854",
+      "layout_detectado": "danf3e",
       "leitura_anterior": "2025-10-31",
       "leitura_atual": "2025-11-30",
       "mes_consumo": "2025-11",
@@ -5695,7 +5905,7 @@
       "tarifa_tusd_fora_ponta": 0.12091,
       "tarifa_tusd_ponta": 1.21156,
       "tipo_documento": "fatura_individual",
-      "unidade": "UC-B1CF32",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -5716,7 +5926,9 @@
       "versao": "1470ae0d37d5114292538c03b658ce16"
     },
     {
+      "_uc": null,
       "arquivo_id": "9b3b2d9fa6ac4572d15c",
+      "chave_nf3e_id": "dd25397121460c78f351598f",
       "competencia": "2026-01",
       "competencia_copel": "2026-01",
       "consumo_kwh": 33999.0,
@@ -5728,8 +5940,9 @@
       "energia_injetada_kwh": 26225.0,
       "energia_injetada_kwh_fora_ponta": 26225.0,
       "energia_injetada_kwh_ponta": null,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "9b3b2d9fa6ac4572d15c",
+      "layout_detectado": "danf3e",
       "leitura_anterior": "2025-11-30",
       "leitura_atual": "2025-12-31",
       "mes_consumo": "2025-12",
@@ -5750,7 +5963,7 @@
       "tarifa_tusd_fora_ponta": 0.12091,
       "tarifa_tusd_ponta": 1.21156,
       "tipo_documento": "fatura_individual",
-      "unidade": "UC-87ADBF",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -5771,7 +5984,9 @@
       "versao": "f72ef9b855488ef0e44965bef77ba0ff"
     },
     {
+      "_uc": null,
       "arquivo_id": "3d29b0d5b1766ac891c2",
+      "chave_nf3e_id": "77d008089f527c22159885ae",
       "competencia": "2026-02",
       "competencia_copel": "2026-02",
       "consumo_kwh": 23171.0,
@@ -5783,8 +5998,9 @@
       "energia_injetada_kwh": 24962.0,
       "energia_injetada_kwh_fora_ponta": 24960.0,
       "energia_injetada_kwh_ponta": 2.0,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "3d29b0d5b1766ac891c2",
+      "layout_detectado": "danf3e",
       "leitura_anterior": "2025-12-31",
       "leitura_atual": "2026-01-31",
       "mes_consumo": "2026-01",
@@ -5805,7 +6021,7 @@
       "tarifa_tusd_fora_ponta": 0.12091,
       "tarifa_tusd_ponta": 1.21156,
       "tipo_documento": "fatura_individual",
-      "unidade": "UC-0DCDA0",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -5826,7 +6042,9 @@
       "versao": "d1590a9b53fc168104eb896f732edfdb"
     },
     {
+      "_uc": null,
       "arquivo_id": "4203835d46f7169f64b4",
+      "chave_nf3e_id": "0762eb6a3ea58dd89aad23ff",
       "competencia": "2026-03",
       "competencia_copel": "2026-03",
       "consumo_kwh": 27545.0,
@@ -5838,8 +6056,9 @@
       "energia_injetada_kwh": 16366.0,
       "energia_injetada_kwh_fora_ponta": 16366.0,
       "energia_injetada_kwh_ponta": 0.0,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "4203835d46f7169f64b4",
+      "layout_detectado": "danf3e",
       "leitura_anterior": "2026-01-31",
       "leitura_atual": "2026-02-28",
       "mes_consumo": "2026-02",
@@ -5860,7 +6079,7 @@
       "tarifa_tusd_fora_ponta": 0.12091,
       "tarifa_tusd_ponta": 1.21156,
       "tipo_documento": "fatura_individual",
-      "unidade": "UC-837D6C",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -5881,7 +6100,9 @@
       "versao": "69a4d39c422116ce2a2ae33da19d98f8"
     },
     {
+      "_uc": null,
       "arquivo_id": "6bcc702562e908f74ef7",
+      "chave_nf3e_id": "4413a134e2ec0e2667826ad9",
       "competencia": "2026-04",
       "competencia_copel": "2026-04",
       "consumo_kwh": 47431.0,
@@ -5893,8 +6114,9 @@
       "energia_injetada_kwh": 19728.0,
       "energia_injetada_kwh_fora_ponta": 19728.0,
       "energia_injetada_kwh_ponta": 0.0,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "6bcc702562e908f74ef7",
+      "layout_detectado": "danf3e",
       "leitura_anterior": "2026-02-28",
       "leitura_atual": "2026-03-31",
       "mes_consumo": "2026-03",
@@ -5915,7 +6137,7 @@
       "tarifa_tusd_fora_ponta": 0.12091,
       "tarifa_tusd_ponta": 1.21156,
       "tipo_documento": "fatura_individual",
-      "unidade": "UC-041A71",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -5936,7 +6158,9 @@
       "versao": "fa7f9eadcbd0f66af1d1f72d666ed236"
     },
     {
+      "_uc": null,
       "arquivo_id": "0bd3078df06c29d70966",
+      "chave_nf3e_id": "e3bb8b4ce4498699ab2de1e3",
       "competencia": "2026-05",
       "competencia_copel": "2026-05",
       "consumo_kwh": 45532.0,
@@ -5948,8 +6172,9 @@
       "energia_injetada_kwh": 17309.0,
       "energia_injetada_kwh_fora_ponta": 17309.0,
       "energia_injetada_kwh_ponta": 0.0,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "0bd3078df06c29d70966",
+      "layout_detectado": "danf3e",
       "leitura_anterior": "2026-03-31",
       "leitura_atual": "2026-04-30",
       "mes_consumo": "2026-04",
@@ -5970,7 +6195,7 @@
       "tarifa_tusd_fora_ponta": 0.12091,
       "tarifa_tusd_ponta": 1.21156,
       "tipo_documento": "fatura_individual",
-      "unidade": "UC-90BD09",
+      "unidade": "UC-27E88AB465E1",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -5991,7 +6216,9 @@
       "versao": "eaa05a7eb2a1825332b10fa796aa013b"
     },
     {
+      "_uc": "000303338203107",
       "arquivo_id": "dc27cb82a07a32ae866e",
+      "chave_nf3e_id": "ed724de17005a5992bb265ea",
       "competencia": "2026-06",
       "competencia_copel": "2026-06",
       "consumo_kwh": 42806.0,
@@ -6003,8 +6230,9 @@
       "energia_injetada_kwh": 12585.0,
       "energia_injetada_kwh_fora_ponta": 12585.0,
       "energia_injetada_kwh_ponta": 0.0,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "dc27cb82a07a32ae866e",
+      "layout_detectado": "danf3e",
       "leitura_anterior": "2026-04-30",
       "leitura_atual": "2026-05-31",
       "mes_consumo": "2026-05",
@@ -6025,7 +6253,7 @@
       "tarifa_tusd_fora_ponta": 0.12091,
       "tarifa_tusd_ponta": 1.21156,
       "tipo_documento": "fatura_individual",
-      "unidade": "UC-B17795",
+      "unidade": "UC-B1779599B0C7",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -6046,7 +6274,9 @@
       "versao": "f8073fd1698cba096938bc165db88167"
     },
     {
+      "_uc": "000303338203107",
       "arquivo_id": "e4e1cb6eefbc75a91c62",
+      "chave_nf3e_id": "5fa56f555d4bcd271b66538d",
       "competencia": "2026-07",
       "competencia_copel": "2026-07",
       "consumo_kwh": 39178.0,
@@ -6058,8 +6288,9 @@
       "energia_injetada_kwh": 13307.0,
       "energia_injetada_kwh_fora_ponta": 13307.0,
       "energia_injetada_kwh_ponta": 0.0,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "e4e1cb6eefbc75a91c62",
+      "layout_detectado": "danf3e",
       "leitura_anterior": "2026-05-31",
       "leitura_atual": "2026-06-30",
       "mes_consumo": "2026-06",
@@ -6080,7 +6311,7 @@
       "tarifa_tusd_fora_ponta": 0.14659,
       "tarifa_tusd_ponta": 1.46339,
       "tipo_documento": "fatura_individual",
-      "unidade": "UC-B17795",
+      "unidade": "UC-B1779599B0C7",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -6101,7 +6332,9 @@
       "versao": "c661acabc37b148581fa7fe83634ccc6"
     },
     {
+      "_uc": "000303338203107",
       "arquivo_id": "cc9697596694fcfc4dcb",
+      "chave_nf3e_id": "c5f41399240294e706f2d89b",
       "competencia": "2026-08",
       "competencia_copel": "2026-08",
       "consumo_kwh": 35073.0,
@@ -6113,8 +6346,9 @@
       "energia_injetada_kwh": 19822.0,
       "energia_injetada_kwh_fora_ponta": 19822.0,
       "energia_injetada_kwh_ponta": 0.0,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "cc9697596694fcfc4dcb",
+      "layout_detectado": "danf3e",
       "leitura_anterior": "2026-06-30",
       "leitura_atual": "2026-07-31",
       "mes_consumo": "2026-07",
@@ -6135,7 +6369,7 @@
       "tarifa_tusd_fora_ponta": 0.14659,
       "tarifa_tusd_ponta": 1.46339,
       "tipo_documento": "fatura_individual",
-      "unidade": "UC-B17795",
+      "unidade": "UC-B1779599B0C7",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -6156,7 +6390,9 @@
       "versao": "09e1b1fb06ea18902f2ee3ff51b65fba"
     },
     {
+      "_uc": "000303338203107",
       "arquivo_id": "6bde1b6b3d64f098c0ba",
+      "chave_nf3e_id": "8fb40f29df2b51c59e3cda4b",
       "competencia": "2026-09",
       "competencia_copel": "2026-09",
       "consumo_kwh": 41450.0,
@@ -6168,8 +6404,9 @@
       "energia_injetada_kwh": 18602.0,
       "energia_injetada_kwh_fora_ponta": 18602.0,
       "energia_injetada_kwh_ponta": 0.0,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "6bde1b6b3d64f098c0ba",
+      "layout_detectado": "danf3e",
       "leitura_anterior": "2026-07-31",
       "leitura_atual": "2026-08-31",
       "mes_consumo": "2026-08",
@@ -6190,7 +6427,7 @@
       "tarifa_tusd_fora_ponta": 0.14659,
       "tarifa_tusd_ponta": 1.46339,
       "tipo_documento": "fatura_individual",
-      "unidade": "UC-B17795",
+      "unidade": "UC-B1779599B0C7",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -6211,7 +6448,9 @@
       "versao": "eee11f6916ba1d8e9ee7574f4abc3986"
     },
     {
+      "_uc": "000303338203107",
       "arquivo_id": "ae9a8d8c88943eddd059",
+      "chave_nf3e_id": "cf40ccfb934f2873be57e6ea",
       "competencia": "2026-10",
       "competencia_copel": "2026-10",
       "consumo_kwh": 46650.0,
@@ -6223,8 +6462,9 @@
       "energia_injetada_kwh": 13517.0,
       "energia_injetada_kwh_fora_ponta": 13517.0,
       "energia_injetada_kwh_ponta": 0.0,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "ae9a8d8c88943eddd059",
+      "layout_detectado": "danf3e",
       "leitura_anterior": "2026-08-31",
       "leitura_atual": "2026-09-30",
       "mes_consumo": "2026-09",
@@ -6245,7 +6485,7 @@
       "tarifa_tusd_fora_ponta": 0.14659,
       "tarifa_tusd_ponta": 1.46339,
       "tipo_documento": "fatura_individual",
-      "unidade": "UC-B17795",
+      "unidade": "UC-B1779599B0C7",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",
@@ -6266,7 +6506,9 @@
       "versao": "970e58005ec140faad524b226c3ee59c"
     },
     {
+      "_uc": "000303338203107",
       "arquivo_id": "4110d0ee4a000ef3c8d7",
+      "chave_nf3e_id": "829bdead798de60124eb5a16",
       "competencia": "2026-11",
       "competencia_copel": "2026-11",
       "consumo_kwh": 42390.0,
@@ -6278,8 +6520,9 @@
       "energia_injetada_kwh": 18222.0,
       "energia_injetada_kwh_fora_ponta": 18222.0,
       "energia_injetada_kwh_ponta": 0.0,
-      "extrator_versao": "copel-multiformato-4",
+      "extrator_versao": "copel-auditavel-5",
       "id": "4110d0ee4a000ef3c8d7",
+      "layout_detectado": "danf3e",
       "leitura_anterior": "2026-09-30",
       "leitura_atual": "2026-10-31",
       "mes_consumo": "2026-10",
@@ -6300,7 +6543,7 @@
       "tarifa_tusd_fora_ponta": 0.14659,
       "tarifa_tusd_ponta": 1.46339,
       "tipo_documento": "fatura_individual",
-      "unidade": "UC-B17795",
+      "unidade": "UC-B1779599B0C7",
       "validacao_campos": {
         "consumo_kwh_fora_ponta": "identificado",
         "consumo_kwh_ponta": "identificado",

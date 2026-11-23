@@ -1,0 +1,3624 @@
+{
+  "atualizado_em": "2026-11-23T14:31:35Z",
+  "documentos": {
+    "054481c82efc8e0176d3": {
+      "alertas": [],
+      "campos": {
+        "chave_nf3e": {
+          "confianca": "alta",
+          "regra": "44_digitos_dv_mod11",
+          "validado": true
+        },
+        "consumo_kwh": {
+          "confianca": "media",
+          "regra": "rotulo_especifico_ou_fallback_v16",
+          "validado": true
+        },
+        "te_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.02,
+          "validado": true
+        },
+        "te_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "tusd_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.01,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.02,
+          "validado": true
+        },
+        "tusd_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "alta",
+          "regra": "total_linha_faturamento",
+          "validado": true
+        }
+      },
+      "layout": "danf3e"
+    },
+    "0920d138fc0c02131f29": {
+      "alertas": [],
+      "campos": {
+        "chave_nf3e": {
+          "confianca": "alta",
+          "regra": "44_digitos_dv_mod11",
+          "validado": true
+        },
+        "consumo_kwh": {
+          "confianca": "media",
+          "regra": "rotulo_especifico_ou_fallback_v16",
+          "validado": true
+        },
+        "te_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.01,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.03,
+          "validado": true
+        },
+        "te_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "tusd_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.02,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.03,
+          "validado": true
+        },
+        "tusd_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "alta",
+          "regra": "total_linha_faturamento",
+          "validado": true
+        }
+      },
+      "layout": "danf3e"
+    },
+    "0aa6c53a16ccb0129dc9": {
+      "alertas": [],
+      "campos": {
+        "chave_nf3e": {
+          "confianca": "alta",
+          "regra": "44_digitos_dv_mod11",
+          "validado": true
+        },
+        "consumo_kwh": {
+          "confianca": "media",
+          "regra": "rotulo_especifico_ou_fallback_v16",
+          "validado": true
+        },
+        "te_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.01,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.02,
+          "validado": true
+        },
+        "te_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "tusd_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.02,
+          "validado": true
+        },
+        "tusd_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "alta",
+          "regra": "total_linha_faturamento",
+          "validado": true
+        }
+      },
+      "layout": "danf3e"
+    },
+    "0abefcd522256a56a8f8": {
+      "alertas": [],
+      "campos": {
+        "chave_nf3e": {
+          "confianca": "alta",
+          "regra": "44_digitos_dv_mod11",
+          "validado": true
+        },
+        "consumo_kwh": {
+          "confianca": "media",
+          "regra": "rotulo_especifico_ou_fallback_v16",
+          "validado": true
+        },
+        "te_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.02,
+          "validado": true
+        },
+        "te_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "tusd_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.02,
+          "validado": true
+        },
+        "tusd_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "alta",
+          "regra": "total_linha_faturamento",
+          "validado": true
+        }
+      },
+      "layout": "danf3e"
+    },
+    "0bd3078df06c29d70966": {
+      "alertas": [],
+      "campos": {
+        "chave_nf3e": {
+          "confianca": "alta",
+          "regra": "44_digitos_dv_mod11",
+          "validado": true
+        },
+        "consumo_kwh": {
+          "confianca": "media",
+          "regra": "rotulo_especifico_ou_fallback_v16",
+          "validado": true
+        },
+        "te_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.01,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.03,
+          "validado": true
+        },
+        "te_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "tusd_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.02,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.03,
+          "validado": true
+        },
+        "tusd_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "alta",
+          "regra": "total_linha_faturamento",
+          "validado": true
+        }
+      },
+      "layout": "danf3e"
+    },
+    "0c694c289473a7b569b7": {
+      "alertas": [],
+      "campos": {
+        "consumo_kwh_fora_ponta": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        },
+        "consumo_kwh_ponta": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        }
+      },
+      "layout": "historico_cmehfat0"
+    },
+    "1287c3f45b49ba6b3094": {
+      "alertas": [],
+      "campos": {
+        "consumo_kwh_fora_ponta": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        },
+        "consumo_kwh_ponta": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        }
+      },
+      "layout": "historico_cmehfat0"
+    },
+    "163eca080124c8d00748": {
+      "estado": "origem_removida"
+    },
+    "173d1ee7a50b12c29d01": {
+      "alertas": [],
+      "campos": {
+        "consumo_kwh_fora_ponta": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        },
+        "consumo_kwh_ponta": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        }
+      },
+      "layout": "historico_cmehfat0"
+    },
+    "173d5eb4eef8d9d8f137": {
+      "alertas": [],
+      "campos": {
+        "consumo_kwh_fora_ponta": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        },
+        "consumo_kwh_ponta": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        }
+      },
+      "layout": "historico_cmehfat0"
+    },
+    "1790e00f4c36460a1a58": {
+      "estado": "origem_removida"
+    },
+    "1f1e45b37ac1bbb74cc4": {
+      "alertas": [],
+      "campos": {
+        "chave_nf3e": {
+          "confianca": "alta",
+          "regra": "44_digitos_dv_mod11",
+          "validado": true
+        },
+        "consumo_kwh": {
+          "confianca": "media",
+          "regra": "rotulo_especifico_ou_fallback_v16",
+          "validado": true
+        },
+        "te_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.02,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.03,
+          "validado": true
+        },
+        "te_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "tusd_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.02,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.03,
+          "validado": true
+        },
+        "tusd_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "alta",
+          "regra": "total_linha_faturamento",
+          "validado": true
+        }
+      },
+      "layout": "danf3e"
+    },
+    "21266a5ae753f5accded": {
+      "alertas": [],
+      "campos": {
+        "consumo_kwh_fora_ponta": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        },
+        "consumo_kwh_ponta": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        }
+      },
+      "layout": "historico_cmehfat0"
+    },
+    "24d6e2b755ded0567ab8": {
+      "alertas": [],
+      "campos": {
+        "consumo_kwh_fora_ponta": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        },
+        "consumo_kwh_ponta": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        }
+      },
+      "layout": "historico_cmehfat0"
+    },
+    "253e44c4f96adc56a66e": {
+      "alertas": [],
+      "campos": {
+        "consumo_kwh_fora_ponta": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        },
+        "consumo_kwh_ponta": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        }
+      },
+      "layout": "historico_cmehfat0"
+    },
+    "273cbc963cec9470d89e": {
+      "alertas": [],
+      "campos": {
+        "consumo_kwh_fora_ponta": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        },
+        "consumo_kwh_ponta": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        }
+      },
+      "layout": "historico_cmehfat0"
+    },
+    "2945817519006d505e4c": {
+      "alertas": [],
+      "campos": {
+        "chave_nf3e": {
+          "confianca": "alta",
+          "regra": "44_digitos_dv_mod11",
+          "validado": true
+        },
+        "consumo_kwh": {
+          "confianca": "media",
+          "regra": "rotulo_especifico_ou_fallback_v16",
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "alta",
+          "regra": "total_linha_faturamento",
+          "validado": true
+        }
+      },
+      "layout": "danf3e"
+    },
+    "29b864aac89be27ae9a4": {
+      "alertas": [],
+      "campos": {
+        "consumo_kwh_fora_ponta": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        },
+        "consumo_kwh_ponta": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        }
+      },
+      "layout": "historico_cmehfat0"
+    },
+    "29b933f12f9609b941e8": {
+      "estado": "origem_removida"
+    },
+    "2f0f3b9bf276732afabc": {
+      "alertas": [],
+      "campos": {
+        "consumo_kwh": {
+          "confianca": "media",
+          "regra": "rotulo_especifico_ou_fallback_v16",
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "alta",
+          "regra": "valor_a_pagar_cabecalho",
+          "validado": true
+        }
+      },
+      "layout": "fatura_legada"
+    },
+    "3060203255533752483b": {
+      "alertas": [],
+      "campos": {
+        "chave_nf3e": {
+          "confianca": "alta",
+          "regra": "44_digitos_dv_mod11",
+          "validado": true
+        },
+        "consumo_kwh": {
+          "confianca": "media",
+          "regra": "rotulo_especifico_ou_fallback_v16",
+          "validado": true
+        },
+        "te_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.01,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.02,
+          "validado": true
+        },
+        "te_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "tusd_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.01,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.02,
+          "validado": true
+        },
+        "tusd_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "alta",
+          "regra": "total_linha_faturamento",
+          "validado": true
+        }
+      },
+      "layout": "danf3e"
+    },
+    "351a764f343a32bbccce": {
+      "alertas": [],
+      "campos": {
+        "consumo_kwh": {
+          "confianca": "media",
+          "regra": "rotulo_especifico_ou_fallback_v16",
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "alta",
+          "regra": "valor_a_pagar_cabecalho",
+          "validado": true
+        }
+      },
+      "layout": "fatura_legada"
+    },
+    "37c5e16f1dbeca4f8d28": {
+      "alertas": [],
+      "campos": {
+        "consumo_kwh": {
+          "confianca": "media",
+          "regra": "rotulo_especifico_ou_fallback_v16",
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "alta",
+          "regra": "valor_a_pagar_cabecalho",
+          "validado": true
+        }
+      },
+      "layout": "fatura_legada"
+    },
+    "382e9a56d7b9d331f30f": {
+      "estado": "origem_removida"
+    },
+    "38ed1865fc8ba1664dd6": {
+      "alertas": [],
+      "campos": {
+        "consumo_kwh": {
+          "confianca": "media",
+          "regra": "rotulo_especifico_ou_fallback_v16",
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "alta",
+          "regra": "valor_a_pagar_cabecalho",
+          "validado": true
+        }
+      },
+      "layout": "fatura_legada"
+    },
+    "397d2d4246881ada4506": {
+      "alertas": [],
+      "campos": {
+        "consumo_kwh": {
+          "confianca": "media",
+          "regra": "rotulo_especifico_ou_fallback_v16",
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "alta",
+          "regra": "valor_a_pagar_cabecalho",
+          "validado": true
+        }
+      },
+      "layout": "fatura_legada"
+    },
+    "39f90d21c8073350a775": {
+      "alertas": [],
+      "campos": {
+        "chave_nf3e": {
+          "confianca": "alta",
+          "regra": "44_digitos_dv_mod11",
+          "validado": true
+        },
+        "consumo_kwh": {
+          "confianca": "media",
+          "regra": "rotulo_especifico_ou_fallback_v16",
+          "validado": true
+        },
+        "te_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.03,
+          "validado": true
+        },
+        "te_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "tusd_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.01,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.03,
+          "validado": true
+        },
+        "tusd_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "alta",
+          "regra": "total_linha_faturamento",
+          "validado": true
+        }
+      },
+      "layout": "danf3e"
+    },
+    "3ad94b710a7ba44b7e65": {
+      "estado": "origem_removida"
+    },
+    "3c3044efbf977ac8ebb2": {
+      "alertas": [],
+      "campos": {
+        "consumo_kwh_fora_ponta": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        },
+        "consumo_kwh_ponta": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        }
+      },
+      "layout": "historico_cmehfat0"
+    },
+    "3d29b0d5b1766ac891c2": {
+      "alertas": [],
+      "campos": {
+        "chave_nf3e": {
+          "confianca": "alta",
+          "regra": "44_digitos_dv_mod11",
+          "validado": true
+        },
+        "consumo_kwh": {
+          "confianca": "media",
+          "regra": "rotulo_especifico_ou_fallback_v16",
+          "validado": true
+        },
+        "te_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.01,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.02,
+          "validado": true
+        },
+        "te_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "tusd_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.02,
+          "validado": true
+        },
+        "tusd_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "alta",
+          "regra": "total_linha_faturamento",
+          "validado": true
+        }
+      },
+      "layout": "danf3e"
+    },
+    "3dfda8d4326135d0bac8": {
+      "estado": "origem_removida"
+    },
+    "409fdad7858e439c6854": {
+      "alertas": [],
+      "campos": {
+        "chave_nf3e": {
+          "confianca": "alta",
+          "regra": "44_digitos_dv_mod11",
+          "validado": true
+        },
+        "consumo_kwh": {
+          "confianca": "media",
+          "regra": "rotulo_especifico_ou_fallback_v16",
+          "validado": true
+        },
+        "te_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.01,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.02,
+          "validado": true
+        },
+        "te_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "tusd_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.01,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.02,
+          "validado": true
+        },
+        "tusd_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "alta",
+          "regra": "total_linha_faturamento",
+          "validado": true
+        }
+      },
+      "layout": "danf3e"
+    },
+    "4110d0ee4a000ef3c8d7": {
+      "alertas": [],
+      "campos": {
+        "chave_nf3e": {
+          "confianca": "alta",
+          "regra": "44_digitos_dv_mod11",
+          "validado": true
+        },
+        "consumo_kwh": {
+          "confianca": "media",
+          "regra": "rotulo_especifico_ou_fallback_v16",
+          "validado": true
+        },
+        "te_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.03,
+          "validado": true
+        },
+        "te_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "tusd_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.03,
+          "validado": true
+        },
+        "tusd_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "alta",
+          "regra": "total_linha_faturamento",
+          "validado": true
+        }
+      },
+      "layout": "danf3e"
+    },
+    "4203835d46f7169f64b4": {
+      "alertas": [],
+      "campos": {
+        "chave_nf3e": {
+          "confianca": "alta",
+          "regra": "44_digitos_dv_mod11",
+          "validado": true
+        },
+        "consumo_kwh": {
+          "confianca": "media",
+          "regra": "rotulo_especifico_ou_fallback_v16",
+          "validado": true
+        },
+        "te_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.01,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.02,
+          "validado": true
+        },
+        "te_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "tusd_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.02,
+          "validado": true
+        },
+        "tusd_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "alta",
+          "regra": "total_linha_faturamento",
+          "validado": true
+        }
+      },
+      "layout": "danf3e"
+    },
+    "42b4a49ad8dd77523a0d": {
+      "alertas": [],
+      "campos": {
+        "consumo_kwh_fora_ponta": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        },
+        "consumo_kwh_ponta": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        }
+      },
+      "layout": "historico_cmehfat0"
+    },
+    "43b7a4ef2dc686d2a52e": {
+      "alertas": [],
+      "campos": {
+        "chave_nf3e": {
+          "confianca": "alta",
+          "regra": "44_digitos_dv_mod11",
+          "validado": true
+        },
+        "consumo_kwh": {
+          "confianca": "media",
+          "regra": "rotulo_especifico_ou_fallback_v16",
+          "validado": true
+        },
+        "te_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.02,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.03,
+          "validado": true
+        },
+        "te_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "tusd_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.01,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.03,
+          "validado": true
+        },
+        "tusd_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "alta",
+          "regra": "total_linha_faturamento",
+          "validado": true
+        }
+      },
+      "layout": "danf3e"
+    },
+    "45617633176354ecaf4f": {
+      "estado": "origem_removida"
+    },
+    "46943b74b861ebc39f68": {
+      "alertas": [],
+      "campos": {
+        "chave_nf3e": {
+          "confianca": "alta",
+          "regra": "44_digitos_dv_mod11",
+          "validado": true
+        },
+        "consumo_kwh": {
+          "confianca": "media",
+          "regra": "rotulo_especifico_ou_fallback_v16",
+          "validado": true
+        },
+        "te_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.02,
+          "validado": true
+        },
+        "te_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "tusd_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.01,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.02,
+          "validado": true
+        },
+        "tusd_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "alta",
+          "regra": "total_linha_faturamento",
+          "validado": true
+        }
+      },
+      "layout": "danf3e"
+    },
+    "4ba3b50a04565ed298ae": {
+      "alertas": [],
+      "campos": {
+        "consumo_kwh": {
+          "confianca": "media",
+          "regra": "rotulo_especifico_ou_fallback_v16",
+          "validado": true
+        },
+        "te_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.02,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.03,
+          "validado": true
+        },
+        "te_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "tusd_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.01,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.03,
+          "validado": true
+        },
+        "tusd_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "alta",
+          "regra": "valor_a_pagar_cabecalho",
+          "validado": true
+        }
+      },
+      "layout": "fatura_legada"
+    },
+    "4f2d2708f16ae3816f46": {
+      "alertas": [],
+      "campos": {
+        "chave_nf3e": {
+          "confianca": "alta",
+          "regra": "44_digitos_dv_mod11",
+          "validado": true
+        },
+        "consumo_kwh": {
+          "confianca": "media",
+          "regra": "rotulo_especifico_ou_fallback_v16",
+          "validado": true
+        },
+        "te_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.02,
+          "validado": true
+        },
+        "te_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "tusd_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.01,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.02,
+          "validado": true
+        },
+        "tusd_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "alta",
+          "regra": "total_linha_faturamento",
+          "validado": true
+        }
+      },
+      "layout": "danf3e"
+    },
+    "4f8317d7889d168e6fa3": {
+      "estado": "origem_removida"
+    },
+    "4f91a4384c200599241a": {
+      "estado": "origem_removida"
+    },
+    "52dcad774a4300a91934": {
+      "alertas": [],
+      "campos": {
+        "chave_nf3e": {
+          "confianca": "alta",
+          "regra": "44_digitos_dv_mod11",
+          "validado": true
+        },
+        "consumo_kwh": {
+          "confianca": "media",
+          "regra": "rotulo_especifico_ou_fallback_v16",
+          "validado": true
+        },
+        "te_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.01,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.03,
+          "validado": true
+        },
+        "te_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "tusd_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.01,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.03,
+          "validado": true
+        },
+        "tusd_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "alta",
+          "regra": "total_linha_faturamento",
+          "validado": true
+        }
+      },
+      "layout": "danf3e"
+    },
+    "5556f8979b3f0916c835": {
+      "estado": "origem_removida"
+    },
+    "5c30aa86512a1bd70740": {
+      "alertas": [],
+      "campos": {
+        "chave_nf3e": {
+          "confianca": "alta",
+          "regra": "44_digitos_dv_mod11",
+          "validado": true
+        },
+        "consumo_kwh": {
+          "confianca": "media",
+          "regra": "rotulo_especifico_ou_fallback_v16",
+          "validado": true
+        },
+        "te_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.02,
+          "validado": true
+        },
+        "te_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "tusd_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.01,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.02,
+          "validado": true
+        },
+        "tusd_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "alta",
+          "regra": "total_linha_faturamento",
+          "validado": true
+        }
+      },
+      "layout": "danf3e"
+    },
+    "60868c1d3acc61bdbd38": {
+      "alertas": [],
+      "campos": {
+        "chave_nf3e": {
+          "confianca": "alta",
+          "regra": "44_digitos_dv_mod11",
+          "validado": true
+        },
+        "consumo_kwh": {
+          "confianca": "media",
+          "regra": "rotulo_especifico_ou_fallback_v16",
+          "validado": true
+        },
+        "te_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.01,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.02,
+          "validado": true
+        },
+        "te_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "tusd_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.02,
+          "validado": true
+        },
+        "tusd_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "alta",
+          "regra": "total_linha_faturamento",
+          "validado": true
+        }
+      },
+      "layout": "danf3e"
+    },
+    "621f8a404e35d05bdf0b": {
+      "estado": "origem_removida"
+    },
+    "650917d68277506d7e71": {
+      "alertas": [],
+      "campos": {
+        "consumo_kwh_fora_ponta": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        },
+        "consumo_kwh_ponta": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        }
+      },
+      "layout": "historico_cmehfat0"
+    },
+    "6a5524572f7c7af2e1a0": {
+      "estado": "origem_removida"
+    },
+    "6ba949e5dc93ca9739a6": {
+      "alertas": [],
+      "campos": {
+        "chave_nf3e": {
+          "confianca": "alta",
+          "regra": "44_digitos_dv_mod11",
+          "validado": true
+        },
+        "consumo_kwh": {
+          "confianca": "media",
+          "regra": "rotulo_especifico_ou_fallback_v16",
+          "validado": true
+        },
+        "te_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.01,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.02,
+          "validado": true
+        },
+        "te_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "tusd_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.01,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.02,
+          "validado": true
+        },
+        "tusd_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "alta",
+          "regra": "total_linha_faturamento",
+          "validado": true
+        }
+      },
+      "layout": "danf3e"
+    },
+    "6bcc702562e908f74ef7": {
+      "alertas": [],
+      "campos": {
+        "chave_nf3e": {
+          "confianca": "alta",
+          "regra": "44_digitos_dv_mod11",
+          "validado": true
+        },
+        "consumo_kwh": {
+          "confianca": "media",
+          "regra": "rotulo_especifico_ou_fallback_v16",
+          "validado": true
+        },
+        "te_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.01,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.03,
+          "validado": true
+        },
+        "te_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "tusd_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.01,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.03,
+          "validado": true
+        },
+        "tusd_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "alta",
+          "regra": "total_linha_faturamento",
+          "validado": true
+        }
+      },
+      "layout": "danf3e"
+    },
+    "6bde1b6b3d64f098c0ba": {
+      "alertas": [],
+      "campos": {
+        "chave_nf3e": {
+          "confianca": "alta",
+          "regra": "44_digitos_dv_mod11",
+          "validado": true
+        },
+        "consumo_kwh": {
+          "confianca": "media",
+          "regra": "rotulo_especifico_ou_fallback_v16",
+          "validado": true
+        },
+        "te_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.03,
+          "validado": true
+        },
+        "te_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "tusd_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.02,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.03,
+          "validado": true
+        },
+        "tusd_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "alta",
+          "regra": "total_linha_faturamento",
+          "validado": true
+        }
+      },
+      "layout": "danf3e"
+    },
+    "6c54d257005a06461224": {
+      "alertas": [],
+      "campos": {
+        "consumo_kwh_fora_ponta": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        },
+        "consumo_kwh_ponta": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        }
+      },
+      "layout": "historico_cmehfat0"
+    },
+    "6c6ac61d7125cc71c3be": {
+      "estado": "origem_removida"
+    },
+    "6e508776285ecb4230a5": {
+      "alertas": [],
+      "campos": {
+        "consumo_kwh": {
+          "confianca": "media",
+          "regra": "rotulo_especifico_ou_fallback_v16",
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "alta",
+          "regra": "valor_a_pagar_cabecalho",
+          "validado": true
+        }
+      },
+      "layout": "fatura_legada"
+    },
+    "6e6bf8e2960b0d6d19d9": {
+      "alertas": [],
+      "campos": {
+        "consumo_kwh_fora_ponta": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        },
+        "consumo_kwh_ponta": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        }
+      },
+      "layout": "historico_cmehfat0"
+    },
+    "753c95ddbc32588ef975": {
+      "estado": "origem_removida"
+    },
+    "79026effc5638a1619c7": {
+      "alertas": [],
+      "campos": {
+        "chave_nf3e": {
+          "confianca": "alta",
+          "regra": "44_digitos_dv_mod11",
+          "validado": true
+        },
+        "consumo_kwh": {
+          "confianca": "media",
+          "regra": "rotulo_especifico_ou_fallback_v16",
+          "validado": true
+        },
+        "te_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.01,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.02,
+          "validado": true
+        },
+        "te_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "tusd_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.02,
+          "validado": true
+        },
+        "tusd_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "alta",
+          "regra": "total_linha_faturamento",
+          "validado": true
+        }
+      },
+      "layout": "danf3e"
+    },
+    "79b05b36cf95123edc2e": {
+      "alertas": [],
+      "campos": {
+        "consumo_kwh": {
+          "confianca": "media",
+          "regra": "rotulo_especifico_ou_fallback_v16",
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "alta",
+          "regra": "valor_a_pagar_cabecalho",
+          "validado": true
+        }
+      },
+      "layout": "fatura_legada"
+    },
+    "7a5489ee45214dffc287": {
+      "alertas": [],
+      "campos": {
+        "chave_nf3e": {
+          "confianca": "alta",
+          "regra": "44_digitos_dv_mod11",
+          "validado": true
+        },
+        "consumo_kwh": {
+          "confianca": "media",
+          "regra": "rotulo_especifico_ou_fallback_v16",
+          "validado": true
+        },
+        "te_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.04,
+          "validado": true
+        },
+        "te_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "tusd_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.04,
+          "validado": true
+        },
+        "tusd_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "alta",
+          "regra": "total_linha_faturamento",
+          "validado": true
+        }
+      },
+      "layout": "danf3e"
+    },
+    "83198bd3cb3aa1dbc1a7": {
+      "alertas": [],
+      "campos": {
+        "consumo_kwh_fora_ponta": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        },
+        "consumo_kwh_ponta": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        }
+      },
+      "layout": "historico_cmehfat0"
+    },
+    "837f6cb165e8cb0e710b": {
+      "alertas": [],
+      "campos": {
+        "consumo_kwh_fora_ponta": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        },
+        "consumo_kwh_ponta": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        }
+      },
+      "layout": "historico_cmehfat0"
+    },
+    "878f59fcc0d795c296ae": {
+      "alertas": [],
+      "campos": {
+        "consumo_kwh_fora_ponta": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        },
+        "consumo_kwh_ponta": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        }
+      },
+      "layout": "historico_cmehfat0"
+    },
+    "89a46e8c888a963ff70f": {
+      "alertas": [],
+      "campos": {
+        "chave_nf3e": {
+          "confianca": "alta",
+          "regra": "44_digitos_dv_mod11",
+          "validado": true
+        },
+        "consumo_kwh": {
+          "confianca": "media",
+          "regra": "rotulo_especifico_ou_fallback_v16",
+          "validado": true
+        },
+        "te_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.01,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.02,
+          "validado": true
+        },
+        "te_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "tusd_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.01,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.02,
+          "validado": true
+        },
+        "tusd_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "alta",
+          "regra": "total_linha_faturamento",
+          "validado": true
+        }
+      },
+      "layout": "danf3e"
+    },
+    "8c69dafb8348b3c2b5ad": {
+      "alertas": [],
+      "campos": {
+        "consumo_kwh_fora_ponta": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        },
+        "consumo_kwh_ponta": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        }
+      },
+      "layout": "historico_cmehfat0"
+    },
+    "932c36bbfd38eb59bc9e": {
+      "alertas": [],
+      "campos": {
+        "consumo_kwh_fora_ponta": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        },
+        "consumo_kwh_ponta": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        }
+      },
+      "layout": "historico_cmehfat0"
+    },
+    "9b3b2d9fa6ac4572d15c": {
+      "alertas": [],
+      "campos": {
+        "chave_nf3e": {
+          "confianca": "alta",
+          "regra": "44_digitos_dv_mod11",
+          "validado": true
+        },
+        "consumo_kwh": {
+          "confianca": "media",
+          "regra": "rotulo_especifico_ou_fallback_v16",
+          "validado": true
+        },
+        "te_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.01,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.02,
+          "validado": true
+        },
+        "te_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "tusd_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.01,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.02,
+          "validado": true
+        },
+        "tusd_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "alta",
+          "regra": "total_linha_faturamento",
+          "validado": true
+        }
+      },
+      "layout": "danf3e"
+    },
+    "a1004cf096a162330a69": {
+      "estado": "origem_removida"
+    },
+    "a2de4c9a895c37085069": {
+      "alertas": [],
+      "campos": {
+        "chave_nf3e": {
+          "confianca": "alta",
+          "regra": "44_digitos_dv_mod11",
+          "validado": true
+        },
+        "consumo_kwh": {
+          "confianca": "media",
+          "regra": "rotulo_especifico_ou_fallback_v16",
+          "validado": true
+        },
+        "te_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.03,
+          "validado": true
+        },
+        "te_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "tusd_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.01,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.03,
+          "validado": true
+        },
+        "tusd_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "alta",
+          "regra": "total_linha_faturamento",
+          "validado": true
+        }
+      },
+      "layout": "danf3e"
+    },
+    "a7856012556e5b5516b3": {
+      "alertas": [],
+      "campos": {
+        "consumo_kwh_fora_ponta": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        },
+        "consumo_kwh_ponta": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        }
+      },
+      "layout": "historico_cmehfat0"
+    },
+    "a7c177172383cbda7cf2": {
+      "estado": "origem_removida"
+    },
+    "a831723ebab2f7352440": {
+      "alertas": [],
+      "campos": {
+        "chave_nf3e": {
+          "confianca": "alta",
+          "regra": "44_digitos_dv_mod11",
+          "validado": true
+        },
+        "consumo_kwh": {
+          "confianca": "media",
+          "regra": "rotulo_especifico_ou_fallback_v16",
+          "validado": true
+        },
+        "te_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.01,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.02,
+          "validado": true
+        },
+        "te_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "tusd_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.01,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.02,
+          "validado": true
+        },
+        "tusd_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "alta",
+          "regra": "total_linha_faturamento",
+          "validado": true
+        }
+      },
+      "layout": "danf3e"
+    },
+    "ab64ab46fb31e99e2dcc": {
+      "alertas": [],
+      "campos": {
+        "chave_nf3e": {
+          "confianca": "alta",
+          "regra": "44_digitos_dv_mod11",
+          "validado": true
+        },
+        "consumo_kwh": {
+          "confianca": "media",
+          "regra": "rotulo_especifico_ou_fallback_v16",
+          "validado": true
+        },
+        "te_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.01,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.02,
+          "validado": true
+        },
+        "te_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "tusd_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.01,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.02,
+          "validado": true
+        },
+        "tusd_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "alta",
+          "regra": "total_linha_faturamento",
+          "validado": true
+        }
+      },
+      "layout": "danf3e"
+    },
+    "ae32d79e9c65eeec386d": {
+      "alertas": [],
+      "campos": {
+        "chave_nf3e": {
+          "confianca": "alta",
+          "regra": "44_digitos_dv_mod11",
+          "validado": true
+        },
+        "consumo_kwh": {
+          "confianca": "media",
+          "regra": "rotulo_especifico_ou_fallback_v16",
+          "validado": true
+        },
+        "te_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.01,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.03,
+          "validado": true
+        },
+        "te_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "tusd_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.01,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.03,
+          "validado": true
+        },
+        "tusd_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "alta",
+          "regra": "total_linha_faturamento",
+          "validado": true
+        }
+      },
+      "layout": "danf3e"
+    },
+    "ae47132096e3399da369": {
+      "estado": "origem_removida"
+    },
+    "ae9a8d8c88943eddd059": {
+      "alertas": [],
+      "campos": {
+        "chave_nf3e": {
+          "confianca": "alta",
+          "regra": "44_digitos_dv_mod11",
+          "validado": true
+        },
+        "consumo_kwh": {
+          "confianca": "media",
+          "regra": "rotulo_especifico_ou_fallback_v16",
+          "validado": true
+        },
+        "te_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.03,
+          "validado": true
+        },
+        "te_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "tusd_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.03,
+          "validado": true
+        },
+        "tusd_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "alta",
+          "regra": "total_linha_faturamento",
+          "validado": true
+        }
+      },
+      "layout": "danf3e"
+    },
+    "b1ac7bea3e5b9b34fb8d": {
+      "alertas": [],
+      "campos": {
+        "chave_nf3e": {
+          "confianca": "alta",
+          "regra": "44_digitos_dv_mod11",
+          "validado": true
+        },
+        "consumo_kwh": {
+          "confianca": "media",
+          "regra": "rotulo_especifico_ou_fallback_v16",
+          "validado": true
+        },
+        "te_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.01,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.02,
+          "validado": true
+        },
+        "te_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "tusd_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.02,
+          "validado": true
+        },
+        "tusd_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "alta",
+          "regra": "total_linha_faturamento",
+          "validado": true
+        }
+      },
+      "layout": "danf3e"
+    },
+    "b30837e73dfdd8a39f98": {
+      "alertas": [],
+      "campos": {
+        "consumo_kwh_fora_ponta": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        },
+        "consumo_kwh_ponta": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        }
+      },
+      "layout": "historico_cmehfat0"
+    },
+    "b4a99f57b7c53d8396ef": {
+      "alertas": [],
+      "campos": {
+        "chave_nf3e": {
+          "confianca": "alta",
+          "regra": "44_digitos_dv_mod11",
+          "validado": true
+        },
+        "consumo_kwh": {
+          "confianca": "media",
+          "regra": "rotulo_especifico_ou_fallback_v16",
+          "validado": true
+        },
+        "te_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.02,
+          "validado": true
+        },
+        "te_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "tusd_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.02,
+          "validado": true
+        },
+        "tusd_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "alta",
+          "regra": "total_linha_faturamento",
+          "validado": true
+        }
+      },
+      "layout": "danf3e"
+    },
+    "b5443800c0f219e729c3": {
+      "alertas": [],
+      "campos": {
+        "chave_nf3e": {
+          "confianca": "alta",
+          "regra": "44_digitos_dv_mod11",
+          "validado": true
+        },
+        "consumo_kwh": {
+          "confianca": "media",
+          "regra": "rotulo_especifico_ou_fallback_v16",
+          "validado": true
+        },
+        "te_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.01,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.03,
+          "validado": true
+        },
+        "te_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "tusd_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.03,
+          "validado": true
+        },
+        "tusd_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "alta",
+          "regra": "total_linha_faturamento",
+          "validado": true
+        }
+      },
+      "layout": "danf3e"
+    },
+    "b5b7748420037c2937d2": {
+      "alertas": [],
+      "campos": {
+        "chave_nf3e": {
+          "confianca": "alta",
+          "regra": "44_digitos_dv_mod11",
+          "validado": true
+        },
+        "consumo_kwh": {
+          "confianca": "media",
+          "regra": "rotulo_especifico_ou_fallback_v16",
+          "validado": true
+        },
+        "te_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.03,
+          "validado": true
+        },
+        "te_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "tusd_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.01,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.03,
+          "validado": true
+        },
+        "tusd_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "alta",
+          "regra": "total_linha_faturamento",
+          "validado": true
+        }
+      },
+      "layout": "danf3e"
+    },
+    "b62ceb269f30a285336e": {
+      "estado": "origem_removida"
+    },
+    "bbfa5811be9292cac753": {
+      "alertas": [],
+      "campos": {
+        "consumo_kwh": {
+          "confianca": "media",
+          "regra": "rotulo_especifico_ou_fallback_v16",
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "alta",
+          "regra": "valor_a_pagar_cabecalho",
+          "validado": true
+        }
+      },
+      "layout": "fatura_legada"
+    },
+    "bdb42a1df5d405f47c0c": {
+      "alertas": [],
+      "campos": {
+        "chave_nf3e": {
+          "confianca": "alta",
+          "regra": "44_digitos_dv_mod11",
+          "validado": true
+        },
+        "consumo_kwh": {
+          "confianca": "media",
+          "regra": "rotulo_especifico_ou_fallback_v16",
+          "validado": true
+        },
+        "te_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.02,
+          "validado": true
+        },
+        "te_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "tusd_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.02,
+          "validado": true
+        },
+        "tusd_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "alta",
+          "regra": "total_linha_faturamento",
+          "validado": true
+        }
+      },
+      "layout": "danf3e"
+    },
+    "bfaa97b27db5b123975f": {
+      "alertas": [],
+      "campos": {
+        "consumo_kwh_fora_ponta": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        },
+        "consumo_kwh_ponta": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        }
+      },
+      "layout": "historico_cmehfat0"
+    },
+    "c3effca110a5e825e8af": {
+      "estado": "origem_removida"
+    },
+    "c541e7ec605d0bdd49dd": {
+      "alertas": [],
+      "campos": {
+        "consumo_kwh_fora_ponta": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        },
+        "consumo_kwh_ponta": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        }
+      },
+      "layout": "historico_cmehfat0"
+    },
+    "c9d7658e39e86a38cd61": {
+      "alertas": [],
+      "campos": {
+        "consumo_kwh_fora_ponta": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        },
+        "consumo_kwh_ponta": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        }
+      },
+      "layout": "historico_cmehfat0"
+    },
+    "cc8369edaf45af2b4e28": {
+      "estado": "origem_removida"
+    },
+    "cc93a4854853ceca2113": {
+      "alertas": [],
+      "campos": {
+        "chave_nf3e": {
+          "confianca": "alta",
+          "regra": "44_digitos_dv_mod11",
+          "validado": true
+        },
+        "consumo_kwh": {
+          "confianca": "media",
+          "regra": "rotulo_especifico_ou_fallback_v16",
+          "validado": true
+        },
+        "te_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.01,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.02,
+          "validado": true
+        },
+        "te_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "tusd_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.02,
+          "validado": true
+        },
+        "tusd_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "alta",
+          "regra": "total_linha_faturamento",
+          "validado": true
+        }
+      },
+      "layout": "danf3e"
+    },
+    "cc9697596694fcfc4dcb": {
+      "alertas": [],
+      "campos": {
+        "chave_nf3e": {
+          "confianca": "alta",
+          "regra": "44_digitos_dv_mod11",
+          "validado": true
+        },
+        "consumo_kwh": {
+          "confianca": "media",
+          "regra": "rotulo_especifico_ou_fallback_v16",
+          "validado": true
+        },
+        "te_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.01,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.02,
+          "validado": true
+        },
+        "te_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "tusd_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.02,
+          "validado": true
+        },
+        "tusd_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "alta",
+          "regra": "total_linha_faturamento",
+          "validado": true
+        }
+      },
+      "layout": "danf3e"
+    },
+    "cddce9e898f990b25ac3": {
+      "alertas": [],
+      "campos": {
+        "chave_nf3e": {
+          "confianca": "alta",
+          "regra": "44_digitos_dv_mod11",
+          "validado": true
+        },
+        "consumo_kwh": {
+          "confianca": "media",
+          "regra": "rotulo_especifico_ou_fallback_v16",
+          "validado": true
+        },
+        "te_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.02,
+          "validado": true
+        },
+        "te_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "tusd_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.02,
+          "validado": true
+        },
+        "tusd_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "alta",
+          "regra": "total_linha_faturamento",
+          "validado": true
+        }
+      },
+      "layout": "danf3e"
+    },
+    "cee061462271969836b0": {
+      "alertas": [],
+      "campos": {
+        "chave_nf3e": {
+          "confianca": "alta",
+          "regra": "44_digitos_dv_mod11",
+          "validado": true
+        },
+        "consumo_kwh": {
+          "confianca": "media",
+          "regra": "rotulo_especifico_ou_fallback_v16",
+          "validado": true
+        },
+        "te_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.03,
+          "validado": true
+        },
+        "te_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.02,
+          "validado": true
+        },
+        "tusd_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.03,
+          "validado": true
+        },
+        "tusd_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.01,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.02,
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "alta",
+          "regra": "total_linha_faturamento",
+          "validado": true
+        }
+      },
+      "layout": "danf3e"
+    },
+    "cfee56a3267a1a897f9c": {
+      "estado": "origem_removida"
+    },
+    "d0c280cfb49f9badfe9e": {
+      "alertas": [],
+      "campos": {
+        "chave_nf3e": {
+          "confianca": "alta",
+          "regra": "44_digitos_dv_mod11",
+          "validado": true
+        },
+        "consumo_kwh": {
+          "confianca": "media",
+          "regra": "rotulo_especifico_ou_fallback_v16",
+          "validado": true
+        },
+        "te_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.01,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.03,
+          "validado": true
+        },
+        "te_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "tusd_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.03,
+          "validado": true
+        },
+        "tusd_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "alta",
+          "regra": "total_linha_faturamento",
+          "validado": true
+        }
+      },
+      "layout": "danf3e"
+    },
+    "d1763ec6e878f19403fc": {
+      "alertas": [],
+      "campos": {
+        "consumo_kwh_fora_ponta": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        },
+        "consumo_kwh_ponta": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        }
+      },
+      "layout": "historico_cmehfat0"
+    },
+    "d28dde3863e0b9d66d00": {
+      "alertas": [],
+      "campos": {
+        "consumo_kwh_fora_ponta": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        },
+        "consumo_kwh_ponta": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        }
+      },
+      "layout": "historico_cmehfat0"
+    },
+    "d2c68f36aeab768ca65f": {
+      "alertas": [],
+      "campos": {
+        "consumo_kwh_fora_ponta": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        },
+        "consumo_kwh_ponta": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        }
+      },
+      "layout": "historico_cmehfat0"
+    },
+    "d3f3d1cf294f9c1fa526": {
+      "alertas": [],
+      "campos": {
+        "chave_nf3e": {
+          "confianca": "alta",
+          "regra": "44_digitos_dv_mod11",
+          "validado": true
+        },
+        "consumo_kwh": {
+          "confianca": "media",
+          "regra": "rotulo_especifico_ou_fallback_v16",
+          "validado": true
+        },
+        "te_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.01,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.02,
+          "validado": true
+        },
+        "te_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "tusd_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.01,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.02,
+          "validado": true
+        },
+        "tusd_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "alta",
+          "regra": "total_linha_faturamento",
+          "validado": true
+        }
+      },
+      "layout": "danf3e"
+    },
+    "d53cfcb218e8f9280c2f": {
+      "alertas": [],
+      "campos": {
+        "consumo_kwh_fora_ponta": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        },
+        "consumo_kwh_ponta": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        }
+      },
+      "layout": "historico_cmehfat0"
+    },
+    "da95a2949ec1f754b9c2": {
+      "estado": "origem_removida"
+    },
+    "db559c81bc7a5e604a52": {
+      "alertas": [],
+      "campos": {
+        "consumo_kwh_fora_ponta": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        },
+        "consumo_kwh_ponta": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        }
+      },
+      "layout": "historico_cmehfat0"
+    },
+    "dc27cb82a07a32ae866e": {
+      "alertas": [],
+      "campos": {
+        "chave_nf3e": {
+          "confianca": "alta",
+          "regra": "44_digitos_dv_mod11",
+          "validado": true
+        },
+        "consumo_kwh": {
+          "confianca": "media",
+          "regra": "rotulo_especifico_ou_fallback_v16",
+          "validado": true
+        },
+        "te_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.02,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.03,
+          "validado": true
+        },
+        "te_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "tusd_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.01,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.03,
+          "validado": true
+        },
+        "tusd_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "alta",
+          "regra": "total_linha_faturamento",
+          "validado": true
+        }
+      },
+      "layout": "danf3e"
+    },
+    "dd0809beba26d3ecb131": {
+      "alertas": [],
+      "campos": {
+        "chave_nf3e": {
+          "confianca": "alta",
+          "regra": "44_digitos_dv_mod11",
+          "validado": true
+        },
+        "consumo_kwh": {
+          "confianca": "media",
+          "regra": "rotulo_especifico_ou_fallback_v16",
+          "validado": true
+        },
+        "te_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.02,
+          "validado": true
+        },
+        "te_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "tusd_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.02,
+          "validado": true
+        },
+        "tusd_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "alta",
+          "regra": "total_linha_faturamento",
+          "validado": true
+        }
+      },
+      "layout": "danf3e"
+    },
+    "dd17439043178b3f95f9": {
+      "alertas": [],
+      "campos": {
+        "consumo_kwh_fora_ponta": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        },
+        "consumo_kwh_ponta": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        }
+      },
+      "layout": "historico_cmehfat0"
+    },
+    "e19435c6fa39a74e82cc": {
+      "alertas": [],
+      "campos": {
+        "chave_nf3e": {
+          "confianca": "alta",
+          "regra": "44_digitos_dv_mod11",
+          "validado": true
+        },
+        "consumo_kwh": {
+          "confianca": "media",
+          "regra": "rotulo_especifico_ou_fallback_v16",
+          "validado": true
+        },
+        "te_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.03,
+          "validado": true
+        },
+        "te_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "tusd_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.01,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.03,
+          "validado": true
+        },
+        "tusd_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "alta",
+          "regra": "total_linha_faturamento",
+          "validado": true
+        }
+      },
+      "layout": "danf3e"
+    },
+    "e19d03b4a39f63c638c4": {
+      "alertas": [],
+      "campos": {
+        "chave_nf3e": {
+          "confianca": "alta",
+          "regra": "44_digitos_dv_mod11",
+          "validado": true
+        },
+        "consumo_kwh": {
+          "confianca": "media",
+          "regra": "rotulo_especifico_ou_fallback_v16",
+          "validado": true
+        },
+        "te_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.01,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.02,
+          "validado": true
+        },
+        "te_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "tusd_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.02,
+          "validado": true
+        },
+        "tusd_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "alta",
+          "regra": "total_linha_faturamento",
+          "validado": true
+        }
+      },
+      "layout": "danf3e"
+    },
+    "e49b5dd11bb09fd45b1a": {
+      "estado": "origem_removida"
+    },
+    "e4e1cb6eefbc75a91c62": {
+      "alertas": [],
+      "campos": {
+        "chave_nf3e": {
+          "confianca": "alta",
+          "regra": "44_digitos_dv_mod11",
+          "validado": true
+        },
+        "consumo_kwh": {
+          "confianca": "media",
+          "regra": "rotulo_especifico_ou_fallback_v16",
+          "validado": true
+        },
+        "te_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.03,
+          "validado": true
+        },
+        "te_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "tusd_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.01,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.03,
+          "validado": true
+        },
+        "tusd_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "alta",
+          "regra": "total_linha_faturamento",
+          "validado": true
+        }
+      },
+      "layout": "danf3e"
+    },
+    "e51def4af26a92c63888": {
+      "alertas": [],
+      "campos": {
+        "consumo_kwh_fora_ponta": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        },
+        "consumo_kwh_ponta": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        }
+      },
+      "layout": "historico_cmehfat0"
+    },
+    "e5a8f4f67b4564a3144c": {
+      "alertas": [],
+      "campos": {
+        "consumo_kwh_fora_ponta": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        },
+        "consumo_kwh_ponta": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        }
+      },
+      "layout": "historico_cmehfat0"
+    },
+    "ec022600bd8bd970c236": {
+      "estado": "origem_removida"
+    },
+    "ecc0684f0f728cf4dc96": {
+      "alertas": [],
+      "campos": {
+        "consumo_kwh_fora_ponta": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        },
+        "consumo_kwh_ponta": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        }
+      },
+      "layout": "historico_cmehfat0"
+    },
+    "edea29b67a5b9406a1cf": {
+      "alertas": [],
+      "campos": {
+        "consumo_kwh": {
+          "confianca": "media",
+          "regra": "rotulo_especifico_ou_fallback_v16",
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "alta",
+          "regra": "valor_a_pagar_cabecalho",
+          "validado": true
+        }
+      },
+      "layout": "fatura_legada"
+    },
+    "ef90863c5eb3c91eae7e": {
+      "alertas": [],
+      "campos": {
+        "consumo_kwh": {
+          "confianca": "media",
+          "regra": "rotulo_especifico_ou_fallback_v16",
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "alta",
+          "regra": "valor_a_pagar_cabecalho",
+          "validado": true
+        }
+      },
+      "layout": "fatura_legada"
+    },
+    "f37701b44f212a27547e": {
+      "alertas": [],
+      "campos": {
+        "consumo_kwh_fora_ponta": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        },
+        "consumo_kwh_ponta": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        }
+      },
+      "layout": "historico_cmehfat0"
+    },
+    "f460a86d8c5d8796f602": {
+      "alertas": [],
+      "campos": {
+        "consumo_kwh": {
+          "confianca": "media",
+          "regra": "rotulo_especifico_ou_fallback_v16",
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "alta",
+          "regra": "valor_a_pagar_cabecalho",
+          "validado": true
+        }
+      },
+      "layout": "fatura_legada"
+    },
+    "f492cfe864443c8663b6": {
+      "alertas": [],
+      "campos": {
+        "consumo_kwh_fora_ponta": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        },
+        "consumo_kwh_ponta": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        }
+      },
+      "layout": "historico_cmehfat0"
+    },
+    "f5e138f647df33340a14": {
+      "alertas": [],
+      "campos": {
+        "chave_nf3e": {
+          "confianca": "alta",
+          "regra": "44_digitos_dv_mod11",
+          "validado": true
+        },
+        "consumo_kwh": {
+          "confianca": "media",
+          "regra": "rotulo_especifico_ou_fallback_v16",
+          "validado": true
+        },
+        "te_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.02,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.03,
+          "validado": true
+        },
+        "te_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "tusd_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.02,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.03,
+          "validado": true
+        },
+        "tusd_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "alta",
+          "regra": "total_linha_faturamento",
+          "validado": true
+        }
+      },
+      "layout": "danf3e"
+    },
+    "fad38b5ed653b35e1cfb": {
+      "alertas": [],
+      "campos": {
+        "consumo_kwh_fora_ponta": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        },
+        "consumo_kwh_ponta": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "media",
+          "regra": "bloco_mensal_historico",
+          "validado": true
+        }
+      },
+      "layout": "historico_cmehfat0"
+    },
+    "ffdbe145b4864f432f52": {
+      "alertas": [],
+      "campos": {
+        "chave_nf3e": {
+          "confianca": "alta",
+          "regra": "44_digitos_dv_mod11",
+          "validado": true
+        },
+        "consumo_kwh": {
+          "confianca": "media",
+          "regra": "rotulo_especifico_ou_fallback_v16",
+          "validado": true
+        },
+        "te_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.02,
+          "validado": true
+        },
+        "te_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "tusd_fora_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.02,
+          "validado": true
+        },
+        "tusd_ponta": {
+          "confianca": "alta",
+          "diferenca_reais": 0.0,
+          "origem": "primeira_pagina",
+          "regra": "linha_quantidade_preco_valor",
+          "tolerancia_reais": 0.01,
+          "validado": true
+        },
+        "valor_centavos": {
+          "confianca": "alta",
+          "regra": "total_linha_faturamento",
+          "validado": true
+        }
+      },
+      "layout": "danf3e"
+    }
+  },
+  "extrator_versao": "copel-auditavel-5",
+  "schema": 1
+}

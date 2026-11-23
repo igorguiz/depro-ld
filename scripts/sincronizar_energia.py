@@ -24,6 +24,7 @@ from xml.etree import ElementTree as ET
 
 import pymupdf as fitz
 import requests
+from copel_auditoria import review_document, normalize, nf3e_candidates
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / 'data'
@@ -37,7 +38,8 @@ MAX_FILES = 3000
 MAX_PDF_BYTES = 15 * 1024 * 1024
 MAX_XML_BYTES = 3 * 1024 * 1024
 HEADERS = {'X-Requested-With': 'XMLHttpRequest'}
-PARSER_VERSION = 'copel-multiformato-4'
+PARSER_VERSION = 'copel-auditavel-5'
+AUDIT_FILE = DATA / 'energia_auditoria.json'
 
 
 def now_utc():
@@ -550,6 +552,30 @@ class PublicShare:
         return response.content
 
 
+def identifiable_uc_from_pdf(pdf_bytes):
+    """Identifica UC SOMENTE quando ancorada no cabecalho oficial do PDF."""
+    if pdf_bytes is None:
+        return None
+    try:
+        with fitz.open(stream=pdf_bytes, filetype='pdf') as pdf:
+            original = pdf[0].get_text(sort=True)
+            natural = pdf[0].get_text(sort=False)
+        patterns = [
+            r'(?m)\b(\d{7,16})\s+NOTA\s+FISCAL\s+N[ºo.]',
+            r'(?m)(?:0?[1-9]|1[0-2])/20\d{2}\s+(\d{7,16})\s+LONDRINA',
+            r'(?m)[A-ZÇÃÉÊ]+/20\d{2}\s+(\d{7,16})\s+LONDRINA',
+            r'N[ºo.]?\.?\s*da\s*UC\.?\s*:?\s*(\d{7,16})',
+        ]
+        for text in (original,natural):
+            for pat in patterns:
+                match=re.search(pat,text,re.I)
+                if match:
+                    return match.group(1)
+    except Exception:
+        pass
+    return None
+
+
 def scan():
     token = os.environ.get('NEXTCLOUD_SHARE_TOKEN', '').strip()
     password = os.environ.get('NEXTCLOUD_SHARE_PASSWORD', '')
@@ -567,6 +593,7 @@ def scan():
     old_bills = {f['id']: f for f in before.get('faturas', []) if 'id' in f}
     next_files = {}
     next_bills = {}
+    audit_entries = {}
     processed = 0
     key = os.environ.get('ENERGIA_ID_CHAVE', '').strip() or password
     for item in files:
@@ -581,6 +608,7 @@ def scan():
                 rec['status'] = rec.get('status_extracao', rec['status'])
                 rec['motivo'] = rec.get('motivo_extracao', rec.get('motivo'))
                 next_bills[rec['id']] = rec
+                audit_entries[rec['id']] = {'estado':'cache_reutilizado', 'layout':rec.get('layout_detectado')}
             continue
         pdf = client.download(item)
         records = parse_pdf_records(pdf) if pdf is not None else [{'status':'conferencia','motivo':'PDF excede 15 MB'}]
@@ -592,16 +620,35 @@ def scan():
                 t=d[0].get_text(sort=False)
                 match=re.search(r'Nº\. da UC\.:?\s*(?:.{0,100}\n)?',t)
                 nums=re.findall(r'(?m)^\s*\d{8,16}\s*$',t)
-                historical_uc=nums[0].strip() if nums else None
+                # O cabeçalho do histórico identifica o número real da UC.
+                uc_match = re.search(r'N[ºo.]*(?:\s*\.\s*)?\s*da\s*UC\.?:?\s*(\d{7,16})', t, re.I)
+                historical_uc = uc_match.group(1) if uc_match else (nums[0].strip() if nums else None)
+        observed_uc = identifiable_uc_from_pdf(pdf)
+        page_texts = []
+        if pdf is not None:
+            try:
+                with fitz.open(stream=pdf,filetype='pdf') as d:
+                    page_texts = [page.get_text(sort=True) + "\n" + page.get_text(sort=False)[:2500] for page in d]
+            except Exception:
+                pass
         for index,record in enumerate(records):
-            source_group = record.pop('_uc', None) or historical_uc or ('pasta:' + item['relative'].rsplit('/', 1)[0])
+            source_group = observed_uc or historical_uc or record.pop('_uc', None) or ('pasta:' + item['relative'].rsplit('/', 1)[0])
             rec_id=file_id if len(records)==1 else stable_id(key,file_id+'|'+str(record.get('competencia'))+'|'+str(index),20)
+            audit, updates, warnings = review_document(page_texts,record,key) if page_texts else ({'alertas':['pdf_sem_texto']},{'layout_detectado':'layout_desconhecido'},['pdf_sem_texto'])
+            record.update(updates)
+            if warnings:
+                record['status'] = 'conferencia'
+                reason = record.get('motivo')
+                record['motivo'] = '; '.join(filter(None,[reason, ', '.join(warnings)]))
+            audit_entries[rec_id] = audit
             record['id']=rec_id
             record['arquivo_id']=file_id
             record['extrator_versao']=PARSER_VERSION
             record['status_extracao']=record.get('status','conferencia')
             record['motivo_extracao']=record.get('motivo')
-            record['unidade']='UC-'+stable_id(key,source_group,6).upper()
+            # Unidade tecnica opcional: somente assumir igualdade entre contas quando a UC real
+            # for explicitamente localizada. Nunca inferir UC pelo caminho do PDF.
+            record['unidade']='UC-'+stable_id(key,source_group,12).upper() if not source_group.startswith('pasta:') else None
             record['versao']=item['etag'] or hashlib.sha256(pdf or b'').hexdigest()[:16]
             next_bills[rec_id]=record
         processed += 1
@@ -613,14 +660,28 @@ def scan():
             item = dict(bill)
             item['origem_removida'] = True
             next_bills[file_id] = item
+            audit_entries[file_id] = {'estado':'origem_removida'}
             missing += 1
     items = sorted(next_bills.values(), key=lambda x: ((x.get('mes_consumo') or x.get('competencia') or ''), x['id']))
     # Uma referência mensal pode aparecer no relatório e na fatura individual.
     # Priorizar documento individual; nunca somar dois documentos da mesma UC/mês.
+    # Segunda via da mesma NF3e: nao contabilizar ambas, mesmo com nomes distintos.
+    by_nf = {}
+    for r in items:
+        if r.get('chave_nf3e_id') and r.get('status') in ('ok','parcial') and not r.get('origem_removida'):
+            by_nf.setdefault(r['chave_nf3e_id'], []).append(r)
+    for group in by_nf.values():
+        if len(group)>1:
+            for extra in sorted(group, key=lambda b:b['id'])[1:]:
+                extra['status']='duplicado'
+                extra['motivo']='Segunda via da mesma NF3e (chave fiscal coincidente)'
     grouped = {}
     for r in items:
         if r.get('status') in ('ok','parcial') and not r.get('origem_removida'):
-            grouped.setdefault((r['unidade'],r.get('mes_consumo') or r.get('competencia')),[]).append(r)
+            # A chave da NF3e tem preferencia para identidade da nota; apenas
+            # agrupar por mes quando ha unidade identificada com seguranca.
+            if r.get('unidade'):
+                grouped.setdefault((r['unidade'],r.get('competencia_copel') or r.get('competencia')),[]).append(r)
     for group in grouped.values():
         if len(group)>1:
             singles=[b for b in group if b.get('tipo_documento')=='fatura_individual']
@@ -635,13 +696,14 @@ def scan():
     now = now_utc()
     result = {'schema': 2, 'atualizado_em': now, 'faturas': items}
     save_json(DATA_FILE, result)
+    save_json(AUDIT_FILE, {'schema':1,'atualizado_em':now, 'extrator_versao':PARSER_VERSION, 'documentos':audit_entries})
     save_json(STATE_FILE, {'schema': 1, 'arquivos': next_files})
     save_json(STATUS_FILE, {'estado': 'sucesso', 'ultima_tentativa': now,
                             'ultima_sincronizacao': now, 'arquivos_localizados': len(files),
                             'novos_ou_alterados': processed,
                             'faturas_processadas': sum(b.get('status') in ('ok','parcial') and not b.get('origem_removida') for b in items),
-                            'faturas_conferencia': sum(b.get('status') == 'conferencia' or bool(b.get('origem_removida')) for b in items),
-                            'faturas_parciais': sum(b.get('status') == 'parcial' for b in items),
+                            'faturas_conferencia': sum(b.get('status') == 'conferencia' and not b.get('origem_removida') for b in items),
+                            'faturas_parciais': sum(b.get('status') == 'parcial' and not b.get('origem_removida') for b in items),
                             'faturas_duplicadas': sum(b.get('status') == 'duplicado' for b in items),
                             'origens_removidas': missing, 'mensagem': 'Consulta WebDAV concluída'})
     return len(files), processed

@@ -179,15 +179,23 @@ def extract_demand_measurements(page_texts, layout="danf3e"):
     return None, matches, len(values_set)>1
 
 
-def extract_injection_measurements(page_texts):
-    """Lê medição de injeção por posto. Soma só quando AMBOS documentados.
+def extract_injection_measurements(page_texts, layout=None):
+    """Lê energia fisicamente injetada e audita origem dos valores.
 
-    Não confunde TE/TUSD e créditos compensados com energia física injetada.
-    Total explicitamente informado tem prioridade; divergência é sinalizada
-    por auditoria. Ausência de posto não equivale a zero.
+    Regras v1.8.2:
+    - Total explícito da fatura tem prioridade.
+    - Ponta ausente só equivale a zero quando existe medição válida da
+      injeção fora de ponta E o layout individual foi identificado.
+    - Zero inferido não é confundido com zero medido: ``origem_ponta``
+      registra o critério; o total recebe procedência específica.
+    - Se existir um total explícito diferente da medição fora ponta, não
+      inferir zero na ponta, pois isso contradiz a evidência disponível.
+    - Sem qualquer posto medido, ou layout histórico/desconhecido, não
+      se preenchem zeros artificiais.
     """
     result = {'ponta': None, 'fora_ponta': None, 'total': None,
-              'origem_total': None, 'ambiguidade': False}
+              'origem_total': None, 'origem_ponta': None,
+              'ambiguidade': False}
     labels = {'ponta':r'ENERGIA GERADA/INJETADA PONTA',
               'fora_ponta':r'ENERGIA GERADA/INJETADA FORA P(?:ONTA)?',
               'total':r'ENERGIA (?:GERADA/)?INJETADA TOTAL'}
@@ -196,18 +204,29 @@ def extract_injection_measurements(page_texts):
         candidates = []
         for page in page_texts:
             for m in pattern.finditer(normalize(page)):
-                val=decimal_pt(m.group(1))
+                val = decimal_pt(m.group(1))
                 if val is not None and val >= 0:
                     candidates.append(float(val))
-        if len(set(candidates))==1:
-            result[key]=candidates[0]
-        elif len(set(candidates))>1:
-            result['ambiguidade']=True
+        distinct = set(candidates)
+        if len(distinct) == 1:
+            result[key] = candidates[0]
+        elif len(distinct) > 1:
+            result['ambiguidade'] = True
+    if result['ponta'] is not None:
+        result['origem_ponta'] = 'medicao_explicita'
+    elif (not result['ambiguidade']
+          and layout in ('danf3e', 'fatura_legada')
+          and result['fora_ponta'] is not None
+          and (result['total'] is None or abs(result['total']-result['fora_ponta']) < 1e-6)):
+        result['ponta'] = 0.0
+        result['origem_ponta'] = 'zero_inferido_layout'
     if result['total'] is not None:
-        result['origem_total']='total_explicito'
+        result['origem_total'] = 'total_explicito'
     elif result['ponta'] is not None and result['fora_ponta'] is not None:
-        result['total']=round(result['ponta']+result['fora_ponta'],6)
-        result['origem_total']='soma_postos_medicao'
+        result['total'] = round(result['ponta'] + result['fora_ponta'], 6)
+        result['origem_total'] = ('soma_postos_com_zero_inferido'
+                                  if result['origem_ponta'] == 'zero_inferido_layout'
+                                  else 'soma_postos_medicao')
     return result
 
 
@@ -327,12 +346,20 @@ def review_document(page_texts, record, secret):
             'confianca':'alta' if valid else 'baixa','validado':valid,
             'quantidade_evidencias':len(samples)}
         if not valid:issues.append('consumo_total_sem_medicao_conferida')
-        injection=extract_injection_measurements(page_texts)
+        injection=extract_injection_measurements(page_texts,layout)
         for period in ('ponta','fora_ponta'):
             expected=injection[period]
             got=record.get('energia_injetada_kwh_'+period)
             if expected is not None and (got is None or abs(float(got)-expected)>0.000001):
                 issues.append('injetada_divergente_'+period)
+        if injection['origem_ponta'] != record.get('origem_injecao_ponta'):
+            issues.append('origem_injecao_ponta_divergente')
+        evidence['campos']['energia_injetada_kwh_ponta'] = {
+            'regra': injection['origem_ponta'] or 'nao_informada',
+            'confianca': 'media' if injection['origem_ponta'] == 'zero_inferido_layout' else (
+                'alta' if injection['origem_ponta'] == 'medicao_explicita' else 'baixa'),
+            'validado': injection['origem_ponta'] == record.get('origem_injecao_ponta'),
+        }
         if injection['ambiguidade']:
             issues.append('energia_injetada_medicoes_divergentes')
         total=record.get('energia_injetada_kwh')
@@ -348,7 +375,8 @@ def review_document(page_texts, record, secret):
             issues.append('origem_total_injetado_divergente')
         evidence['campos']['energia_injetada_kwh']={
             'regra': injection['origem_total'] or 'postos_insuficientes',
-            'confianca':'alta' if injection['total'] is not None and not injection['ambiguidade'] else 'media',
+            'confianca': ('media' if injection['origem_total'] == 'soma_postos_com_zero_inferido' else
+                           'alta' if injection['total'] is not None and not injection['ambiguidade'] else 'media'),
             'validado':not injection['ambiguidade'] and (injection['total'] is None or total is not None)}
         # Demanda medida, contratada e faturada devem vir de colunas da linha
         # DEMANDA USD. Uma rubrica existente que não foi interpretada é erro.

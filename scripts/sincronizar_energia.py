@@ -40,7 +40,7 @@ MAX_FILES = 3000
 MAX_PDF_BYTES = 15 * 1024 * 1024
 MAX_XML_BYTES = 3 * 1024 * 1024
 HEADERS = {'X-Requested-With': 'XMLHttpRequest'}
-PARSER_VERSION = 'copel-auditavel-7'
+PARSER_VERSION = 'copel-auditavel-8'
 AUDIT_FILE = DATA / 'energia_auditoria.json'
 
 
@@ -241,7 +241,8 @@ def br_money_float(raw):
 def extract_detailed_bill(pdf_bytes):
     """Extrai apenas dados explicitamente mostrados na fatura, em TODAS as páginas.
 
-    Preserva consumo total medido; agrega apenas postos explícitos de injeção.
+    Preserva consumo total medido; totaliza injeção por postos, com zero
+    inferido na ponta somente sob regra auditável para layout reconhecido.
     No layout legado registra valor unitário e montante de energia sem chamá-los TE.
     """
     with fitz.open(stream=pdf_bytes,filetype='pdf') as doc:
@@ -329,11 +330,12 @@ def extract_detailed_bill(pdf_bytes):
     else:
         fields['demanda_faturada_kw']=None
 
-    injected=extract_injection_measurements(pages)
+    injected=extract_injection_measurements(pages,layout)
     fields['energia_injetada_kwh_ponta']=injected['ponta']
     fields['energia_injetada_kwh_fora_ponta']=injected['fora_ponta']
     fields['energia_injetada_kwh']=injected['total']
     fields['origem_total_injetado']=injected['origem_total']
+    fields['origem_injecao_ponta']=injected['origem_ponta']
     if injected['ambiguidade']:
         fields['status']='conferencia'
         fields['motivo']='Leituras de energia injetada divergentes'
@@ -343,6 +345,14 @@ def extract_detailed_bill(pdf_bytes):
         'energia_injetada_kwh_ponta','energia_injetada_kwh_fora_ponta',
         'tarifa_te_ponta','tarifa_tusd_ponta','tarifa_te_fora_ponta','tarifa_tusd_fora_ponta']
     fields['validacao_campos']={k:('identificado' if fields.get(k) is not None else 'nao_informado_ou_nao_identificado') for k in selected}
+    # Atribuições convencionadas e totais calculados NÃO equivalem a medições
+    # explicitamente identificadas, mesmo quando numericamente válidas.
+    if injected['origem_ponta'] == 'zero_inferido_layout':
+        fields['validacao_campos']['energia_injetada_kwh_ponta']='inferido_por_layout'
+    if injected['origem_total'] == 'soma_postos_com_zero_inferido':
+        fields['validacao_campos']['energia_injetada_kwh']='calculado_com_zero_inferido'
+    elif injected['origem_total'] == 'soma_postos_medicao':
+        fields['validacao_campos']['energia_injetada_kwh']='calculado_dos_postos_medidos'
     return fields
 
 
@@ -376,7 +386,7 @@ def parse_historical_pdf(pdf_bytes):
                     'leitura_anterior':None,'leitura_atual':None,'consumo_kwh_ponta':k1,'consumo_kwh_fora_ponta':k2,
                     'consumo_kwh':None,
                     'demanda_medida_kw':d,'demanda_contratada_kw':c,'demanda_faturada_kw':None,
-                    'energia_injetada_kwh_ponta':None,'energia_injetada_kwh_fora_ponta':None,'energia_injetada_kwh':None,'origem_total_injetado':None,
+                    'energia_injetada_kwh_ponta':None,'energia_injetada_kwh_fora_ponta':None,'energia_injetada_kwh':None,'origem_total_injetado':None,'origem_injecao_ponta':None,
                     'valor_centavos':v,'valor_reais':round(v/100,2) if v is not None else None,
                     'status':'conferencia' if problems else 'parcial','motivo':'; '.join(problems) if problems else 'Histórico sem tarifas TE/TUSD e datas exatas de leitura',
                     '_uc':None}

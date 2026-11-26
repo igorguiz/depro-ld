@@ -25,7 +25,7 @@ from xml.etree import ElementTree as ET
 import pymupdf as fitz
 import requests
 from copel_auditoria import (review_document, normalize, nf3e_candidates,
-    extract_billing_rows, extract_meter_total, extract_injection_measurements,
+    extract_billing_rows, extract_meter_total, extract_injection_measurements, extract_demand_measurements,
     extract_regulated_tariffs)
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -40,7 +40,7 @@ MAX_FILES = 3000
 MAX_PDF_BYTES = 15 * 1024 * 1024
 MAX_XML_BYTES = 3 * 1024 * 1024
 HEADERS = {'X-Requested-With': 'XMLHttpRequest'}
-PARSER_VERSION = 'copel-auditavel-6'
+PARSER_VERSION = 'copel-auditavel-7'
 AUDIT_FILE = DATA / 'energia_auditoria.json'
 
 
@@ -104,8 +104,8 @@ def find_after_label(text, expressions, number_pattern):
 def parse_invoice_text(text):
     """Campos conferíveis do DANF3E / extrato tarifário da Copel.
 
-    Usa os títulos presentes no próprio documento. Valores de energia injetada,
-    tarifas e histórico de outros meses nunca substituem consumo ou valor atual.
+    Usa os títulos presentes no próprio documento. Tarifas e histórico
+    de outros meses nunca substituem consumo ou valor atual.
     """
     number = r'(?:\d{1,3}(?:\.\d{3})+|\d+)(?:,\d+)?'
     money = r'-?\d{1,3}(?:\.\d{3})*,\d{2}|-?\d+,\d{2}'
@@ -241,7 +241,7 @@ def br_money_float(raw):
 def extract_detailed_bill(pdf_bytes):
     """Extrai apenas dados explicitamente mostrados na fatura, em TODAS as páginas.
 
-    Não agrega consumos, TE/TUSD nem injeção para criar grandezas inexistentes.
+    Preserva consumo total medido; agrega apenas postos explícitos de injeção.
     No layout legado registra valor unitário e montante de energia sem chamá-los TE.
     """
     with fitz.open(stream=pdf_bytes,filetype='pdf') as doc:
@@ -312,28 +312,31 @@ def extract_detailed_bill(pdf_bytes):
         fields['tarifa_total_'+period]=None
         fields['preco_faturado_total_'+period]=None
 
-    # Medição e faturamento de demanda não são a mesma grandeza.
-    number=r'[-]?(?:\d{1,3}(?:\.\d{3})+|\d+)(?:,\d+)?'
-    demand_re=re.compile(r'(?m)^\s*DEMANDA\s+(?:USD\s+)?(?!ISENTA)(\d+)\s+(\d+)\s+('+number+r')\s+('+number+r')\s+('+number+r')')
-    matches=[]
-    for page in pages:
-        for m in demand_re.finditer(normalize(page)):
-            matches.append((parse_decimal(m.group(3)),parse_decimal(m.group(4)),parse_decimal(m.group(5))))
-    if matches:
-        # Mesma rubrica pode constar em mais de uma página, mas não pode divergir.
-        if len(set(matches))==1:
-            fields['demanda_medida_kw'],fields['demanda_contratada_kw'],fields['demanda_faturada_kw']=matches[0]
-        else:
-            fields['status']='conferencia'
-            fields['motivo']='Linhas de demanda divergentes'
-            fields['demanda_faturada_kw']=None
+    # Valores diretamente das colunas medidas da rubrica DEMANDA USD.
+    # A marca-d'água Segunda Via pode preceder o rótulo; as duas colunas
+    # de leitura do medidor podem estar ausentes em alguns meses.
+    demand, demand_evidences, demand_ambiguous = extract_demand_measurements(pages,layout)
+    if demand is not None:
+        fields['demanda_medida_kw']=demand['medida']
+        fields['demanda_contratada_kw']=demand['contratada']
+        fields['demanda_faturada_kw']=demand['faturada']
+    elif demand_ambiguous:
+        fields['status']='conferencia'
+        fields['motivo']='Valores conflitantes nas linhas DEMANDA USD'
+        fields['demanda_medida_kw']=None
+        fields['demanda_contratada_kw']=None
+        fields['demanda_faturada_kw']=None
     else:
         fields['demanda_faturada_kw']=None
 
     injected=extract_injection_measurements(pages)
     fields['energia_injetada_kwh_ponta']=injected['ponta']
     fields['energia_injetada_kwh_fora_ponta']=injected['fora_ponta']
-    fields['energia_injetada_kwh']=injected['total']  # NÃO somar postos.
+    fields['energia_injetada_kwh']=injected['total']
+    fields['origem_total_injetado']=injected['origem_total']
+    if injected['ambiguidade']:
+        fields['status']='conferencia'
+        fields['motivo']='Leituras de energia injetada divergentes'
     fields['valor_reais']=round(fields['valor_centavos']/100,2) if fields.get('valor_centavos') is not None else None
     selected=['consumo_kwh','consumo_kwh_ponta','consumo_kwh_fora_ponta',
         'demanda_medida_kw','demanda_contratada_kw','energia_injetada_kwh',
@@ -373,7 +376,7 @@ def parse_historical_pdf(pdf_bytes):
                     'leitura_anterior':None,'leitura_atual':None,'consumo_kwh_ponta':k1,'consumo_kwh_fora_ponta':k2,
                     'consumo_kwh':None,
                     'demanda_medida_kw':d,'demanda_contratada_kw':c,'demanda_faturada_kw':None,
-                    'energia_injetada_kwh_ponta':None,'energia_injetada_kwh_fora_ponta':None,'energia_injetada_kwh':None,
+                    'energia_injetada_kwh_ponta':None,'energia_injetada_kwh_fora_ponta':None,'energia_injetada_kwh':None,'origem_total_injetado':None,
                     'valor_centavos':v,'valor_reais':round(v/100,2) if v is not None else None,
                     'status':'conferencia' if problems else 'parcial','motivo':'; '.join(problems) if problems else 'Histórico sem tarifas TE/TUSD e datas exatas de leitura',
                     '_uc':None}

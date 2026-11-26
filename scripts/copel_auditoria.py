@@ -144,14 +144,55 @@ def extract_meter_total(page_texts):
     return (distinct[0] if len(distinct)==1 else None), results
 
 
+def extract_demand_measurements(page_texts, layout="danf3e"):
+    """Lê a linha técnica DEMANDA USD por rótulo, com 0 ou 2 leituras opcionais.
+
+    Exclui DEMANDA USD ISENTA ICMS e outras rubricas que não representam
+    a grandeza medida. Não depende de início de linha (marca Segunda Via).
+    A tripla (medida, contratada, faturada) deve estar no mesmo bloco.
+    """
+    number = r'(?:\d{1,3}(?:\.\d{3})+|\d+)(?:,\d+)?'
+    # Tabela técnica: opcionalmente leituras inteiras, em seguida três
+    # grandezas kW com vírgula decimal. Tarifa após a tripla é evidência
+    # adicional, mas pode aparecer em páginas/linhas distintas.
+    rx = re.compile(
+        (r'\bDEMANDA\s+USD(?!\s+ISENTA)\s+' if layout!='fatura_legada' else r'\bDEMANDA(?:[ \t]+USD(?![ \t]+ISENTA))?[ \t]+') +
+        r'(?:\d+\s+\d+\s+)?'
+        r'('+number+r')\s+('+number+r')\s+('+number+r')(?=\s|$)')
+    matches=[]
+    for page_no, page in enumerate(page_texts,1):
+        for line in normalize(page).splitlines():
+            for m in rx.finditer(line):
+                values = tuple(decimal_pt(m.group(i)) for i in (1,2,3))
+                if any(x is None or x < 0 for x in values):
+                    continue
+                # Evitar ler os três primeiros números de cinco leituras,
+                # exigindo vírgula decimal ao menos na medida e no faturado.
+                if ',' not in m.group(1) or ',' not in m.group(3):
+                    continue
+                matches.append({'medida':float(values[0]),
+                                'contratada':float(values[1]),
+                                'faturada':float(values[2]),'pagina':page_no})
+    values_set={ (m['medida'],m['contratada'],m['faturada']) for m in matches }
+    if len(values_set)==1:
+        return matches[0], matches, False
+    return None, matches, len(values_set)>1
+
+
 def extract_injection_measurements(page_texts):
-    """Lê medições explícitas (nunca soma ponta e fora de ponta)."""
-    result = {'ponta': None, 'fora_ponta': None, 'total': None}
+    """Lê medição de injeção por posto. Soma só quando AMBOS documentados.
+
+    Não confunde TE/TUSD e créditos compensados com energia física injetada.
+    Total explicitamente informado tem prioridade; divergência é sinalizada
+    por auditoria. Ausência de posto não equivale a zero.
+    """
+    result = {'ponta': None, 'fora_ponta': None, 'total': None,
+              'origem_total': None, 'ambiguidade': False}
     labels = {'ponta':r'ENERGIA GERADA/INJETADA PONTA',
               'fora_ponta':r'ENERGIA GERADA/INJETADA FORA P(?:ONTA)?',
               'total':r'ENERGIA (?:GERADA/)?INJETADA TOTAL'}
     for key, label in labels.items():
-        pattern = re.compile(r'\b'+label+r'\s+\d+\s+\d+\s+('+NUMBER+r')(?=\s|$)')
+        pattern = re.compile(r'\b'+label+r'[ \t]+\d+[ \t]+\d+[ \t]+('+NUMBER+r')(?=\s|$)')
         candidates = []
         for page in page_texts:
             for m in pattern.finditer(normalize(page)):
@@ -160,6 +201,13 @@ def extract_injection_measurements(page_texts):
                     candidates.append(float(val))
         if len(set(candidates))==1:
             result[key]=candidates[0]
+        elif len(set(candidates))>1:
+            result['ambiguidade']=True
+    if result['total'] is not None:
+        result['origem_total']='total_explicito'
+    elif result['ponta'] is not None and result['fora_ponta'] is not None:
+        result['total']=round(result['ponta']+result['fora_ponta'],6)
+        result['origem_total']='soma_postos_medicao'
     return result
 
 
@@ -285,11 +333,38 @@ def review_document(page_texts, record, secret):
             got=record.get('energia_injetada_kwh_'+period)
             if expected is not None and (got is None or abs(float(got)-expected)>0.000001):
                 issues.append('injetada_divergente_'+period)
-        # Null explícito é correto quando o documento não apresenta total injetado.
-        if injection['total'] is None and record.get('energia_injetada_kwh') is not None:
-            issues.append('energia_injetada_total_derivada_sem_rotulo')
-        if injection['total'] is not None and record.get('energia_injetada_kwh')!=injection['total']:
+        if injection['ambiguidade']:
+            issues.append('energia_injetada_medicoes_divergentes')
+        total=record.get('energia_injetada_kwh')
+        if injection['total'] is None:
+            if total is not None:
+                issues.append('energia_injetada_total_sem_evidencia')
+        elif total is None or abs(float(total)-injection['total'])>0.000001:
             issues.append('energia_injetada_total_divergente')
+        if injection['origem_total']=='total_explicito' and injection['ponta'] is not None and injection['fora_ponta'] is not None:
+            if abs(injection['total'] - injection['ponta'] - injection['fora_ponta'])>0.000001:
+                issues.append('energia_injetada_total_explicito_incoerente_com_postos')
+        if injection['origem_total'] != record.get('origem_total_injetado'):
+            issues.append('origem_total_injetado_divergente')
+        evidence['campos']['energia_injetada_kwh']={
+            'regra': injection['origem_total'] or 'postos_insuficientes',
+            'confianca':'alta' if injection['total'] is not None and not injection['ambiguidade'] else 'media',
+            'validado':not injection['ambiguidade'] and (injection['total'] is None or total is not None)}
+        # Demanda medida, contratada e faturada devem vir de colunas da linha
+        # DEMANDA USD. Uma rubrica existente que não foi interpretada é erro.
+        demand, demand_evidences, demand_ambiguous=extract_demand_measurements(page_texts,layout)
+        if demand_ambiguous:
+            issues.append('demanda_linhas_divergentes')
+        elif demand is None:
+            if any(re.search((r'\bDEMANDA\s+USD(?!\s+ISENTA)' if layout!='fatura_legada' else r'\bDEMANDA[ \t]+\d+'),normalize(p)) for p in page_texts):
+                issues.append('demanda_usd_nao_interpretada')
+        else:
+            for key, source in [('demanda_medida_kw','medida'),('demanda_contratada_kw','contratada'),('demanda_faturada_kw','faturada')]:
+                value=record.get(key)
+                if value is None or abs(float(value)-demand[source])>0.000001:
+                    issues.append('demanda_divergente_'+key)
+            evidence['campos']['demanda']={'regra':'demanda_usd_colunas_medida_contratada_faturada',
+                'pagina':demand['pagina'],'confianca':'alta','validado':True}
         # Só se exige TE/TUSD quando o layout/tabela de fato os apresenta.
         if layout=='danf3e':
             tariffs=extract_regulated_tariffs(page_texts)

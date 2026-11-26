@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-11-26T14:43:54Z",
+  "atualizado_em": "2026-11-26T17:28:12Z",
   "documentos": {
     "054481c82efc8e0176d3": {
       "alertas": [],
@@ -23,7 +23,12 @@
         },
         "energia_injetada_kwh": {
           "confianca": "media",
-          "regra": "postos_insuficientes",
+          "regra": "soma_postos_com_zero_inferido",
+          "validado": true
+        },
+        "energia_injetada_kwh_ponta": {
+          "confianca": "media",
+          "regra": "zero_inferido_layout",
           "validado": true
         },
         "te_fora_ponta": {
@@ -95,6 +100,11 @@
           "regra": "soma_postos_medicao",
           "validado": true
         },
+        "energia_injetada_kwh_ponta": {
+          "confianca": "alta",
+          "regra": "medicao_explicita",
+          "validado": true
+        },
         "te_fora_ponta": {
           "confianca": "alta",
           "diferenca_reais": 0.01,
@@ -162,6 +172,11 @@
         "energia_injetada_kwh": {
           "confianca": "alta",
           "regra": "soma_postos_medicao",
+          "validado": true
+        },
+        "energia_injetada_kwh_ponta": {
+          "confianca": "alta",
+          "regra": "medicao_explicita",
           "validado": true
         },
         "te_fora_ponta": {
@@ -233,6 +248,11 @@
           "regra": "soma_postos_medicao",
           "validado": true
         },
+        "energia_injetada_kwh_ponta": {
+          "confianca": "alta",
+          "regra": "medicao_explicita",
+          "validado": true
+        },
         "te_fora_ponta": {
           "confianca": "alta",
           "diferenca_reais": 0.0,
@@ -300,6 +320,11 @@
         "energia_injetada_kwh": {
           "confianca": "alta",
           "regra": "soma_postos_medicao",
+          "validado": true
+        },
+        "energia_injetada_kwh_ponta": {
+          "confianca": "alta",
+          "regra": "medicao_explicita",
           "validado": true
         },
         "te_fora_ponta": {
@@ -458,7 +483,12 @@
         },
         "energia_injetada_kwh": {
           "confianca": "media",
-          "regra": "postos_insuficientes",
+          "regra": "soma_postos_com_zero_inferido",
+          "validado": true
+        },
+        "energia_injetada_kwh_ponta": {
+          "confianca": "media",
+          "regra": "zero_inferido_layout",
           "validado": true
         },
         "te_fora_ponta": {
@@ -614,6 +644,11 @@
           "regra": "soma_postos_medicao",
           "validado": true
         },
+        "energia_injetada_kwh_ponta": {
+          "confianca": "alta",
+          "regra": "medicao_explicita",
+          "validado": true
+        },
         "te_fora_ponta": {
           "confianca": "alta",
           "diferenca_reais": 0.0,
@@ -699,7 +734,12 @@
         },
         "energia_injetada_kwh": {
           "confianca": "media",
-          "regra": "postos_insuficientes",
+          "regra": "soma_postos_com_zero_inferido",
+          "validado": true
+        },
+        "energia_injetada_kwh_ponta": {
+          "confianca": "media",
+          "regra": "zero_inferido_layout",
           "validado": true
         },
         "legada_fora_ponta": {
@@ -751,6 +791,11 @@
         "energia_injetada_kwh": {
           "confianca": "alta",
           "regra": "soma_postos_medicao",
+          "validado": true
+        },
+        "energia_injetada_kwh_ponta": {
+          "confianca": "alta",
+          "regra": "medicao_explicita",
           "validado": true
         },
         "te_fora_ponta": {
@@ -814,7 +859,12 @@
         },
         "energia_injetada_kwh": {
           "confianca": "media",
-          "regra": "postos_insuficientes",
+          "regra": "soma_postos_com_zero_inferido",
+          "validado": true
+        },
+        "energia_injetada_kwh_ponta": {
+          "confianca": "media",
+          "regra": "zero_inferido_layout",
           "validado": true
         },
         "legada_fora_ponta": {
@@ -860,7 +910,12 @@
         },
         "energia_injetada_kwh": {
           "confianca": "media",
-          "regra": "postos_insuficientes",
+          "regra": "soma_postos_com_zero_inferido",
+          "validado": true
+        },
+        "energia_injetada_kwh_ponta": {
+          "confianca": "media",
+          "regra": "zero_inferido_layout",
           "validado": true
         },
         "legada_fora_ponta": {
@@ -909,7 +964,12 @@
         },
         "energia_injetada_kwh": {
           "confianca": "media",
-          "regra": "postos_insuficientes",
+          "regra": "soma_postos_com_zero_inferido",
+          "validado": true
+        },
+        "energia_injetada_kwh_ponta": {
+          "confianca": "media",
+          "regra": "zero_inferido_layout",
           "validado": true
         },
         "legada_fora_ponta": {
@@ -955,7 +1015,12 @@
         },
         "energia_injetada_kwh": {
           "confianca": "media",
-          "regra": "postos_insuficientes",
+          "regra": "soma_postos_com_zero_inferido",
+          "validado": true
+        },
+        "energia_injetada_kwh_ponta": {
+          "confianca": "media",
+          "regra": "zero_inferido_layout",
           "validado": true
         },
         "legada_fora_ponta": {
@@ -1007,6 +1072,11 @@
         "energia_injetada_kwh": {
           "confianca": "alta",
           "regra": "soma_postos_medicao",
+          "validado": true
+        },
+        "energia_injetada_kwh_ponta": {
+          "confianca": "alta",
+          "regra": "medicao_explicita",
           "validado": true
         },
         "te_fora_ponta": {
@@ -1102,6 +1172,11 @@
           "regra": "soma_postos_medicao",
           "validado": true
         },
+        "energia_injetada_kwh_ponta": {
+          "confianca": "alta",
+          "regra": "medicao_explicita",
+          "validado": true
+        },
         "te_fora_ponta": {
           "confianca": "alta",
           "diferenca_reais": 0.01,
@@ -1174,6 +1249,11 @@
           "regra": "soma_postos_medicao",
           "validado": true
         },
+        "energia_injetada_kwh_ponta": {
+          "confianca": "alta",
+          "regra": "medicao_explicita",
+          "validado": true
+        },
         "te_fora_ponta": {
           "confianca": "alta",
           "diferenca_reais": 0.01,
@@ -1243,6 +1323,11 @@
           "regra": "soma_postos_medicao",
           "validado": true
         },
+        "energia_injetada_kwh_ponta": {
+          "confianca": "alta",
+          "regra": "medicao_explicita",
+          "validado": true
+        },
         "te_fora_ponta": {
           "confianca": "alta",
           "diferenca_reais": 0.0,
@@ -1310,6 +1395,11 @@
         "energia_injetada_kwh": {
           "confianca": "alta",
           "regra": "soma_postos_medicao",
+          "validado": true
+        },
+        "energia_injetada_kwh_ponta": {
+          "confianca": "alta",
+          "regra": "medicao_explicita",
           "validado": true
         },
         "te_fora_ponta": {
@@ -1399,7 +1489,12 @@
         },
         "energia_injetada_kwh": {
           "confianca": "media",
-          "regra": "postos_insuficientes",
+          "regra": "soma_postos_com_zero_inferido",
+          "validado": true
+        },
+        "energia_injetada_kwh_ponta": {
+          "confianca": "media",
+          "regra": "zero_inferido_layout",
           "validado": true
         },
         "te_fora_ponta": {
@@ -1471,7 +1566,12 @@
         },
         "energia_injetada_kwh": {
           "confianca": "media",
-          "regra": "postos_insuficientes",
+          "regra": "soma_postos_com_zero_inferido",
+          "validado": true
+        },
+        "energia_injetada_kwh_ponta": {
+          "confianca": "media",
+          "regra": "zero_inferido_layout",
           "validado": true
         },
         "te_fora_ponta": {
@@ -1535,7 +1635,12 @@
         },
         "energia_injetada_kwh": {
           "confianca": "media",
-          "regra": "postos_insuficientes",
+          "regra": "soma_postos_com_zero_inferido",
+          "validado": true
+        },
+        "energia_injetada_kwh_ponta": {
+          "confianca": "media",
+          "regra": "zero_inferido_layout",
           "validado": true
         },
         "valor_centavos": {
@@ -1569,6 +1674,11 @@
         "energia_injetada_kwh": {
           "confianca": "alta",
           "regra": "soma_postos_medicao",
+          "validado": true
+        },
+        "energia_injetada_kwh_ponta": {
+          "confianca": "alta",
+          "regra": "medicao_explicita",
           "validado": true
         },
         "te_fora_ponta": {
@@ -1643,7 +1753,12 @@
         },
         "energia_injetada_kwh": {
           "confianca": "media",
-          "regra": "postos_insuficientes",
+          "regra": "soma_postos_com_zero_inferido",
+          "validado": true
+        },
+        "energia_injetada_kwh_ponta": {
+          "confianca": "media",
+          "regra": "zero_inferido_layout",
           "validado": true
         },
         "te_fora_ponta": {
@@ -1718,6 +1833,11 @@
           "regra": "soma_postos_medicao",
           "validado": true
         },
+        "energia_injetada_kwh_ponta": {
+          "confianca": "alta",
+          "regra": "medicao_explicita",
+          "validado": true
+        },
         "te_fora_ponta": {
           "confianca": "alta",
           "diferenca_reais": 0.0,
@@ -1785,6 +1905,11 @@
         "energia_injetada_kwh": {
           "confianca": "alta",
           "regra": "soma_postos_medicao",
+          "validado": true
+        },
+        "energia_injetada_kwh_ponta": {
+          "confianca": "alta",
+          "regra": "medicao_explicita",
           "validado": true
         },
         "te_fora_ponta": {
@@ -1883,6 +2008,11 @@
           "regra": "soma_postos_medicao",
           "validado": true
         },
+        "energia_injetada_kwh_ponta": {
+          "confianca": "alta",
+          "regra": "medicao_explicita",
+          "validado": true
+        },
         "te_fora_ponta": {
           "confianca": "alta",
           "diferenca_reais": 0.01,
@@ -1952,6 +2082,11 @@
           "regra": "soma_postos_medicao",
           "validado": true
         },
+        "energia_injetada_kwh_ponta": {
+          "confianca": "alta",
+          "regra": "medicao_explicita",
+          "validado": true
+        },
         "te_fora_ponta": {
           "confianca": "alta",
           "diferenca_reais": 0.01,
@@ -2019,6 +2154,11 @@
         "energia_injetada_kwh": {
           "confianca": "alta",
           "regra": "soma_postos_medicao",
+          "validado": true
+        },
+        "energia_injetada_kwh_ponta": {
+          "confianca": "alta",
+          "regra": "medicao_explicita",
           "validado": true
         },
         "te_fora_ponta": {
@@ -2106,7 +2246,12 @@
         },
         "energia_injetada_kwh": {
           "confianca": "media",
-          "regra": "postos_insuficientes",
+          "regra": "soma_postos_com_zero_inferido",
+          "validado": true
+        },
+        "energia_injetada_kwh_ponta": {
+          "confianca": "media",
+          "regra": "zero_inferido_layout",
           "validado": true
         },
         "legada_fora_ponta": {
@@ -2184,6 +2329,11 @@
           "regra": "soma_postos_medicao",
           "validado": true
         },
+        "energia_injetada_kwh_ponta": {
+          "confianca": "alta",
+          "regra": "medicao_explicita",
+          "validado": true
+        },
         "te_fora_ponta": {
           "confianca": "alta",
           "diferenca_reais": 0.01,
@@ -2245,7 +2395,12 @@
         },
         "energia_injetada_kwh": {
           "confianca": "media",
-          "regra": "postos_insuficientes",
+          "regra": "soma_postos_com_zero_inferido",
+          "validado": true
+        },
+        "energia_injetada_kwh_ponta": {
+          "confianca": "media",
+          "regra": "zero_inferido_layout",
           "validado": true
         },
         "legada_fora_ponta": {
@@ -2296,7 +2451,12 @@
         },
         "energia_injetada_kwh": {
           "confianca": "media",
-          "regra": "postos_insuficientes",
+          "regra": "soma_postos_com_zero_inferido",
+          "validado": true
+        },
+        "energia_injetada_kwh_ponta": {
+          "confianca": "media",
+          "regra": "zero_inferido_layout",
           "validado": true
         },
         "te_fora_ponta": {
@@ -2428,7 +2588,12 @@
         },
         "energia_injetada_kwh": {
           "confianca": "media",
-          "regra": "postos_insuficientes",
+          "regra": "soma_postos_com_zero_inferido",
+          "validado": true
+        },
+        "energia_injetada_kwh_ponta": {
+          "confianca": "media",
+          "regra": "zero_inferido_layout",
           "validado": true
         },
         "te_fora_ponta": {
@@ -2542,6 +2707,11 @@
           "regra": "soma_postos_medicao",
           "validado": true
         },
+        "energia_injetada_kwh_ponta": {
+          "confianca": "alta",
+          "regra": "medicao_explicita",
+          "validado": true
+        },
         "te_fora_ponta": {
           "confianca": "alta",
           "diferenca_reais": 0.01,
@@ -2611,7 +2781,12 @@
         },
         "energia_injetada_kwh": {
           "confianca": "media",
-          "regra": "postos_insuficientes",
+          "regra": "soma_postos_com_zero_inferido",
+          "validado": true
+        },
+        "energia_injetada_kwh_ponta": {
+          "confianca": "media",
+          "regra": "zero_inferido_layout",
           "validado": true
         },
         "te_fora_ponta": {
@@ -2704,7 +2879,12 @@
         },
         "energia_injetada_kwh": {
           "confianca": "media",
-          "regra": "postos_insuficientes",
+          "regra": "soma_postos_com_zero_inferido",
+          "validado": true
+        },
+        "energia_injetada_kwh_ponta": {
+          "confianca": "media",
+          "regra": "zero_inferido_layout",
           "validado": true
         },
         "te_fora_ponta": {
@@ -2773,7 +2953,12 @@
         },
         "energia_injetada_kwh": {
           "confianca": "media",
-          "regra": "postos_insuficientes",
+          "regra": "soma_postos_com_zero_inferido",
+          "validado": true
+        },
+        "energia_injetada_kwh_ponta": {
+          "confianca": "media",
+          "regra": "zero_inferido_layout",
           "validado": true
         },
         "te_fora_ponta": {
@@ -2843,6 +3028,11 @@
         "energia_injetada_kwh": {
           "confianca": "alta",
           "regra": "soma_postos_medicao",
+          "validado": true
+        },
+        "energia_injetada_kwh_ponta": {
+          "confianca": "alta",
+          "regra": "medicao_explicita",
           "validado": true
         },
         "te_fora_ponta": {
@@ -2917,6 +3107,11 @@
           "regra": "soma_postos_medicao",
           "validado": true
         },
+        "energia_injetada_kwh_ponta": {
+          "confianca": "alta",
+          "regra": "medicao_explicita",
+          "validado": true
+        },
         "te_fora_ponta": {
           "confianca": "alta",
           "diferenca_reais": 0.0,
@@ -2983,7 +3178,12 @@
         },
         "energia_injetada_kwh": {
           "confianca": "media",
-          "regra": "postos_insuficientes",
+          "regra": "soma_postos_com_zero_inferido",
+          "validado": true
+        },
+        "energia_injetada_kwh_ponta": {
+          "confianca": "media",
+          "regra": "zero_inferido_layout",
           "validado": true
         },
         "te_fora_ponta": {
@@ -3076,6 +3276,11 @@
           "regra": "soma_postos_medicao",
           "validado": true
         },
+        "energia_injetada_kwh_ponta": {
+          "confianca": "alta",
+          "regra": "medicao_explicita",
+          "validado": true
+        },
         "te_fora_ponta": {
           "confianca": "alta",
           "diferenca_reais": 0.0,
@@ -3145,6 +3350,11 @@
           "regra": "soma_postos_medicao",
           "validado": true
         },
+        "energia_injetada_kwh_ponta": {
+          "confianca": "alta",
+          "regra": "medicao_explicita",
+          "validado": true
+        },
         "te_fora_ponta": {
           "confianca": "alta",
           "diferenca_reais": 0.01,
@@ -3211,7 +3421,12 @@
         },
         "energia_injetada_kwh": {
           "confianca": "media",
-          "regra": "postos_insuficientes",
+          "regra": "soma_postos_com_zero_inferido",
+          "validado": true
+        },
+        "energia_injetada_kwh_ponta": {
+          "confianca": "media",
+          "regra": "zero_inferido_layout",
           "validado": true
         },
         "te_fora_ponta": {
@@ -3278,7 +3493,12 @@
         },
         "energia_injetada_kwh": {
           "confianca": "media",
-          "regra": "postos_insuficientes",
+          "regra": "soma_postos_com_zero_inferido",
+          "validado": true
+        },
+        "energia_injetada_kwh_ponta": {
+          "confianca": "media",
+          "regra": "zero_inferido_layout",
           "validado": true
         },
         "legada_fora_ponta": {
@@ -3330,6 +3550,11 @@
         "energia_injetada_kwh": {
           "confianca": "alta",
           "regra": "soma_postos_medicao",
+          "validado": true
+        },
+        "energia_injetada_kwh_ponta": {
+          "confianca": "alta",
+          "regra": "medicao_explicita",
           "validado": true
         },
         "te_fora_ponta": {
@@ -3470,6 +3695,11 @@
           "regra": "soma_postos_medicao",
           "validado": true
         },
+        "energia_injetada_kwh_ponta": {
+          "confianca": "alta",
+          "regra": "medicao_explicita",
+          "validado": true
+        },
         "te_fora_ponta": {
           "confianca": "alta",
           "diferenca_reais": 0.01,
@@ -3537,6 +3767,11 @@
         "energia_injetada_kwh": {
           "confianca": "alta",
           "regra": "soma_postos_medicao",
+          "validado": true
+        },
+        "energia_injetada_kwh_ponta": {
+          "confianca": "alta",
+          "regra": "medicao_explicita",
           "validado": true
         },
         "te_fora_ponta": {
@@ -3608,6 +3843,11 @@
           "regra": "soma_postos_medicao",
           "validado": true
         },
+        "energia_injetada_kwh_ponta": {
+          "confianca": "alta",
+          "regra": "medicao_explicita",
+          "validado": true
+        },
         "te_fora_ponta": {
           "confianca": "alta",
           "diferenca_reais": 0.0,
@@ -3675,6 +3915,11 @@
         "energia_injetada_kwh": {
           "confianca": "alta",
           "regra": "soma_postos_medicao",
+          "validado": true
+        },
+        "energia_injetada_kwh_ponta": {
+          "confianca": "alta",
+          "regra": "medicao_explicita",
           "validado": true
         },
         "te_fora_ponta": {
@@ -3746,7 +3991,12 @@
         },
         "energia_injetada_kwh": {
           "confianca": "media",
-          "regra": "postos_insuficientes",
+          "regra": "soma_postos_com_zero_inferido",
+          "validado": true
+        },
+        "energia_injetada_kwh_ponta": {
+          "confianca": "media",
+          "regra": "zero_inferido_layout",
           "validado": true
         },
         "te_fora_ponta": {
@@ -3881,6 +4131,11 @@
           "regra": "soma_postos_medicao",
           "validado": true
         },
+        "energia_injetada_kwh_ponta": {
+          "confianca": "alta",
+          "regra": "medicao_explicita",
+          "validado": true
+        },
         "te_fora_ponta": {
           "confianca": "alta",
           "diferenca_reais": 0.01,
@@ -3995,6 +4250,11 @@
           "regra": "soma_postos_medicao",
           "validado": true
         },
+        "energia_injetada_kwh_ponta": {
+          "confianca": "alta",
+          "regra": "medicao_explicita",
+          "validado": true
+        },
         "te_fora_ponta": {
           "confianca": "alta",
           "diferenca_reais": 0.02,
@@ -4061,7 +4321,12 @@
         },
         "energia_injetada_kwh": {
           "confianca": "media",
-          "regra": "postos_insuficientes",
+          "regra": "soma_postos_com_zero_inferido",
+          "validado": true
+        },
+        "energia_injetada_kwh_ponta": {
+          "confianca": "media",
+          "regra": "zero_inferido_layout",
           "validado": true
         },
         "te_fora_ponta": {
@@ -4151,7 +4416,12 @@
         },
         "energia_injetada_kwh": {
           "confianca": "media",
-          "regra": "postos_insuficientes",
+          "regra": "soma_postos_com_zero_inferido",
+          "validado": true
+        },
+        "energia_injetada_kwh_ponta": {
+          "confianca": "media",
+          "regra": "zero_inferido_layout",
           "validado": true
         },
         "te_fora_ponta": {
@@ -4221,6 +4491,11 @@
         "energia_injetada_kwh": {
           "confianca": "alta",
           "regra": "soma_postos_medicao",
+          "validado": true
+        },
+        "energia_injetada_kwh_ponta": {
+          "confianca": "alta",
+          "regra": "medicao_explicita",
           "validado": true
         },
         "te_fora_ponta": {
@@ -4293,6 +4568,11 @@
         "energia_injetada_kwh": {
           "confianca": "alta",
           "regra": "soma_postos_medicao",
+          "validado": true
+        },
+        "energia_injetada_kwh_ponta": {
+          "confianca": "alta",
+          "regra": "medicao_explicita",
           "validado": true
         },
         "te_fora_ponta": {
@@ -4422,7 +4702,12 @@
         },
         "energia_injetada_kwh": {
           "confianca": "media",
-          "regra": "postos_insuficientes",
+          "regra": "soma_postos_com_zero_inferido",
+          "validado": true
+        },
+        "energia_injetada_kwh_ponta": {
+          "confianca": "media",
+          "regra": "zero_inferido_layout",
           "validado": true
         },
         "legada_fora_ponta": {
@@ -4468,7 +4753,12 @@
         },
         "energia_injetada_kwh": {
           "confianca": "media",
-          "regra": "postos_insuficientes",
+          "regra": "soma_postos_com_zero_inferido",
+          "validado": true
+        },
+        "energia_injetada_kwh_ponta": {
+          "confianca": "media",
+          "regra": "zero_inferido_layout",
           "validado": true
         },
         "legada_fora_ponta": {
@@ -4535,7 +4825,12 @@
         },
         "energia_injetada_kwh": {
           "confianca": "media",
-          "regra": "postos_insuficientes",
+          "regra": "soma_postos_com_zero_inferido",
+          "validado": true
+        },
+        "energia_injetada_kwh_ponta": {
+          "confianca": "media",
+          "regra": "zero_inferido_layout",
           "validado": true
         },
         "legada_fora_ponta": {
@@ -4607,7 +4902,12 @@
         },
         "energia_injetada_kwh": {
           "confianca": "media",
-          "regra": "postos_insuficientes",
+          "regra": "soma_postos_com_zero_inferido",
+          "validado": true
+        },
+        "energia_injetada_kwh_ponta": {
+          "confianca": "media",
+          "regra": "zero_inferido_layout",
           "validado": true
         },
         "te_fora_ponta": {
@@ -4700,6 +5000,11 @@
           "regra": "soma_postos_medicao",
           "validado": true
         },
+        "energia_injetada_kwh_ponta": {
+          "confianca": "alta",
+          "regra": "medicao_explicita",
+          "validado": true
+        },
         "te_fora_ponta": {
           "confianca": "alta",
           "diferenca_reais": 0.0,
@@ -4745,6 +5050,6 @@
       "layout": "danf3e"
     }
   },
-  "extrator_versao": "copel-auditavel-7",
+  "extrator_versao": "copel-auditavel-8",
   "schema": 1
 }

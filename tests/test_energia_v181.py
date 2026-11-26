@@ -1,4 +1,4 @@
-"""Regressões dirigidas v1.8.1: demanda USD e soma segura de energia injetada."""
+"""Regressões de demanda v1.8.1, adaptadas à regra de injeção v1.8.2."""
 import sys
 import unittest
 from pathlib import Path
@@ -59,7 +59,7 @@ class TestPdfsReais(unittest.TestCase):
         if not source.exists():self.skipTest('ZIP original não disponível')
         expected={
             '29_ContaCopel-Fev_24.pdf':(207.36,400,207.36,24502),
-            '38_ContaCopel-Nov_24.pdf':(247.10,400,247.10,None),
+            '38_ContaCopel-Nov_24.pdf':(247.10,400,247.10,15806),
             '57_ContaCopel-Jun_26.pdf':(143.64,345,143.64,13307),
         }
         with zipfile.ZipFile(source) as z:

@@ -39,13 +39,14 @@ Segunda Via ENERGIA ELETRICA CONSUMO 0 94718 42600,00
         self.assertEqual(len(records),12)
         self.assertTrue(all(r['consumo_kwh'] is None for r in records))
         self.assertTrue(all(r['status']=='parcial' for r in records))
-    def test_injecao_nao_soma_ponta_fora(self):
+    def test_injecao_consolida_ambos_postos_medidos(self):
         page='''ENERGIA GERADA/INJETADA PONTA 0 15 1,00
 ENERGIA GERADA/INJETADA FORA P 151921 445190 36951,00'''
         result=extract_injection_measurements([page])
         self.assertEqual(result['ponta'],1)
         self.assertEqual(result['fora_ponta'],36951)
-        self.assertIsNone(result['total'])
+        self.assertEqual(result['total'],36952)
+        self.assertEqual(result['origem_total'],'soma_postos_medicao')
     def test_tarifa_presente_nula_gera_alerta(self):
         source='ENERGIA ELETRICA TE PONTA kWh 100,00 0,500000 50,00'
         _,warnings=audit_lines([source], {'preco_faturado_te_ponta':None,'valor_te_ponta_reais':None},'danf3e')
